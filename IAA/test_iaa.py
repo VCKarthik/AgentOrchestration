@@ -413,7 +413,7 @@ class TestIAACore:
         assert rec.recommended_action.action_id in ("request_missing_document", "request_document")
 
     def test_run_iaa_with_mock_llm_parses_task_list(self):
-        """task_list and workflow_timeline are parsed from step 2 output."""
+        """task_list and workflow_timeline are parsed from the merged single-shot output."""
         from agent.iaa import run_iaa
         from agent.retriever import IAARetriever
 
@@ -421,8 +421,7 @@ class TestIAACore:
         mock_retriever.retrieve.return_value = []
         mock_retriever.format_for_prompt.return_value = ""
 
-        step1 = "Process at verification stage."
-        step2 = json.dumps({
+        merged = json.dumps({
             "predicted_actions": [
                 {"action_id": "approve_document", "label": "Approve",
                  "confidence": 0.9, "reasoning": "All docs present"}
@@ -437,13 +436,13 @@ class TestIAACore:
                  "status": "completed", "timestamp": None},
                 {"step": 2, "event_type": "approve_document", "actor": "manager",
                  "status": "predicted", "timestamp": None}
-            ]
+            ],
+            "recommended_action": {
+                "action_id": "approve_document", "label": "Approve document",
+                "confidence": 0.9, "justification": "Ready for approval."
+            }
         })
-        step3 = json.dumps({
-            "action_id": "approve_document", "label": "Approve document",
-            "confidence": 0.9, "justification": "Ready for approval."
-        })
-        mock_llm = self._make_mock_llm([step1, step2, step3])
+        mock_llm = self._make_mock_llm([merged])
 
         state = _state()
         rec   = run_iaa(state, retriever=mock_retriever, llm=mock_llm)
@@ -508,7 +507,7 @@ class TestIAACore:
         assert rec.escalate_to_human
 
     def test_run_iaa_bad_llm_output_uses_fallback(self):
-        """If step 2 LLM returns unparseable JSON, chain raises ValueError — documented behavior."""
+        """If the LLM returns unparseable JSON, chain returns the no-LLM fallback recommendation."""
         from agent.iaa import run_iaa
         from agent.retriever import IAARetriever
 
@@ -516,15 +515,14 @@ class TestIAACore:
         mock_retriever.retrieve.return_value = []
         mock_retriever.format_for_prompt.return_value = ""
 
-        mock_llm = self._make_mock_llm([
-            "Summarized state.",
-            "I cannot provide JSON at this time.",
-            "Still not JSON.",
-        ])
+        mock_llm = self._make_mock_llm(["I cannot provide JSON at this time."])
 
         state = _state()
-        with pytest.raises((ValueError, json.JSONDecodeError)):
-            run_iaa(state, retriever=mock_retriever, llm=mock_llm)
+        rec = run_iaa(state, retriever=mock_retriever, llm=mock_llm)
+
+        assert rec.recommended_action.action_id == "review_case"
+        assert rec.model_used == "fallback/no_llm"
+        assert rec.task_list == []
 
 
 # ══════════════════════════════════════════════════════════════════════════════

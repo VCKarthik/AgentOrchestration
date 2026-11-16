@@ -34,8 +34,8 @@ ref/csa.db
 SWA/swa_v3.db
 swa_v3.db
 CSA/data/csa.db
-IAA/qdrant_store/
-IAA/data/predictions.jsonl
+**/qdrant_store/
+**/predictions.jsonl
 
 # Logs & PID files
 logs/
