@@ -1,0 +1,94 @@
+{
+  "workflows": {
+    "vendor_onboarding": {
+      "label": "Vendor Onboarding",
+      "required_inputs": ["tax_form", "compliance_certificate", "bank_details", "insurance_cert", "nda"],
+      "mandatory_inputs": ["tax_form", "compliance_certificate", "bank_details"]
+    },
+    "contract_review": {
+      "label": "Contract Review",
+      "required_inputs": ["draft_contract", "legal_sign_off", "counterparty_id", "risk_assessment", "approval_memo"],
+      "mandatory_inputs": ["draft_contract", "legal_sign_off", "counterparty_id"]
+    },
+    "payment_approval": {
+      "label": "Payment Approval",
+      "required_inputs": ["invoice", "purchase_order", "budget_code", "approver_sign_off", "bank_details"],
+      "mandatory_inputs": ["invoice", "purchase_order", "approver_sign_off"]
+    },
+    "employee_onboarding": {
+      "label": "Employee Onboarding",
+      "required_inputs": ["offer_letter", "id_verification", "background_check", "tax_withholding_form", "direct_deposit_form", "signed_nda", "equipment_request"],
+      "mandatory_inputs": ["offer_letter", "id_verification", "background_check", "tax_withholding_form"]
+    },
+    "employee_offboarding": {
+      "label": "Employee Offboarding",
+      "required_inputs": ["resignation_letter", "exit_interview", "asset_return_checklist", "access_revocation_form", "final_paycheck_approval"],
+      "mandatory_inputs": ["asset_return_checklist", "access_revocation_form", "final_paycheck_approval"]
+    },
+    "loan_approval": {
+      "label": "Loan Approval",
+      "required_inputs": ["credit_report", "income_verification", "collateral_appraisal", "debt_schedule", "loan_application", "id_proof", "bank_statements_6mo"],
+      "mandatory_inputs": ["credit_report", "income_verification", "loan_application", "id_proof"]
+    },
+    "insurance_claim": {
+      "label": "Insurance Claim",
+      "required_inputs": ["claim_form", "incident_report", "supporting_photos", "police_report", "medical_records", "repair_estimate", "policy_document"],
+      "mandatory_inputs": ["claim_form", "incident_report", "policy_document"]
+    },
+    "invoice_processing": {
+      "label": "Invoice Processing",
+      "required_inputs": ["invoice", "goods_receipt_note", "purchase_order", "vendor_bank_details", "tax_invoice"],
+      "mandatory_inputs": ["invoice", "purchase_order", "goods_receipt_note"]
+    },
+    "supplier_qualification": {
+      "label": "Supplier Qualification",
+      "required_inputs": ["supplier_profile", "quality_certification", "financial_statements", "reference_list", "compliance_declaration", "site_audit_report"],
+      "mandatory_inputs": ["supplier_profile", "quality_certification", "compliance_declaration"]
+    },
+    "regulatory_filing": {
+      "label": "Regulatory Filing",
+      "required_inputs": ["filing_form", "supporting_evidence", "legal_review_sign_off", "compliance_attestation", "board_resolution", "audit_report"],
+      "mandatory_inputs": ["filing_form", "legal_review_sign_off", "compliance_attestation"]
+    },
+    "data_privacy_request": {
+      "label": "Data Privacy Request (GDPR/CCPA)",
+      "required_inputs": ["subject_access_request_form", "id_verification", "data_map_extract", "dpo_review", "response_letter"],
+      "mandatory_inputs": ["subject_access_request_form", "id_verification", "dpo_review"]
+    },
+    "license_renewal": {
+      "label": "License Renewal",
+      "required_inputs": ["renewal_application", "current_license_copy", "compliance_certificate", "fee_payment_receipt", "inspection_report"],
+      "mandatory_inputs": ["renewal_application", "current_license_copy", "fee_payment_receipt"]
+    },
+    "grant_application": {
+      "label": "Grant Application",
+      "required_inputs": ["project_proposal", "budget_breakdown", "org_registration_docs", "prior_grant_report", "ethics_approval", "lead_researcher_cv"],
+      "mandatory_inputs": ["project_proposal", "budget_breakdown", "org_registration_docs"]
+    },
+    "merger_acquisition": {
+      "label": "Merger & Acquisition",
+      "required_inputs": ["loi", "due_diligence_report", "financial_audit", "legal_clearance", "board_approval", "regulatory_clearance", "valuation_report", "nda"],
+      "mandatory_inputs": ["loi", "due_diligence_report", "legal_clearance", "board_approval", "regulatory_clearance"]
+    },
+    "customer_kyc": {
+      "label": "Customer KYC",
+      "required_inputs": ["id_proof", "address_proof", "source_of_funds_declaration", "pep_screening_result", "sanctions_check", "risk_rating_form"],
+      "mandatory_inputs": ["id_proof", "address_proof", "pep_screening_result", "sanctions_check"]
+    },
+    "software_procurement": {
+      "label": "Software Procurement",
+      "required_inputs": ["vendor_security_questionnaire", "license_agreement", "it_approval", "data_processing_agreement", "budget_approval", "legal_review"],
+      "mandatory_inputs": ["vendor_security_questionnaire", "license_agreement", "it_approval", "data_processing_agreement"]
+    },
+    "real_estate_closing": {
+      "label": "Real Estate Closing",
+      "required_inputs": ["purchase_agreement", "title_search_report", "property_inspection_report", "mortgage_commitment_letter", "homeowners_insurance", "closing_disclosure", "id_proof"],
+      "mandatory_inputs": ["purchase_agreement", "title_search_report", "mortgage_commitment_letter", "closing_disclosure"]
+    },
+    "export_compliance": {
+      "label": "Export Compliance",
+      "required_inputs": ["export_license", "end_user_certificate", "sanctions_screening_result", "shipping_documentation", "customs_declaration", "country_of_origin_cert"],
+      "mandatory_inputs": ["export_license", "end_user_certificate", "sanctions_screening_result", "customs_declaration"]
+    }
+  }
+}

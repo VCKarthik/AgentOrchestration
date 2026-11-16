@@ -1,0 +1,256 @@
+iaa_contract:
+
+  # ── Nested model definitions ────────────────────────────────────────────────
+  models:
+
+    ProcessStep:
+      description: A single structured step from the process history, richer than a plain string.
+      fields:
+        event_type:
+          type: str
+          required: true
+          description: The event type label that occurred at this step.
+          reasoning: Field(...) — no default provided.
+        actor:
+          type: Optional[str]
+          required: false
+          description: Role label or resource ID of who performed this step.
+          reasoning: Field(None, ...) — defaults to null.
+        timestamp:
+          type: Optional[datetime]
+          required: false
+          description: ISO-8601 datetime of when this step occurred; null for steps without timing data.
+          reasoning: Field(None, ...) — defaults to null.
+        outcome:
+          type: Optional[str]
+          required: false
+          description: Result of this step if known (e.g. 'approved', 'rejected').
+          reasoning: Field(None, ...) — defaults to null.
+
+    PredictedAction:
+      description: One candidate next action with a confidence score and reasoning.
+      fields:
+        action_id:
+          type: str
+          required: true
+          description: Snake_case unique identifier for this predicted action (e.g. 'request_document').
+          reasoning: Field(...) — no default provided.
+        label:
+          type: str
+          required: true
+          description: Human-readable label for display to the user or orchestrator.
+          reasoning: Field(...) — no default provided.
+        confidence:
+          type: float  # range: [0.0, 1.0]
+          required: true
+          description: Model confidence in this action being the correct next step, between 0 and 1.
+          reasoning: Field(...) — no default provided.
+        reasoning:
+          type: str
+          required: true
+          description: Natural-language explanation of why this action was predicted.
+          reasoning: Field(...) — no default provided.
+
+    TaskItem:
+      description: A single actionable task destined for the Delegation Agent.
+      fields:
+        task_id:
+          type: str
+          required: true
+          description: Unique identifier for this task (e.g. 'T001').
+          reasoning: Field(...) — no default provided.
+        action:
+          type: str
+          required: true
+          description: Snake_case action identifier the Delegation Agent will execute.
+          reasoning: Field(...) — no default provided.
+        assigned_role:
+          type: Optional[str]
+          required: false
+          description: Role label for the Delegation Agent to assign this task to.
+          reasoning: Field(None, ...) — defaults to null.
+        priority:
+          type: str  # enum: high | medium | low
+          required: false
+          description: Execution priority of this task; defaults to 'medium'.
+          reasoning: Field("medium", ...) — has a default value.
+        depends_on:
+          type: list[str]
+          required: false
+          description: List of task_ids that must complete before this task can begin.
+          reasoning: default_factory=list — defaults to empty list.
+        reasoning:
+          type: str
+          required: true
+          description: Explanation of why this task is included in the recommendation.
+          reasoning: Field(...) — no default provided.
+
+    WorkflowStep:
+      description: One step in the chronological workflow timeline from case start to end.
+      fields:
+        step:
+          type: int
+          required: true
+          description: Ordinal position of this step in the full workflow sequence.
+          reasoning: Field(...) — no default provided.
+        event_type:
+          type: str
+          required: true
+          description: Event type label identifying what happens at this workflow step.
+          reasoning: Field(...) — no default provided.
+        actor:
+          type: Optional[str]
+          required: false
+          description: Role or resource responsible for executing this step.
+          reasoning: Field(None, ...) — defaults to null.
+        status:
+          type: str  # enum: completed | current | predicted
+          required: true
+          description: Lifecycle state of this step — completed, active, or a future prediction.
+          reasoning: Field(...) — no default provided.
+        timestamp:
+          type: Optional[datetime]
+          required: false
+          description: ISO-8601 datetime for completed or current steps; null for predicted steps.
+          reasoning: Field(None, ...) — defaults to null.
+
+  # ── Primary input ───────────────────────────────────────────────────────────
+  input:
+    model: ProcessState
+    description: >
+      Current state of a process instance, assembled from its event history.
+      This is the primary input the IAA chain reasons over.
+    fields:
+      entity_id:
+        type: str
+        required: true
+        description: Unique identifier for the case, claim, or contract being processed.
+        reasoning: No default — Pydantic treats bare annotation as required.
+      current_stage:
+        type: str
+        required: true
+        description: The process stage the entity is currently in (e.g. 'verification', 'review').
+        reasoning: No default — Pydantic treats bare annotation as required.
+      current_event_type:
+        type: str
+        required: true
+        description: The most recent event type that triggered this IAA invocation.
+        reasoning: No default — Pydantic treats bare annotation as required.
+      timestamp:
+        type: datetime
+        required: true
+        description: ISO-8601 datetime of the current event triggering this prediction.
+        reasoning: No default — Pydantic treats bare annotation as required.
+      prior_actions:
+        type: list[str]
+        required: false
+        description: Ordered list of event_type strings from the case history, oldest first.
+        reasoning: default_factory=list — defaults to empty list.
+      prior_steps:
+        type: list[ProcessStep]
+        required: false
+        description: Structured prior actions including actor and timestamp when available.
+        reasoning: default_factory=list — defaults to empty list.
+      actor:
+        type: Optional[str]
+        required: false
+        description: Role label or resource ID of who triggered the current event.
+        reasoning: Bare = None annotation — Pydantic default is null.
+      metadata:
+        type: dict[str, Any]
+        required: false
+        description: Domain-specific key-value pairs (e.g. amount, priority, SLA hours).
+        reasoning: default_factory=dict — defaults to empty dict.
+      context_summary:
+        type: Optional[str]
+        required: false
+        description: Narrative summary injected by the Context Stitching Agent if available.
+        reasoning: Field(None, ...) — defaults to null; IAA degrades gracefully without it.
+      risk_flags:
+        type: list[str]
+        required: false
+        description: List of risk flag labels raised by the Risk Radar Agent if available.
+        reasoning: default_factory=list — defaults to empty list; upstream agent output is optional.
+      risk_severity:
+        type: Optional[str]  # enum: low | medium | high | critical
+        required: false
+        description: Aggregate severity level from the Risk Radar Agent ('low'/'medium'/'high'/'critical').
+        reasoning: Field(None, ...) — defaults to null; upstream agent output is optional.
+      policy_constraints:
+        type: list[str]
+        required: false
+        description: Active governance policy constraints from the Governance Agent if available.
+        reasoning: default_factory=list — defaults to empty list; upstream agent output is optional.
+      assigned_owner:
+        type: Optional[str]
+        required: false
+        description: Owner already assigned by the Delegation Agent if available upstream.
+        reasoning: Field(None, ...) — defaults to null; upstream agent output is optional.
+      operating_context:
+        type: str  # enum: full | partial — <missing agents>
+        required: false
+        description: Indicates whether all upstream agents contributed ('full') or some were absent.
+        reasoning: Field("full", ...) — has a default value of 'full'.
+
+  # ── Primary output ──────────────────────────────────────────────────────────
+  output:
+    model: ActionRecommendation
+    description: >
+      Structured IAA output, always the same shape regardless of process domain.
+      Consumed by the LangGraph orchestrator and Delegation Agent.
+    fields:
+      predicted_actions:
+        type: list[PredictedAction]  # length: 1–3
+        required: true
+        description: Top 1–3 predicted next actions ranked by confidence score, highest first.
+        reasoning: Field(...) — no default; at least one prediction is mandatory.
+      recommended_action:
+        type: PredictedAction
+        required: true
+        description: The single highest-confidence action to surface to the user or orchestrator.
+        reasoning: Field(...) — no default; a concrete recommendation is always required.
+      override_applied:
+        type: bool
+        required: false
+        description: True when a hard business rule fired and overrode the LLM-generated output.
+        reasoning: Field(False, ...) — defaults to False; most responses are not rule-overridden.
+      override_reason:
+        type: Optional[str]
+        required: false
+        description: Human-readable explanation of which rule fired when override_applied is True.
+        reasoning: Field(None, ...) — defaults to null; only populated on overrides.
+      retrieved_context_ids:
+        type: list[str]
+        required: false
+        description: Vector store chunk IDs used during RAG retrieval, for audit traceability.
+        reasoning: default_factory=list — defaults to empty list; absent when RAG returns nothing.
+      escalate_to_human:
+        type: bool
+        required: false
+        description: True when the IAA determines human review is required before proceeding.
+        reasoning: Field(False, ...) — defaults to False; most cases do not require escalation.
+      operating_context:
+        type: str
+        required: false
+        description: Pass-through of ProcessState.operating_context for audit log correlation.
+        reasoning: Field("full", ...) — has a default value of 'full'.
+      model_used:
+        type: str
+        required: false
+        description: Identifier of the LLM provider used for this invocation (e.g. 'gemini-2.5-flash').
+        reasoning: Field("gemini-2.5-flash", ...) — defaults to the primary model.
+      timestamp:
+        type: datetime
+        required: false
+        description: UTC datetime when this recommendation was generated.
+        reasoning: default_factory=datetime.utcnow — auto-populated at creation time.
+      task_list:
+        type: list[TaskItem]
+        required: false
+        description: Structured task breakdown for the Delegation Agent to consume and assign.
+        reasoning: default_factory=list — defaults to empty list; populated by chain step 3.
+      workflow_timeline:
+        type: list[WorkflowStep]
+        required: false
+        description: Chronological flowchart of case steps from start to predicted end.
+        reasoning: default_factory=list — defaults to empty list; populated by chain step 3.

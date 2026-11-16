@@ -1,0 +1,19 @@
+# Project AMP — Enterprise B2B theme.
+# Light surfaces, navy primary, slate text. Aimed at non-technical
+# stakeholder demos where a corporate tool look reads better than a
+# dark "AI assistant" aesthetic.
+
+[theme]
+base                = "light"
+primaryColor        = "#0F2A47"   # deep navy — refined corporate tone
+backgroundColor     = "#F8FAFC"   # page background (slate-50)
+secondaryBackgroundColor = "#FFFFFF"   # cards, sidebar
+textColor           = "#0F172A"   # near-black slate
+font                = "sans serif"
+
+[server]
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false

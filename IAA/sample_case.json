@@ -1,0 +1,13 @@
+{
+  "entity_id": "FIXTURE-001",
+  "process_type": "document_review",
+  "domain": "operations",
+  "event_type": "documentation_incomplete",
+  "stage": "verification",
+  "prior_actions": ["document_submitted", "document_received"],
+  "next_action": "request_missing_document",
+  "timestamp": "2026-04-01T09:00:00Z",
+  "risk_severity": "medium",
+  "risk_flags": ["missing_required_attachment"],
+  "metadata": {"amount": 15000}
+}

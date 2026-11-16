@@ -1,0 +1,5261 @@
+{
+  "metadata": {
+    "domain": "claim_review",
+    "description": "30 prior claim reviews showing the manual sent_followup pattern across cases. Use as SWA backdrop for claim review demos.",
+    "version": "1.0"
+  },
+  "cases": [
+    {
+      "case_id": "seed_clm_001",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-19T00:02:12.646582+00:00",
+      "closed_at": "2026-04-26T08:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_002",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-23T14:02:12.646582+00:00",
+      "closed_at": "2026-04-30T22:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_003",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-19T02:02:12.646582+00:00",
+      "closed_at": "2026-04-26T10:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_004",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-04T13:02:12.646582+00:00",
+      "closed_at": "2026-04-11T21:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_005",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-02T17:02:12.646582+00:00",
+      "closed_at": "2026-04-10T01:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_006",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-12T18:02:12.646582+00:00",
+      "closed_at": "2026-04-20T02:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_007",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-02T03:02:12.646582+00:00",
+      "closed_at": "2026-04-09T11:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_008",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-24T20:02:12.646582+00:00",
+      "closed_at": "2026-04-01T04:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_009",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-27T16:02:12.646582+00:00",
+      "closed_at": "2026-04-04T00:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_010",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-22T01:02:12.646582+00:00",
+      "closed_at": "2026-04-29T09:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_011",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-14T04:02:12.646582+00:00",
+      "closed_at": "2026-03-21T12:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_012",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-18T21:02:12.646582+00:00",
+      "closed_at": "2026-03-26T05:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_013",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-09T08:02:12.646582+00:00",
+      "closed_at": "2026-04-16T16:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_014",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-10T10:02:12.646582+00:00",
+      "closed_at": "2026-04-17T18:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_015",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-19T13:02:12.646582+00:00",
+      "closed_at": "2026-03-26T21:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_016",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-11T21:02:12.646582+00:00",
+      "closed_at": "2026-04-19T05:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_017",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-19T22:02:12.646582+00:00",
+      "closed_at": "2026-04-27T06:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_018",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-15T14:02:12.646582+00:00",
+      "closed_at": "2026-04-22T22:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_019",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-28T05:02:12.646582+00:00",
+      "closed_at": "2026-04-04T13:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_020",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-07T19:02:12.646582+00:00",
+      "closed_at": "2026-03-15T03:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_021",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-26T16:02:12.646582+00:00",
+      "closed_at": "2026-04-03T00:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_022",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-10T22:02:12.646582+00:00",
+      "closed_at": "2026-04-18T06:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_023",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-24T15:02:12.646582+00:00",
+      "closed_at": "2026-03-31T23:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_024",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-25T10:02:12.646582+00:00",
+      "closed_at": "2026-04-01T18:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_025",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-28T12:02:12.646582+00:00",
+      "closed_at": "2026-04-04T20:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_026",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-31T23:02:12.646582+00:00",
+      "closed_at": "2026-04-08T07:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_027",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-06T23:02:12.646582+00:00",
+      "closed_at": "2026-04-14T07:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_028",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-03-22T23:02:12.646582+00:00",
+      "closed_at": "2026-03-30T07:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_029",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-23T04:02:12.646582+00:00",
+      "closed_at": "2026-04-30T12:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_clm_030",
+      "case_type": "claim_review",
+      "status": "closed",
+      "created_at": "2026-04-19T13:02:12.646582+00:00",
+      "closed_at": "2026-04-26T21:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_id": "seed_clm_020_e00_c289f4",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-07T19:22:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e01_aca3d9",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-07T20:47:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e02_a6000e",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-07T21:26:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_020_e03_0540b7",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-07T22:33:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e04_04edc1",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-08T01:10:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e05_146d58",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-09T21:57:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e06_9488ba",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-11T23:57:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e07_d20888",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-14T01:08:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e00_9466a7",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-14T04:37:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e01_407f08",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-14T05:40:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e02_a09059",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-14T06:51:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_011_e03_e60be6",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-14T07:30:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e04_41f27e",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-14T10:21:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e08_2b5b54",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-14T21:02:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e09_9a175e",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-15T02:28:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_020_e10_a224be",
+      "case_id": "seed_clm_020",
+      "timestamp": "2026-03-15T03:06:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e05_261df2",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-16T06:21:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e06_afc006",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-18T08:41:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e00_d40bf5",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-18T21:37:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e01_fbe833",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-18T22:12:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e02_590dc2",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-18T23:28:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_012_e03_0b5c57",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-19T00:46:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e04_8b5571",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-19T03:20:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e00_ca92bf",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-19T13:39:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e01_a93142",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-19T14:42:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e02_3d1e7c",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-19T15:07:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_015_e03_63e41e",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-19T16:24:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e04_77800c",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-19T19:23:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e07_e5ad76",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-20T10:50:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e05_ea3001",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-20T23:16:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e08_1f36e6",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-21T06:42:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e09_39b452",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-21T11:18:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_011_e10_9341b2",
+      "case_id": "seed_clm_011",
+      "timestamp": "2026-03-21T12:12:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e05_522573",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-21T15:44:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e00_a5bb9b",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-22T23:43:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e01_9da8ae",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-23T00:42:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e06_fd0c6f",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-23T01:47:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e02_63a9f4",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-23T02:00:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_028_e03_d7e38c",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-23T02:43:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e04_0612b4",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-23T05:09:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e06_a1afac",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-23T17:56:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e00_4bf80f",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-24T15:33:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e01_f66e87",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-24T16:16:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e02_abae29",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-24T17:42:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_023_e03_f4988c",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-24T18:31:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e00_edb0a8",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-24T20:21:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e01_c1128b",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-24T21:32:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e04_7d263f",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-24T21:44:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e02_b7539f",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-24T22:29:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_008_e03_fcf1e1",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-24T23:24:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e05_7558f3",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-25T01:04:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e04_a5af24",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-25T02:19:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e07_6fd260",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-25T03:46:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e00_22305e",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-03-25T10:31:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e01_de6a28",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-03-25T11:14:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e02_2cea11",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-03-25T12:56:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_024_e03_ee10f3",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-03-25T13:08:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e04_9c9297",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-03-25T16:26:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e07_2df631",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-25T19:23:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e08_476a90",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-25T23:06:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e09_0325cb",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-26T05:01:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_012_e10_33740c",
+      "case_id": "seed_clm_012",
+      "timestamp": "2026-03-26T05:52:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e08_cf05ff",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-26T15:46:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e00_a71c9b",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-03-26T16:23:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e01_6545ba",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-03-26T17:43:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e05_691b41",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-26T17:59:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e02_b8d94f",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-03-26T18:56:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_021_e03_994a50",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-03-26T19:56:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e09_c224fd",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-26T20:20:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_015_e10_3cae06",
+      "case_id": "seed_clm_015",
+      "timestamp": "2026-03-26T21:54:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e05_c3260f",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-26T22:18:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e04_8cf3f0",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-03-26T22:22:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e06_ebf725",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-27T03:21:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e05_00c219",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-03-27T12:38:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e00_99274b",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-03-27T16:48:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e01_28fc6e",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-03-27T17:08:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e02_92b7a1",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-03-27T18:20:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_009_e03_a59465",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-03-27T19:25:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e04_21dd2b",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-03-27T22:21:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e00_dda8e0",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-03-28T05:48:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e01_12e573",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-03-28T06:55:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e02_7d7cfa",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-03-28T07:57:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_019_e03_36d49d",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-03-28T08:30:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e04_44a021",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-03-28T11:24:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e00_f57981",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-03-28T12:51:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e01_b1ac56",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-03-28T13:40:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e02_0c7e3c",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-03-28T14:16:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_025_e03_ca3e58",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-03-28T15:41:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e04_f888f6",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-03-28T18:45:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e05_a62379",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-03-28T18:57:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e06_6360f8",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-28T19:59:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e06_17e0ca",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-29T00:09:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e07_028290",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-29T05:09:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e06_5bba5c",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-03-29T14:46:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e05_6b5ee9",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-03-29T18:47:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e08_d7741d",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-30T01:17:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e09_1006bc",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-30T06:26:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_028_e10_b8aa95",
+      "case_id": "seed_clm_028",
+      "timestamp": "2026-03-30T07:25:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e05_b5619e",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-03-30T07:37:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e05_fd3a71",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-03-30T14:42:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e06_e2837c",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-03-30T20:41:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e07_620d33",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-30T21:45:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e07_c5d079",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-31T02:22:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e07_9a22fd",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-03-31T16:03:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e08_2c1201",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-31T17:06:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e06_cf452f",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-03-31T20:19:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e09_040456",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-31T22:24:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e08_eb83a5",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-03-31T22:49:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_023_e10_a1cf99",
+      "case_id": "seed_clm_023",
+      "timestamp": "2026-03-31T23:42:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e00_6262b5",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-03-31T23:49:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e01_170fc5",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-01T00:13:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e02_fab37d",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-01T01:10:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_026_e03_f782a5",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-01T02:35:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e09_5ed4fc",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-04-01T03:14:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_008_e10_d5c7d7",
+      "case_id": "seed_clm_008",
+      "timestamp": "2026-04-01T04:49:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e04_584cbe",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-01T05:55:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e06_abe804",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-04-01T09:31:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e08_43ffe6",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-04-01T12:19:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e06_7d8dbc",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-04-01T16:59:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e09_efba13",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-04-01T17:38:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_024_e10_95ace2",
+      "case_id": "seed_clm_024",
+      "timestamp": "2026-04-01T19:00:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e07_f1dbc7",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-04-01T22:17:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e00_52f184",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-02T03:19:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e01_e51b27",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-02T04:37:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e02_98efde",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-02T05:35:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_007_e03_5f6ae6",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-02T06:07:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e04_0989b9",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-02T09:48:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e00_1e9963",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-02T17:36:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e08_644984",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-04-02T18:16:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e01_39003f",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-02T18:44:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e02_b7f7ed",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-02T19:06:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_005_e03_f2ed45",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-02T20:02:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e07_ef6291",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-04-02T22:05:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e09_6e24bc",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-04-02T23:29:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e04_137f92",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-02T23:54:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_021_e10_1983d6",
+      "case_id": "seed_clm_021",
+      "timestamp": "2026-04-03T00:50:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e05_2ae5cf",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-03T01:18:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e07_cf7288",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-04-03T11:57:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e07_676f4c",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-04-03T18:21:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e08_d3957f",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-04-03T18:46:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e09_26890b",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-04-03T23:42:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_009_e10_b221fe",
+      "case_id": "seed_clm_009",
+      "timestamp": "2026-04-04T00:08:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e05_cb62af",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-04T05:33:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e08_2a07c1",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-04-04T07:46:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e09_177286",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-04-04T12:38:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e00_6439f9",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-04T13:12:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_019_e10_e0932d",
+      "case_id": "seed_clm_019",
+      "timestamp": "2026-04-04T13:16:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e08_300110",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-04-04T14:04:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e01_ec91c5",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-04T14:51:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e02_9a4214",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-04T15:21:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_004_e03_948028",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-04T16:39:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e05_30e967",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-04T19:08:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e09_982f97",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-04-04T19:48:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e04_4b1f7e",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-04T20:01:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_025_e10_399ea2",
+      "case_id": "seed_clm_025",
+      "timestamp": "2026-04-04T20:07:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e06_d63d44",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-05T03:53:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e06_d76311",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-06T07:46:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e05_e8c440",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-06T15:38:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e06_90e383",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-06T21:25:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e00_6e2b1c",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-06T23:56:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e01_ace0f3",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-07T00:07:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e02_28808c",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-07T01:02:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_027_e03_02b3e1",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-07T02:36:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e04_53fcd6",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-07T05:31:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e07_bd19c2",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-07T05:49:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e08_d4e7de",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-08T01:53:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e09_68131d",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-08T06:31:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_026_e10_ca862f",
+      "case_id": "seed_clm_026",
+      "timestamp": "2026-04-08T07:11:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e07_89244f",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-08T09:43:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e06_74694b",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-08T17:27:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e07_614787",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-08T23:47:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e05_9cb959",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-09T01:45:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e08_06b8a9",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-09T05:30:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e00_8ed5ac",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-09T08:09:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e01_b6981f",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-09T09:43:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_007_e09_b8eefc",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-09T10:07:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e02_a1dc7e",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-09T11:00:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_007_e10_a0996f",
+      "case_id": "seed_clm_007",
+      "timestamp": "2026-04-09T11:16:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e03_eb86ab",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-09T11:54:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e04_59ba83",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-09T14:06:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e08_66aed2",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-09T19:29:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e09_4afcc3",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-10T00:48:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_005_e10_ecdb4c",
+      "case_id": "seed_clm_005",
+      "timestamp": "2026-04-10T01:41:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e00_c28257",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-10T10:07:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e01_38f83c",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-10T11:58:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e02_9628a0",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-10T12:49:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_014_e03_766f57",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-10T13:40:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e04_18f185",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-10T16:03:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e07_409869",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-10T19:06:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e00_1327e9",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-10T22:12:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e01_72fbe7",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-10T23:59:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e02_10a77c",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-11T00:04:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_022_e03_081620",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-11T01:52:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e06_460ebc",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-11T03:39:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e04_ed66ad",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-11T04:20:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e05_9ef2a0",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-11T10:12:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e08_d05fe7",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-11T15:08:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e09_4c6c41",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-11T20:56:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e00_8f7062",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-11T21:07:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_004_e10_4c01c1",
+      "case_id": "seed_clm_004",
+      "timestamp": "2026-04-11T21:52:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e01_9693ee",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-11T22:18:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e02_341762",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-11T23:09:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_016_e03_43adff",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-12T00:57:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e04_5f55dc",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-12T03:44:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e05_ee10eb",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-12T12:16:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e00_8a6461",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-12T18:29:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e01_f6ef07",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-12T19:22:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e02_f2423c",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-12T20:55:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_006_e03_9d36a7",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-12T21:19:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e04_ef1ce6",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-13T00:17:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e05_cf292f",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-13T00:25:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e07_648f04",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-13T05:54:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e06_37141c",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-13T12:40:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e05_9e648c",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-13T23:28:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e08_1aae9f",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-14T01:08:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e09_16723a",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-14T06:32:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_027_e10_b6bca4",
+      "case_id": "seed_clm_027",
+      "timestamp": "2026-04-14T07:41:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e06_85997e",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-14T14:50:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e05_130dfe",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-14T20:38:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e06_6dfce2",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-15T02:11:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e07_cdc988",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-15T14:30:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e00_384320",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-15T15:01:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e01_dfd335",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-15T15:34:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e02_bc7cbd",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-15T16:28:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_018_e03_d09032",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-15T17:32:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e04_c60a49",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-15T20:31:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e06_974799",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-16T01:14:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e08_089b64",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-16T10:31:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e09_500a8b",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-16T15:46:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_013_e10_228729",
+      "case_id": "seed_clm_013",
+      "timestamp": "2026-04-16T16:19:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e07_66b082",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-16T16:38:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e06_b6548e",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-16T22:23:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e07_c91c39",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-17T04:35:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e08_4e45ee",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-17T12:50:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e05_5e326b",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-17T16:26:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e09_abe588",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-17T17:32:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_014_e10_26d773",
+      "case_id": "seed_clm_014",
+      "timestamp": "2026-04-17T19:00:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e08_7fc733",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-18T00:38:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e07_df2e00",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-18T03:41:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e09_eb11d7",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-18T05:12:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_022_e10_eff750",
+      "case_id": "seed_clm_022",
+      "timestamp": "2026-04-18T06:07:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e08_d3a9c3",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-18T23:42:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e07_2bf22a",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-19T00:33:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e00_e4e3c3",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-19T00:49:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e01_3b0d7b",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-19T01:33:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e00_49d641",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-19T02:05:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e02_451f78",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-19T02:19:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_003_e01_4e5d0e",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-19T03:16:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e03_8ed89f",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-19T03:33:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_016_e09_0c2f9c",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-19T04:50:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e02_e21ce2",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-19T04:51:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_016_e10_75351d",
+      "case_id": "seed_clm_016",
+      "timestamp": "2026-04-19T05:15:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e03_d348df",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-19T05:50:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e04_b21bf1",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-19T06:26:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e04_730b6f",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-19T08:17:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e00_67dcb7",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-19T13:59:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e01_686e53",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-19T14:05:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e02_6b8b0c",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-19T15:19:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_030_e03_e913f4",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-19T16:09:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e06_89c207",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-19T19:00:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e04_c25ce1",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-19T19:07:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e08_325bc0",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-19T20:13:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e00_268cd9",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-19T22:10:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e01_9dda18",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-19T23:30:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e02_754af5",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-20T00:09:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_006_e09_a005d1",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-20T01:15:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e03_0ae2dd",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-20T01:42:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_006_e10_eec15f",
+      "case_id": "seed_clm_006",
+      "timestamp": "2026-04-20T02:53:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e04_f5d0f1",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-20T04:47:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e05_32436c",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-21T02:44:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e05_d5ec66",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-21T04:55:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e05_9113e2",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-21T15:43:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e07_6ef837",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-21T20:57:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e05_f61008",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-22T00:21:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e00_79e06b",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-22T01:20:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e01_d08dfe",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-22T02:32:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e02_599154",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-22T03:23:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_010_e03_bfd685",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-22T04:05:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e04_e28590",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-22T07:57:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e08_7fc36b",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-22T16:19:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e09_7bd76b",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-22T21:23:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_018_e10_dca234",
+      "case_id": "seed_clm_018",
+      "timestamp": "2026-04-22T22:54:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e06_619b2d",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-23T04:48:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e00_a482e7",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-23T04:49:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e01_c8f873",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-23T05:58:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e06_0d97fe",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-23T06:41:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e02_520aa5",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-23T06:43:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_029_e03_facb95",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-23T07:55:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e04_f58120",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-23T10:41:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e00_2d9951",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-23T14:38:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_clm_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e01_49bd4b",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-23T15:07:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e02_45058b",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-23T16:10:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "risk_flagged",
+      "target_entity": "seed_clm_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "pending"
+    },
+    {
+      "event_id": "seed_clm_030_e06_2ed2c1",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-23T17:05:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e03_991edc",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-23T17:13:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e04_a52fe0",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-23T20:18:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e06_ce0c82",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-24T02:37:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e05_e8b6d7",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-24T03:09:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e05_4565cd",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-25T06:19:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e07_80c757",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-25T06:55:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e07_894b3d",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-25T08:17:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e05_ca4ffa",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-25T16:22:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e07_0c0f1f",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-25T19:17:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e08_72a004",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-26T03:00:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e07_81a7b8",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-26T04:07:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e08_dcb73f",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-26T04:32:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e06_b60aad",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-26T05:27:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e09_aaf141",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-26T07:41:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_001_e10_693b86",
+      "case_id": "seed_clm_001",
+      "timestamp": "2026-04-26T09:00:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e09_24a7f0",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-26T09:38:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_003_e10_2f6472",
+      "case_id": "seed_clm_003",
+      "timestamp": "2026-04-26T10:31:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e08_13bc8d",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-26T15:52:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e09_27e146",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-26T20:06:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_030_e10_8db4c2",
+      "case_id": "seed_clm_030",
+      "timestamp": "2026-04-26T21:39:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e08_03b586",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-27T00:55:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e09_862549",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-27T05:31:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_017_e10_5e5c4f",
+      "case_id": "seed_clm_017",
+      "timestamp": "2026-04-27T06:43:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e06_dbf872",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-27T08:46:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e06_494116",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-27T18:31:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e07_84a900",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-28T07:06:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e08_e1c46f",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-29T03:11:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e09_69ed0c",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-29T08:53:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_010_e10_301969",
+      "case_id": "seed_clm_010",
+      "timestamp": "2026-04-29T09:07:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e07_40af15",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-29T10:15:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e07_c4505e",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-29T20:23:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_followup",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e08_4b3e51",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-30T06:30:12.646582+00:00",
+      "actor_id": "claims_adjuster_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e09_62d983",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-30T11:56:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_029_e10_fc3a2a",
+      "case_id": "seed_clm_029",
+      "timestamp": "2026-04-30T12:08:12.646582+00:00",
+      "actor_id": "claims_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e08_ff7cdd",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-30T16:19:12.646582+00:00",
+      "actor_id": "fraud_review@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "claimant_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e09_2f92c7",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-30T21:18:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_clm_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_clm_002_e10_e2cf98",
+      "case_id": "seed_clm_002",
+      "timestamp": "2026-04-30T22:32:12.646582+00:00",
+      "actor_id": "claims_adjuster_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_clm_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 10
+      },
+      "outcome": "success"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "task_id": "T1001",
+  "workflow_type": "vendor_onboarding",
+  "workflow_state": "compliance_review",
+  "priority": "P2",
+  "created_at": "2026-04-16T12:52:16.311756+00:00",
+  "last_updated": "2026-04-18T08:52:16.311756+00:00",
+  "due_date": "2026-04-26T12:52:16.311756+00:00",
+  "sla_deadline": "2026-04-25T12:52:16.311756+00:00",
+  "required_inputs": [
+    "tax_form",
+    "compliance_certificate",
+    "bank_details"
+  ],
+  "received_inputs": [
+    "tax_form",
+    "compliance_certificate",
+    "bank_details"
+  ],
+  "mandatory_inputs": [
+    "tax_form",
+    "compliance_certificate"
+  ],
+  "dependency_status": "clear",
+  "blocker_flag": false,
+  "stakeholder_priority": "standard",
+  "policy_flag": false,
+  "prior_delay_count": 0,
+  "prior_escalation_count": 0
+}

@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Work Agent v3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f7f8fa;
+      --bg-hover: #eef0f4;
+      --border: #e3e6ec;
+      --border-strong: #d0d5dd;
+      --text: #101828;
+      --text-secondary: #475467;
+      --text-muted: #98a2b3;
+      --accent: #0f172a;
+      --accent-soft: #f1f4f9;
+      --success: #027a48;
+      --success-bg: #ecfdf3;
+      --warn: #b54708;
+      --warn-bg: #fffaeb;
+      --danger: #b42318;
+      --danger-bg: #fef3f2;
+      --info: #1849a9;
+      --info-bg: #eff8ff;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      font-size: 14px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 24px;
+      height: 56px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    header .brand {
+      display: flex; align-items: center; gap: 10px;
+    }
+    header .brand-mark {
+      width: 28px; height: 28px;
+      background: var(--accent);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: -0.02em;
+    }
+    header h1 {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    header h1 .ver {
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-left: 4px;
+    }
+    header .divider {
+      width: 1px;
+      height: 20px;
+      background: var(--border);
+    }
+    header .crumb {
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    header .right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* LLM status pill */
+    .llm-status {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 11px; border-radius: 6px;
+      font-size: 12px; font-weight: 500;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+    }
+    .llm-status .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--text-muted);
+    }
+    .llm-status.active   { color: var(--success); border-color: #abefc6; background: var(--success-bg); }
+    .llm-status.active .dot { background: var(--success); box-shadow: 0 0 0 3px rgba(2,122,72,0.15); }
+    .llm-status.error    { color: var(--danger);  border-color: #fecdca; background: var(--danger-bg); }
+    .llm-status.error .dot { background: var(--danger); }
+    .llm-status.checking .dot { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    .llm-tooltip { position: relative; cursor: default; }
+    .llm-tooltip .tip {
+      display: none; position: absolute; right: 0; top: calc(100% + 6px);
+      background: var(--accent); color: #fff;
+      border-radius: 6px; padding: 8px 12px;
+      font-size: 12px; line-height: 1.5;
+      white-space: nowrap; z-index: 100;
+      box-shadow: 0 4px 12px rgba(16,24,40,0.15);
+    }
+    .llm-tooltip:hover .tip { display: block; }
+
+    /* ── LAYOUT ── */
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr 400px;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      background: var(--bg-soft);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    .sidebar-section { padding: 16px 16px 12px; }
+    .sidebar-section + .sidebar-section { padding-top: 0; }
+    .field-label {
+      display: block;
+      font-size: 11px; font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .select-wrap {
+      position: relative;
+    }
+    .select-wrap::after {
+      content: '';
+      position: absolute;
+      right: 12px; top: 50%;
+      width: 8px; height: 8px;
+      border-right: 1.5px solid var(--text-secondary);
+      border-bottom: 1.5px solid var(--text-secondary);
+      transform: translateY(-70%) rotate(45deg);
+      pointer-events: none;
+    }
+    select {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border-strong);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 8px 32px 8px 12px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      appearance: none;
+      cursor: pointer; outline: none;
+      transition: border-color 0.12s, box-shadow 0.12s;
+    }
+    select:hover { border-color: var(--text-secondary); }
+    select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(15,23,42,0.08); }
+
+    .cases-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 16px;
+      border-top: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .cases-header .title {
+      font-size: 11px; font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .count-pill {
+      background: var(--bg);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      font-size: 11px; font-weight: 600;
+      padding: 1px 7px; border-radius: 99px;
+      min-width: 24px; text-align: center;
+    }
+
+    .cases-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0 8px 12px;
+    }
+    .case-item {
+      padding: 10px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 1px;
+      transition: background 0.1s;
+      border: 1px solid transparent;
+    }
+    .case-item:hover { background: var(--bg-hover); }
+    .case-item.active {
+      background: var(--bg);
+      border-color: var(--border-strong);
+      box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+    }
+    .case-item .cid {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .case-item .meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .status-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .status-dot.open { background: var(--success); }
+    .status-dot.in_progress { background: var(--warn); }
+    .status-dot.closed { background: var(--text-muted); }
+
+    .empty-state {
+      padding: 40px 16px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* ── CENTER PANEL ── */
+    .panel {
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      background: var(--bg);
+      border-right: 1px solid var(--border);
+    }
+    .tabs-bar {
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      flex-shrink: 0;
+      height: 48px;
+      gap: 4px;
+    }
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding: 0 14px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.12s, border-color 0.12s;
+      user-select: none;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      font-weight: 600;
+    }
+    .tab-count {
+      display: inline-block;
+      background: var(--bg-soft);
+      color: var(--text-secondary);
+      font-size: 11px; font-weight: 600;
+      padding: 1px 6px; border-radius: 99px;
+      min-width: 22px; text-align: center;
+    }
+    .tab.active .tab-count {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .panel-body { flex: 1; overflow-y: auto; padding: 24px; }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+
+    /* placeholder */
+    .placeholder {
+      height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      color: var(--text-muted);
+      text-align: center;
+      gap: 8px;
+      min-height: 240px;
+    }
+    .placeholder .ph-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--bg-soft);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted);
+    }
+    .placeholder .ph-icon svg { width: 18px; height: 18px; }
+    .placeholder p { font-size: 13px; color: var(--text-secondary); }
+
+    /* ── CASE META ── */
+    .case-meta-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+    .case-meta-top {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 16px; margin-bottom: 14px;
+    }
+    .case-id {
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .case-type {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 24px;
+    }
+    .meta-field label {
+      display: block;
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--text-muted); margin-bottom: 2px;
+    }
+    .meta-field .val {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 12px; font-weight: 500;
+      padding: 2px 9px; border-radius: 99px;
+      border: 1px solid;
+    }
+    .pill.open { color: var(--success); background: var(--success-bg); border-color: #abefc6; }
+    .pill.in_progress { color: var(--warn); background: var(--warn-bg); border-color: #fedf89; }
+    .pill.closed { color: var(--text-secondary); background: var(--bg-soft); border-color: var(--border-strong); }
+
+    /* ── OUTCOME STAT CARDS ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .stat-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .stat-card .label {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+    .stat-card .label .marker {
+      width: 8px; height: 8px; border-radius: 2px;
+    }
+    .stat-card.success .marker { background: var(--success); }
+    .stat-card.pending .marker { background: var(--warn); }
+    .stat-card.failed .marker  { background: var(--danger); }
+    .stat-card .num {
+      font-size: 24px; font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .stat-card .delta {
+      font-size: 11px; color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-head {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .section-head h3 {
+      font-size: 13px; font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .section-head .meta-text {
+      font-size: 12px; color: var(--text-muted);
+    }
+
+    /* ── DATA TABLE ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .data-table th {
+      text-align: left;
+      padding: 9px 14px;
+      font-size: 11px; font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border);
+    }
+    .data-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+      font-size: 13px;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:hover td { background: var(--bg-soft); }
+
+    .mono { font-family: var(--mono); font-size: 12px; }
+    .badge-sm {
+      display: inline-block;
+      font-size: 11px; font-weight: 500;
+      padding: 1px 7px; border-radius: 4px;
+      border: 1px solid;
+    }
+    .badge-sm.success { color: var(--success); background: var(--success-bg); border-color: #abefc6; }
+    .badge-sm.pending { color: var(--warn);    background: var(--warn-bg);    border-color: #fedf89; }
+    .badge-sm.failed  { color: var(--danger);  background: var(--danger-bg);  border-color: #fecdca; }
+    .badge-sm.recommend { color: var(--success); background: var(--success-bg); border-color: #abefc6; }
+    .badge-sm.watch     { color: var(--warn);    background: var(--warn-bg);    border-color: #fedf89; }
+    .badge-sm.escalate  { color: var(--danger);  background: var(--danger-bg);  border-color: #fecdca; }
+    .badge-sm.info      { color: var(--info);    background: var(--info-bg);    border-color: #b2ddff; }
+
+    .actor-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+    .actor-tag.agent { color: var(--info); }
+    .actor-tag.human { color: var(--warn); }
+
+    /* ── DECISION HERO CARD ── */
+    .verdict-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .verdict-top {
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .verdict-left { flex: 1; min-width: 0; }
+    .verdict-eyebrow {
+      font-size: 11px; font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    .verdict-eyebrow strong { color: var(--text); }
+
+    .verdict-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: -0.01em;
+      border: 1px solid;
+    }
+    .verdict-pill.recommend { color: var(--success); background: var(--success-bg); border-color: #abefc6; }
+    .verdict-pill.watch     { color: var(--warn);    background: var(--warn-bg);    border-color: #fedf89; }
+    .verdict-pill.escalate  { color: var(--danger);  background: var(--danger-bg);  border-color: #fecdca; }
+
+    .verdict-meta-row {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 3px 9px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .chip strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .chip.risk-low strong    { color: var(--success); }
+    .chip.risk-medium strong { color: var(--warn); }
+    .chip.risk-high strong   { color: var(--danger); }
+
+    .verdict-score {
+      flex-shrink: 0;
+      text-align: right;
+      padding-left: 12px;
+      border-left: 1px solid var(--border);
+    }
+    .verdict-score .num {
+      font-size: 32px; font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .verdict-score .num small {
+      font-size: 16px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .verdict-score .lbl {
+      font-size: 11px; font-weight: 500;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 4px;
+    }
+
+    .verdict-section {
+      padding: 14px 20px;
+      border-top: 1px solid var(--border);
+    }
+    .verdict-section .section-title {
+      font-size: 11px; font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+    }
+
+    /* ── CONTRIBUTING PATTERNS TABLE ── */
+    .pattern-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .pattern-table td {
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .pattern-table tr:last-child td { border-bottom: none; }
+    .pattern-table .sig { font-family: var(--mono); color: var(--text); }
+    .pattern-table .det { color: var(--text-muted); padding: 0 8px; white-space: nowrap; }
+    .pattern-table .num { color: var(--text-secondary); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+    /* ── AUTOMATION BLOCK ── */
+    .automation-block {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-top: 16px;
+    }
+    .automation-block .a-eyebrow {
+      font-size: 11px; font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+    .automation-block .a-row {
+      display: flex; gap: 8px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .automation-block .a-row + .a-row { margin-top: 3px; }
+    .automation-block .a-key {
+      color: var(--text-muted);
+      width: 64px;
+      flex-shrink: 0;
+      font-size: 12px;
+    }
+    .automation-block .a-val {
+      color: var(--text);
+      flex: 1;
+    }
+    .automation-block .a-val strong {
+      font-weight: 600;
+    }
+
+    /* ── ACTIVITY LOG ── */
+    .right-panel {
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      background: var(--bg-soft);
+    }
+    .right-head {
+      padding: 0 20px;
+      height: 48px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .right-head h2 {
+      font-size: 13px; font-weight: 600;
+      color: var(--text);
+    }
+    .right-body { flex: 1; overflow-y: auto; padding: 12px 16px; }
+
+    .log-row {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .log-row:last-child { border-bottom: none; }
+    .log-time {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.4;
+    }
+    .log-time .date { color: var(--text-secondary); font-weight: 500; }
+    .log-content { min-width: 0; }
+    .log-line1 {
+      display: flex; align-items: center; gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .log-action-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 1px 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+    }
+    .log-by {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .log-target {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .log-target strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .log-context {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-family: var(--mono);
+      line-height: 1.5;
+      word-break: break-all;
+    }
+    .log-context .k { color: var(--info); }
+    .log-outcome-marker {
+      width: 4px; border-radius: 4px;
+    }
+    .log-outcome-marker.success { background: var(--success); }
+    .log-outcome-marker.pending { background: var(--warn); }
+    .log-outcome-marker.failed  { background: var(--danger); }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+    /* spinner */
+    .spinner {
+      width: 18px; height: 18px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin: 48px auto;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .no-data {
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-mark">SW</div>
+    <h1>Shadow Work Agent <span class="ver">v3</span></h1>
+  </div>
+  <div class="divider"></div>
+  <div class="crumb">Case Intelligence</div>
+  <div class="right">
+    <div class="llm-tooltip">
+      <div class="llm-status checking" id="llmStatus">
+        <span class="dot"></span>
+        <span id="llmLabel">Checking…</span>
+      </div>
+      <div class="tip" id="llmTip">Contacting Gemini API…</div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <label class="field-label" for="domainSelect">Workflow Domain</label>
+      <div class="select-wrap">
+        <select id="domainSelect">
+          <option value="">Select a domain</option>
+        </select>
+      </div>
+    </div>
+    <div class="cases-header">
+      <span class="title">Cases</span>
+      <span class="count-pill" id="caseCount">0</span>
+    </div>
+    <div class="cases-list" id="casesList">
+      <div class="empty-state">Select a domain to view cases</div>
+    </div>
+  </aside>
+
+  <!-- ── CENTER PANEL ── -->
+  <section class="panel">
+    <div class="tabs-bar">
+      <div class="tab active" data-tab="overview">Overview</div>
+      <div class="tab" data-tab="findings">
+        Recommendations <span class="tab-count" id="findingsCount">—</span>
+      </div>
+      <div class="tab" data-tab="escalations">
+        Escalations <span class="tab-count" id="escalationsCount">—</span>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="tab-pane active" id="pane-overview">
+        <div class="placeholder">
+          <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+          <p>Select a case to see its outcomes and metadata</p>
+        </div>
+      </div>
+      <div class="tab-pane" id="pane-findings">
+        <div class="placeholder">
+          <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <p>Select a case to see recommendations</p>
+        </div>
+      </div>
+      <div class="tab-pane" id="pane-escalations">
+        <div class="placeholder">
+          <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <p>Select a case to see escalations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RIGHT PANEL ── -->
+  <aside class="right-panel">
+    <div class="right-head">
+      <h2>Activity Log</h2>
+      <span class="count-pill" id="logCount" style="display:none">0</span>
+    </div>
+    <div class="right-body" id="logsPanel">
+      <div class="placeholder" style="height:100%">
+        <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+        <p>Activity events appear here</p>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  const domainSelect = $('domainSelect');
+  const casesList    = $('casesList');
+  const caseCount    = $('caseCount');
+  const logsPanel    = $('logsPanel');
+  const logCount     = $('logCount');
+  const findingsCount = $('findingsCount');
+  const escalationsCount = $('escalationsCount');
+
+  // ── TABS ─────────────────────────────────────────────
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      $('pane-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  // ── HELPERS ──────────────────────────────────────────
+  const fmtDate = (iso) => {
+    if (!iso) return '—';
+    const d = new Date(iso);
+    return d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' })
+      + ' · ' + d.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit', hour12: false });
+  };
+  const fmtTime = (iso) => {
+    if (!iso) return '—';
+    const d = new Date(iso);
+    return `<div class="date">${d.toLocaleDateString('en-US',{month:'short',day:'numeric'})}</div>`
+      + d.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',hour12:false});
+  };
+  const pill = (s) => `<span class="pill ${s}">${s.replace('_',' ')}</span>`;
+  const badge = (kind, label) => `<span class="badge-sm ${kind}">${label}</span>`;
+  const spinner = () => '<div class="spinner"></div>';
+  const titleCase = (s) => s.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+  // ── LOAD DOMAINS ─────────────────────────────────────
+  async function loadDomains() {
+    const data = await (await fetch('/api/domains')).json();
+    data.forEach(d => {
+      const opt = document.createElement('option');
+      opt.value = d.domain;
+      opt.textContent = `${titleCase(d.domain)} (${d.count})`;
+      domainSelect.appendChild(opt);
+    });
+  }
+
+  // ── DOMAIN CHANGE ─────────────────────────────────────
+  domainSelect.addEventListener('change', async () => {
+    const domain = domainSelect.value;
+    resetPanels();
+    if (!domain) {
+      caseCount.textContent = '0';
+      casesList.innerHTML = '<div class="empty-state">Select a domain to view cases</div>';
+      return;
+    }
+    casesList.innerHTML = spinner();
+    const cases = await (await fetch(`/api/cases/${encodeURIComponent(domain)}`)).json();
+    caseCount.textContent = cases.length;
+    if (!cases.length) {
+      casesList.innerHTML = '<div class="empty-state">No cases in this domain</div>';
+      return;
+    }
+    casesList.innerHTML = cases.map(c => `
+      <div class="case-item" data-id="${c.case_id}" onclick="selectCase('${c.case_id}', this)">
+        <div class="cid">${c.case_id}</div>
+        <div class="meta">
+          <span class="status-dot ${c.status}"></span>
+          <span>${c.status.replace('_',' ')}</span>
+          <span style="margin-left:auto">${c.event_count} events</span>
+        </div>
+      </div>
+    `).join('');
+  });
+
+  function resetPanels() {
+    $('pane-overview').innerHTML =
+      `<div class="placeholder">
+         <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+         <p>Select a case to see its outcomes and metadata</p>
+       </div>`;
+    $('pane-findings').innerHTML =
+      `<div class="placeholder">
+         <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+         <p>Select a case to see recommendations</p>
+       </div>`;
+    $('pane-escalations').innerHTML =
+      `<div class="placeholder">
+         <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg></div>
+         <p>Select a case to see escalations</p>
+       </div>`;
+    logsPanel.innerHTML =
+      `<div class="placeholder" style="height:100%">
+         <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+         <p>Activity events appear here</p>
+       </div>`;
+    findingsCount.textContent = '—';
+    escalationsCount.textContent = '—';
+    logCount.style.display = 'none';
+  }
+
+  // ── SELECT CASE ───────────────────────────────────────
+  async function selectCase(caseId, el) {
+    document.querySelectorAll('.case-item').forEach(e => e.classList.remove('active'));
+    el.classList.add('active');
+
+    $('pane-overview').innerHTML = spinner();
+    $('pane-findings').innerHTML = spinner();
+    $('pane-escalations').innerHTML = spinner();
+    logsPanel.innerHTML = spinner();
+
+    const [detail, analysis] = await Promise.all([
+      fetch(`/api/case/${encodeURIComponent(caseId)}`).then(r => r.json()),
+      fetch(`/api/case/${encodeURIComponent(caseId)}/analysis`).then(r => r.json()),
+    ]);
+
+    renderOverview(detail);
+    renderRecommendation(analysis.recommendation);
+    renderEscalation(analysis.escalation);
+    renderLogs(detail.events || []);
+  }
+
+  // ── RENDER OVERVIEW ───────────────────────────────────
+  function renderOverview(data) {
+    const c = data.case;
+    const o = data.outcome_summary;
+    const total = o.success + o.pending + o.failed;
+    const pct = (n) => total ? Math.round(n/total*100) : 0;
+
+    const domainMeta = Object.entries(c.domain_metadata || {})
+      .map(([k,v]) => `<div class="meta-field"><label>${k.replace(/_/g,' ')}</label><div class="val">${v}</div></div>`)
+      .join('');
+
+    $('pane-overview').innerHTML = `
+      <div class="case-meta-card">
+        <div class="case-meta-top">
+          <div>
+            <div class="case-id">${c.case_id}</div>
+            <div class="case-type">${titleCase(c.case_type)}</div>
+          </div>
+          ${pill(c.status)}
+        </div>
+        <div class="meta-grid">
+          <div class="meta-field"><label>Opened</label><div class="val">${fmtDate(c.created_at)}</div></div>
+          <div class="meta-field"><label>Closed</label><div class="val">${fmtDate(c.closed_at)}</div></div>
+          ${domainMeta}
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card success">
+          <div class="label"><span class="marker"></span>Success</div>
+          <div class="num">${o.success}</div>
+          <div class="delta">${pct(o.success)}% of events</div>
+        </div>
+        <div class="stat-card pending">
+          <div class="label"><span class="marker"></span>Pending</div>
+          <div class="num">${o.pending}</div>
+          <div class="delta">${pct(o.pending)}% of events</div>
+        </div>
+        <div class="stat-card failed">
+          <div class="label"><span class="marker"></span>Failed</div>
+          <div class="num">${o.failed}</div>
+          <div class="delta">${pct(o.failed)}% of events</div>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h3>Events</h3>
+        <span class="meta-text">${total} total</span>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Action</th><th>Actor</th><th>Target</th><th style="text-align:right">Outcome</th></tr>
+        </thead>
+        <tbody>
+          ${data.events.map(e => `
+            <tr>
+              <td><span class="mono">${e.action_type}</span></td>
+              <td><span class="actor-tag ${e.actor_type}">${e.actor_id}</span></td>
+              <td style="color:var(--text-secondary)">${e.target_entity}</td>
+              <td style="text-align:right">${badge(e.outcome, e.outcome)}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    `;
+  }
+
+  // ── RENDER RECOMMENDATION ─────────────────────────────
+  function renderRecommendation(rec) {
+    findingsCount.textContent = rec ? rec.pattern_count : 0;
+    if (!rec) {
+      $('pane-findings').innerHTML = '<div class="no-data">No recommendations identified for this case.</div>';
+      return;
+    }
+
+    const ar = rec.automation_recommendation || {};
+    const ts = rec.temporal_signature || {};
+    const confPct = Math.round((rec.aggregate_confidence || 0) * 100);
+
+    const patternRows = (rec.patterns || []).map(p => `
+      <tr>
+        <td class="sig">${p.signature}</td>
+        <td class="det">${p.detector}</td>
+        <td class="num">${Math.round((p.confidence||0)*100)}% · ${p.occurrences}×</td>
+      </tr>
+    `).join('');
+
+    $('pane-findings').innerHTML = `
+      <div class="verdict-card">
+        <div class="verdict-top">
+          <div class="verdict-left">
+            <div class="verdict-eyebrow">
+              Decision · derived from <strong>${rec.pattern_count}</strong>
+              ${rec.pattern_count === 1 ? 'pattern' : 'corroborating patterns'}
+            </div>
+            <span class="verdict-pill ${rec.decision}">${rec.decision.toUpperCase()}</span>
+            ${rec.requires_human_approval
+              ? `<span class="badge-sm info" style="margin-left:6px">Human approval required</span>` : ''}
+            <div class="verdict-meta-row">
+              <div class="chip">Occurrences <strong>${rec.total_occurrences}</strong></div>
+              <div class="chip risk-${rec.risk_level}">Risk <strong>${rec.risk_level}</strong></div>
+              ${ts.mean_interval_hours != null
+                ? `<div class="chip">Avg interval <strong>${ts.mean_interval_hours}h</strong></div>` : ''}
+              ${ts.regularity_score != null
+                ? `<div class="chip">Regularity <strong>${(ts.regularity_score*100).toFixed(0)}%</strong></div>` : ''}
+              ${rec.actors_involved.length
+                ? `<div class="chip">Actors <strong>${rec.actors_involved.length}</strong></div>` : ''}
+            </div>
+          </div>
+          <div class="verdict-score">
+            <div class="num">${confPct}<small>%</small></div>
+            <div class="lbl">Aggregate Confidence</div>
+          </div>
+        </div>
+
+        <div class="verdict-section">
+          <div class="section-title">Contributing patterns</div>
+          <table class="pattern-table">${patternRows}</table>
+        </div>
+
+        ${ar.type ? `
+        <div class="verdict-section" style="background:var(--bg-soft)">
+          <div class="section-title">Proposed automation</div>
+          <div class="automation-block" style="margin-top:0;background:var(--bg)">
+            <div class="a-row"><div class="a-key">Type</div><div class="a-val"><strong>${ar.type}</strong></div></div>
+            <div class="a-row"><div class="a-key">Trigger</div><div class="a-val">${ar.trigger}</div></div>
+            <div class="a-row"><div class="a-key">Action</div><div class="a-val">${ar.action}</div></div>
+            ${ar.estimated_time_saved_per_week_hours
+              ? `<div class="a-row"><div class="a-key">Saves</div><div class="a-val"><strong>${ar.estimated_time_saved_per_week_hours}h / week</strong></div></div>` : ''}
+          </div>
+        </div>` : ''}
+      </div>
+    `;
+  }
+
+  // ── RENDER ESCALATION ─────────────────────────────────
+  function renderEscalation(esc) {
+    escalationsCount.textContent = esc ? esc.pattern_count : 0;
+    if (!esc) {
+      $('pane-escalations').innerHTML = '<div class="no-data">No escalations identified for this case.</div>';
+      return;
+    }
+
+    const patternRows = (esc.patterns || []).map(p => `
+      <tr>
+        <td class="sig" style="color:var(--danger)">${p.signature}</td>
+        <td class="num">${p.occurrences}×</td>
+      </tr>
+    `).join('');
+
+    const summaryBlock = (esc.summaries || []).slice(0, 3).map(s =>
+      `<div style="font-size:13px;color:var(--text);line-height:1.6;margin-bottom:8px">${s}</div>`
+    ).join('');
+
+    const reasonBlock = [...new Set(esc.reasons || [])].map(r =>
+      `<div style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;padding-left:10px;border-left:2px solid var(--border-strong)">${r}</div>`
+    ).join('');
+
+    $('pane-escalations').innerHTML = `
+      <div class="verdict-card">
+        <div class="verdict-top">
+          <div class="verdict-left">
+            <div class="verdict-eyebrow">
+              Escalation · consolidated from <strong>${esc.pattern_count}</strong>
+              flagged ${esc.pattern_count === 1 ? 'pattern' : 'patterns'}
+            </div>
+            <span class="verdict-pill escalate">REQUIRES REVIEW</span>
+            <div class="verdict-meta-row">
+              <div class="chip">Occurrences <strong>${esc.total_occurrences}</strong></div>
+              <div class="chip">Evidence events <strong>${esc.evidence_count}</strong></div>
+              ${esc.recommended_human_roles.length
+                ? `<div class="chip">Reviewer <strong>${esc.recommended_human_roles.join(' / ')}</strong></div>` : ''}
+            </div>
+          </div>
+          <div class="verdict-score">
+            <div class="num">${esc.total_occurrences}</div>
+            <div class="lbl">Flagged Events</div>
+          </div>
+        </div>
+
+        ${summaryBlock || reasonBlock ? `
+        <div class="verdict-section">
+          <div class="section-title">Summary for reviewer</div>
+          ${summaryBlock}
+          ${reasonBlock}
+        </div>` : ''}
+
+        ${esc.pattern_count > 1 ? `
+        <div class="verdict-section" style="background:var(--bg-soft)">
+          <div class="section-title">Flagged patterns</div>
+          <table class="pattern-table">${patternRows}</table>
+        </div>` : ''}
+      </div>
+    `;
+  }
+
+  // ── RENDER LOGS ───────────────────────────────────────
+  function renderLogs(events) {
+    if (!events.length) {
+      logsPanel.innerHTML = '<div class="no-data">No activity logs found</div>';
+      logCount.style.display = 'none';
+      return;
+    }
+    logCount.textContent = events.length;
+    logCount.style.display = 'inline-block';
+
+    logsPanel.innerHTML = events.map(e => {
+      const ctx = e.context_payload || {};
+      const ctxLines = Object.entries(ctx)
+        .map(([k,v]) => `<span class="k">${k}:</span> ${typeof v === 'string' ? v : JSON.stringify(v)}`)
+        .join('  ·  ');
+
+      return `
+        <div class="log-row">
+          <div class="log-time">${fmtTime(e.timestamp)}</div>
+          <div style="display:flex;gap:10px;align-items:stretch">
+            <div class="log-outcome-marker ${e.outcome}"></div>
+            <div class="log-content">
+              <div class="log-line1">
+                <span class="log-action-tag">${e.action_type}</span>
+                <span class="log-by">by <span class="actor-tag ${e.actor_type}">${e.actor_id}</span></span>
+                ${badge(e.outcome, e.outcome)}
+              </div>
+              <div class="log-target">
+                <strong>${e.target_entity}</strong>
+                <span style="color:var(--text-muted)"> · ${e.target_entity_type.replace(/_/g,' ')}</span>
+              </div>
+              ${ctxLines ? `<div class="log-context">${ctxLines}</div>` : ''}
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // ── LLM STATUS ────────────────────────────────────────
+  async function checkLlmStatus() {
+    try {
+      const data = await (await fetch('/api/llm-status')).json();
+      $('llmStatus').className = `llm-status ${data.status === 'no_key' ? 'error' : data.status}`;
+      $('llmLabel').textContent = data.label;
+      $('llmTip').innerHTML = `<strong>${data.model}</strong><br>${data.detail}`;
+    } catch {
+      $('llmStatus').className = 'llm-status error';
+      $('llmLabel').textContent = 'Status check failed';
+      $('llmTip').textContent = 'Could not reach /api/llm-status';
+    }
+  }
+
+  // ── INIT ──────────────────────────────────────────────
+  checkLlmStatus();
+  loadDomains();
+</script>
+</body>
+</html>

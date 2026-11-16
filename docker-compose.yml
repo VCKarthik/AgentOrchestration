@@ -1,0 +1,117 @@
+version: "3.9"
+
+# ── Shared agent defaults ─────────────────────────────────────────────────────
+# Agent containers all share: same image, same env, same volume mounts.
+# CMD is the only per-service difference.
+x-agent: &agent
+  build:
+    context: .
+    dockerfile: Dockerfile
+  env_file: .env
+  volumes:
+    - ./infra:/app/infra
+    - ./data:/app/data
+    - ./logs:/app/logs
+  depends_on:
+    init:
+      condition: service_completed_successfully
+  restart: unless-stopped
+
+services:
+  # ── Qdrant vector store ─────────────────────────────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+    volumes:
+      - ./infra/qdrant_store:/qdrant/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── One-shot initialiser — runs before agents start ─────────────────────────
+  init:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    volumes:
+      - ./infra:/app/infra
+      - ./data:/app/data
+    environment:
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    command: python data/init_db.py
+    restart: "no"
+
+  # ── CSA — Context Stitching Agent ───────────────────────────────────────────
+  csa:
+    <<: *agent
+    ports:
+      - "8001:8001"
+    command: uvicorn CSA.api.main:app --host 0.0.0.0 --port 8001
+
+  # ── RRA — Risk Radar Agent ──────────────────────────────────────────────────
+  rra:
+    <<: *agent
+    ports:
+      - "8002:8002"
+    command: uvicorn RRA.api:app --host 0.0.0.0 --port 8002
+
+  # ── IAA — Intent Anticipation Agent ─────────────────────────────────────────
+  iaa:
+    <<: *agent
+    ports:
+      - "8003:8003"
+    environment:
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+    command: uvicorn IAA.agent.api:app --host 0.0.0.0 --port 8003
+
+  # ── GPA — Governance & Policy Agent ─────────────────────────────────────────
+  gpa:
+    <<: *agent
+    ports:
+      - "8004:8004"
+    environment:
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+    command: uvicorn GPA.app:app --host 0.0.0.0 --port 8004
+
+  # ── DA — Delegation Agent ────────────────────────────────────────────────────
+  da:
+    <<: *agent
+    ports:
+      - "8005:8005"
+    command: uvicorn DA.delegation_agent.api:app --host 0.0.0.0 --port 8005
+
+  # ── Dashboard — Streamlit client (imports orchestrator directly) ─────────────
+  # SWA has no HTTP server — it is imported by the orchestrator inside this container.
+  dashboard:
+    <<: *agent
+    ports:
+      - "8501:8501"
+    environment:
+      - CSA_URL=http://csa:8001
+      - RRA_URL=http://rra:8002
+      - IAA_URL=http://iaa:8003
+      - GPA_URL=http://gpa:8004
+      - DA_URL=http://da:8005
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+    depends_on:
+      - csa
+      - rra
+      - iaa
+      - gpa
+      - da
+    command: >
+      streamlit run demo/app.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.headless=true

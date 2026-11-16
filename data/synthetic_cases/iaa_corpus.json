@@ -1,0 +1,717 @@
+[
+  {
+    "case_id": "CASE-VO-0001",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 17788.54,
+    "executive_summary": "Vendor Onboarding — Case 1 — Automated intake for vendor_onboarding case CASE-VO-0001. Difficulty: happy.",
+    "resolution": "Assign to domain specialist"
+  },
+  {
+    "case_id": "CASE-VO-0002",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 5500.22,
+    "executive_summary": "Vendor Onboarding — Case 2 — Automated intake for vendor_onboarding case CASE-VO-0002. Difficulty: happy.",
+    "resolution": "Schedule review meeting"
+  },
+  {
+    "case_id": "CASE-VO-0003",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 10500.59,
+    "executive_summary": "Vendor Onboarding — Case 3 — Automated intake for vendor_onboarding case CASE-VO-0003. Difficulty: happy.",
+    "resolution": "Assign to domain specialist"
+  },
+  {
+    "case_id": "CASE-VO-0004",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 9464.21,
+    "executive_summary": "Vendor Onboarding — Case 4 — Automated intake for vendor_onboarding case CASE-VO-0004. Difficulty: happy.",
+    "resolution": "Approve and forward to delegation"
+  },
+  {
+    "case_id": "CASE-VO-0005",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 19729.42,
+    "executive_summary": "Vendor Onboarding — Case 5 — Automated intake for vendor_onboarding case CASE-VO-0005. Difficulty: happy.",
+    "resolution": "Approve and forward to delegation"
+  },
+  {
+    "case_id": "CASE-VO-0006",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 18533.99,
+    "executive_summary": "Vendor Onboarding — Case 6 — Automated intake for vendor_onboarding case CASE-VO-0006. Difficulty: happy.",
+    "resolution": "Assign to domain specialist"
+  },
+  {
+    "case_id": "CASE-VO-0007",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 22843.59,
+    "executive_summary": "Vendor Onboarding — Case 7 — Automated intake for vendor_onboarding case CASE-VO-0007. Difficulty: happy.",
+    "resolution": "Schedule review meeting"
+  },
+  {
+    "case_id": "CASE-VO-0008",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 6738.78,
+    "executive_summary": "Vendor Onboarding — Case 8 — Automated intake for vendor_onboarding case CASE-VO-0008. Difficulty: happy.",
+    "resolution": "Assign to domain specialist"
+  },
+  {
+    "case_id": "CASE-VO-0009",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 46096.09,
+    "executive_summary": "Vendor Onboarding — Case 9 — Automated intake for vendor_onboarding case CASE-VO-0009. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-VO-0010",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 26489.86,
+    "executive_summary": "Vendor Onboarding — Case 10 — Automated intake for vendor_onboarding case CASE-VO-0010. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-VO-0011",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 35931.9,
+    "executive_summary": "Vendor Onboarding — Case 11 — Automated intake for vendor_onboarding case CASE-VO-0011. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-VO-0012",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 50267.76,
+    "executive_summary": "Vendor Onboarding — Case 12 — Automated intake for vendor_onboarding case CASE-VO-0012. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-VO-0013",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 26326.8,
+    "executive_summary": "Vendor Onboarding — Case 13 — Automated intake for vendor_onboarding case CASE-VO-0013. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-VO-0014",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 34941.88,
+    "executive_summary": "Vendor Onboarding — Case 14 — Automated intake for vendor_onboarding case CASE-VO-0014. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-VO-0015",
+    "case_type": "vendor_onboarding",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 57494.22,
+    "executive_summary": "Vendor Onboarding — Case 15 — Automated intake for vendor_onboarding case CASE-VO-0015. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-VO-0016",
+    "case_type": "vendor_onboarding",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 143117.69,
+    "executive_summary": "Vendor Onboarding — Case 16 — Automated intake for vendor_onboarding case CASE-VO-0016. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-VO-0017",
+    "case_type": "vendor_onboarding",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 102555.08,
+    "executive_summary": "Vendor Onboarding — Case 17 — Automated intake for vendor_onboarding case CASE-VO-0017. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-VO-0018",
+    "case_type": "vendor_onboarding",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 148658.21,
+    "executive_summary": "Vendor Onboarding — Case 18 — Automated intake for vendor_onboarding case CASE-VO-0018. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-VO-0019",
+    "case_type": "vendor_onboarding",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 176178.81,
+    "executive_summary": "Vendor Onboarding — Case 19 — Automated intake for vendor_onboarding case CASE-VO-0019. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-VO-0020",
+    "case_type": "vendor_onboarding",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "procurement",
+      "compliance",
+      "vendor_management"
+    ],
+    "monetary_value": 75812.34,
+    "executive_summary": "Vendor Onboarding — Case 20 — Automated intake for vendor_onboarding case CASE-VO-0020. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-CL-0021",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 42232.77,
+    "executive_summary": "Claim Review — Case 21 — Automated intake for claim_review case CASE-CL-0021. Difficulty: happy.",
+    "resolution": "Approve and forward to delegation"
+  },
+  {
+    "case_id": "CASE-CL-0022",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 37925.58,
+    "executive_summary": "Claim Review — Case 22 — Automated intake for claim_review case CASE-CL-0022. Difficulty: happy.",
+    "resolution": "Schedule review meeting"
+  },
+  {
+    "case_id": "CASE-CL-0023",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 23610.02,
+    "executive_summary": "Claim Review — Case 23 — Automated intake for claim_review case CASE-CL-0023. Difficulty: happy.",
+    "resolution": "Schedule review meeting"
+  },
+  {
+    "case_id": "CASE-CL-0024",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 16219.18,
+    "executive_summary": "Claim Review — Case 24 — Automated intake for claim_review case CASE-CL-0024. Difficulty: happy.",
+    "resolution": "Assign to domain specialist"
+  },
+  {
+    "case_id": "CASE-CL-0025",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 48288.52,
+    "executive_summary": "Claim Review — Case 25 — Automated intake for claim_review case CASE-CL-0025. Difficulty: happy.",
+    "resolution": "Schedule review meeting"
+  },
+  {
+    "case_id": "CASE-CL-0026",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 23463.78,
+    "executive_summary": "Claim Review — Case 26 — Automated intake for claim_review case CASE-CL-0026. Difficulty: happy.",
+    "resolution": "Schedule review meeting"
+  },
+  {
+    "case_id": "CASE-CL-0027",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 59274.58,
+    "executive_summary": "Claim Review — Case 27 — Automated intake for claim_review case CASE-CL-0027. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-CL-0028",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 59671.64,
+    "executive_summary": "Claim Review — Case 28 — Automated intake for claim_review case CASE-CL-0028. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-CL-0029",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 134749.44,
+    "executive_summary": "Claim Review — Case 29 — Automated intake for claim_review case CASE-CL-0029. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-CL-0030",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 110372.6,
+    "executive_summary": "Claim Review — Case 30 — Automated intake for claim_review case CASE-CL-0030. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-CL-0031",
+    "case_type": "claim_review",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 130712.83,
+    "executive_summary": "Claim Review — Case 31 — Automated intake for claim_review case CASE-CL-0031. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-CL-0032",
+    "case_type": "claim_review",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 405406.13,
+    "executive_summary": "Claim Review — Case 32 — Automated intake for claim_review case CASE-CL-0032. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-CL-0033",
+    "case_type": "claim_review",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 337679.83,
+    "executive_summary": "Claim Review — Case 33 — Automated intake for claim_review case CASE-CL-0033. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-CL-0034",
+    "case_type": "claim_review",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 490590.52,
+    "executive_summary": "Claim Review — Case 34 — Automated intake for claim_review case CASE-CL-0034. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-CL-0035",
+    "case_type": "claim_review",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "claims_processing",
+      "adjudication",
+      "documentation_review"
+    ],
+    "monetary_value": 282487.03,
+    "executive_summary": "Claim Review — Case 35 — Automated intake for claim_review case CASE-CL-0035. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-FR-0036",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 39841.83,
+    "executive_summary": "Fraud Investigation — Case 36 — Automated intake for fraud_investigation case CASE-FR-0036. Difficulty: happy.",
+    "resolution": "Approve and forward to delegation"
+  },
+  {
+    "case_id": "CASE-FR-0037",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 52323.21,
+    "executive_summary": "Fraud Investigation — Case 37 — Automated intake for fraud_investigation case CASE-FR-0037. Difficulty: happy.",
+    "resolution": "Assign to domain specialist"
+  },
+  {
+    "case_id": "CASE-FR-0038",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 42833.39,
+    "executive_summary": "Fraud Investigation — Case 38 — Automated intake for fraud_investigation case CASE-FR-0038. Difficulty: happy.",
+    "resolution": "Schedule review meeting"
+  },
+  {
+    "case_id": "CASE-FR-0039",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 53776.81,
+    "executive_summary": "Fraud Investigation — Case 39 — Automated intake for fraud_investigation case CASE-FR-0039. Difficulty: happy.",
+    "resolution": "Approve and forward to delegation"
+  },
+  {
+    "case_id": "CASE-FR-0040",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 40980.85,
+    "executive_summary": "Fraud Investigation — Case 40 — Automated intake for fraud_investigation case CASE-FR-0040. Difficulty: happy.",
+    "resolution": "Assign to domain specialist"
+  },
+  {
+    "case_id": "CASE-FR-0041",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "medium",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 46705.73,
+    "executive_summary": "Fraud Investigation — Case 41 — Automated intake for fraud_investigation case CASE-FR-0041. Difficulty: happy.",
+    "resolution": "Schedule review meeting"
+  },
+  {
+    "case_id": "CASE-FR-0042",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 66415.41,
+    "executive_summary": "Fraud Investigation — Case 42 — Automated intake for fraud_investigation case CASE-FR-0042. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-FR-0043",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 91905.76,
+    "executive_summary": "Fraud Investigation — Case 43 — Automated intake for fraud_investigation case CASE-FR-0043. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-FR-0044",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 100514.31,
+    "executive_summary": "Fraud Investigation — Case 44 — Automated intake for fraud_investigation case CASE-FR-0044. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-FR-0045",
+    "case_type": "fraud_investigation",
+    "outcome": "assigned",
+    "priority": "high",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 71170.88,
+    "executive_summary": "Fraud Investigation — Case 45 — Automated intake for fraud_investigation case CASE-FR-0045. Difficulty: partial.",
+    "resolution": "Request missing document"
+  },
+  {
+    "case_id": "CASE-FR-0046",
+    "case_type": "fraud_investigation",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 386232.71,
+    "executive_summary": "Fraud Investigation — Case 46 — Automated intake for fraud_investigation case CASE-FR-0046. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-FR-0047",
+    "case_type": "fraud_investigation",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 280801.14,
+    "executive_summary": "Fraud Investigation — Case 47 — Automated intake for fraud_investigation case CASE-FR-0047. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-FR-0048",
+    "case_type": "fraud_investigation",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 422378.88,
+    "executive_summary": "Fraud Investigation — Case 48 — Automated intake for fraud_investigation case CASE-FR-0048. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-FR-0049",
+    "case_type": "fraud_investigation",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 708547.56,
+    "executive_summary": "Fraud Investigation — Case 49 — Automated intake for fraud_investigation case CASE-FR-0049. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  },
+  {
+    "case_id": "CASE-FR-0050",
+    "case_type": "fraud_investigation",
+    "outcome": "escalated",
+    "priority": "critical",
+    "required_skills": [
+      "fraud_analysis",
+      "investigation",
+      "legal",
+      "forensic_accounting"
+    ],
+    "monetary_value": 491865.74,
+    "executive_summary": "Fraud Investigation — Case 50 — Automated intake for fraud_investigation case CASE-FR-0050. Difficulty: escalation.",
+    "resolution": "Escalate to human reviewer"
+  }
+]

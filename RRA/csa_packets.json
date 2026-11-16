@@ -1,0 +1,200 @@
+{
+  "packets": {
+    "CASE-1001": {
+      "task_id": "CSA-20260421170034-F8AE4D",
+      "task_text": "Context fetch for CASE-1001 (claim_review)",
+      "case_id": "CASE-1001",
+      "case_type": "claim_review",
+      "timestamp": "2026-04-21T17:00:34Z",
+      "context": {
+        "emails": [
+          {"id": "E001", "subject": "Policy #4821 - Initial Claim Submission", "sender": "john.doe@insurer.com", "recipients": ["claims@insurer.com"], "date": "2026-03-10 09:15:00", "body": "Dear team, please find attached the initial claim for policy #4821. Water damage to property on March 5th.", "attachments": ["claim_form_4821.pdf", "photos_damage.zip"]},
+          {"id": "E002", "subject": "Re: Policy #4821 - Missing Documentation"},
+          {"id": "E003", "subject": "Re: Policy #4821 - Documents Submitted"}
+        ],
+        "documents": [
+          {"id": "D001", "filename": "policy_4821.pdf",       "file_type": "pdf"},
+          {"id": "D002", "filename": "claim_form_4821.pdf",   "file_type": "pdf"},
+          {"id": "D003", "filename": "plumber_invoice.pdf",   "file_type": "pdf"},
+          {"id": "D004", "filename": "repair_estimate.pdf",   "file_type": "pdf"}
+        ],
+        "calendar_events": [
+          {"id": "EV001", "title": "Claim Adjuster Review - Policy #4821", "start_time": "2026-03-18 10:00:00", "end_time": "2026-03-18 11:00:00", "attendees": ["adjuster.smith@insurer.com", "john.doe@insurer.com"], "location": "Conference Room B / Zoom", "status": "confirmed"},
+          {"id": "EV002", "title": "Site Inspection - Policy #4821"}
+        ],
+        "case_history": [
+          {"id": "H001", "event_type": "created",  "actor": "system",                 "notes": "Case created on receipt of initial claim.",  "status": "pending"},
+          {"id": "H002", "event_type": "updated",  "actor": "adjuster.smith@insurer.com", "notes": "Requested additional docs.",            "status": "pending"},
+          {"id": "H003", "event_type": "updated",  "actor": "john.doe@insurer.com",      "notes": "Client submitted documents.",            "status": "pending"},
+          {"id": "H004", "event_type": "reviewed", "actor": "adjuster.smith@insurer.com", "notes": "Documents verified. Inspection scheduled.", "status": "pending"}
+        ]
+      },
+      "validation": {"status": "COMPLETE", "missing_fields": [], "warnings": [], "confidence_score": 1.0, "total_chunks": 13},
+      "meta": {"total_sources": 13, "sql_hits": 13, "qdrant_hits": 0, "keywords_used": [], "retrieval_method": "exact_match_sql"}
+    },
+
+    "CASE-1002": {
+      "task_id": "CSA-20260423091000-A12B34",
+      "case_id": "CASE-1002",
+      "case_type": "vendor_review",
+      "timestamp": "2026-04-23T09:10:00Z",
+      "context": {
+        "emails": [
+          {"id": "E101", "subject": "Vendor onboarding - Acme Corp", "sender": "procurement@company.com", "date": "2026-04-22 15:00:00", "body": "Acme has submitted initial onboarding paperwork.", "attachments": ["acme_tax_form_w9.pdf", "acme_bank_details.pdf"]}
+        ],
+        "documents": [
+          {"id": "D101", "filename": "acme_tax_form_w9.pdf",   "file_type": "pdf"},
+          {"id": "D102", "filename": "acme_bank_details.pdf",  "file_type": "pdf"},
+          {"id": "D103", "filename": "acme_insurance_cert.pdf","file_type": "pdf"}
+        ],
+        "calendar_events": [],
+        "case_history": [
+          {"id": "H101", "event_type": "created", "actor": "system",              "notes": "Vendor onboarding initiated.",                  "status": "pending"},
+          {"id": "H102", "event_type": "updated", "actor": "procurement@company.com","notes": "Awaiting compliance certificate from vendor.", "status": "pending"}
+        ]
+      },
+      "validation": {"status": "COMPLETE", "missing_fields": [], "warnings": [], "confidence_score": 0.95, "total_chunks": 4}
+    },
+
+    "CASE-1003": {
+      "task_id": "CSA-20260424124500-9F8E1C",
+      "case_id": "CASE-1003",
+      "case_type": "contract_review",
+      "timestamp": "2026-04-24T12:45:00Z",
+      "context": {
+        "emails": [
+          {"id": "E201", "subject": "URGENT: Contract approval needed - SLA tomorrow", "sender": "legal@company.com", "date": "2026-04-23 18:00:00", "body": "Need legal sign-off on draft contract by EOD tomorrow.", "attachments": ["draft_contract_v3.pdf"]}
+        ],
+        "documents": [
+          {"id": "D201", "filename": "draft_contract_v3.pdf", "file_type": "pdf"}
+        ],
+        "calendar_events": [
+          {"id": "EV201", "title": "Legal Review - Contract", "start_time": "2026-04-25 10:00:00", "end_time": "2026-04-25 11:00:00", "status": "tentative"}
+        ],
+        "case_history": [
+          {"id": "H201", "event_type": "created",   "actor": "legal@company.com", "notes": "Contract submitted for review.",            "status": "pending"},
+          {"id": "H202", "event_type": "escalated", "actor": "legal@company.com", "notes": "Escalated due to deadline pressure.",       "status": "escalated"},
+          {"id": "H203", "event_type": "delayed",   "actor": "legal@company.com", "notes": "Counterparty has not provided ID document.", "status": "pending"}
+        ]
+      },
+      "validation": {"status": "COMPLETE", "missing_fields": [], "warnings": ["High priority workflow"], "confidence_score": 1.0, "total_chunks": 5}
+    },
+
+    "CASE-1004": {
+      "task_id": "CSA-20260425080000-44CC22",
+      "case_id": "CASE-1004",
+      "case_type": "kyc_review",
+      "timestamp": "2026-04-25T08:00:00Z",
+      "context": {
+        "emails": [
+          {"id": "E301", "subject": "KYC review - Customer #9921", "sender": "compliance@bank.com", "date": "2026-04-22 09:30:00", "body": "Initial KYC docs received. Sanctions/PEP screening still pending.", "attachments": ["customer_id_proof.pdf", "address_proof_utility_bill.pdf"]}
+        ],
+        "documents": [
+          {"id": "D301", "filename": "customer_id_proof.pdf",          "file_type": "pdf"},
+          {"id": "D302", "filename": "address_proof_utility_bill.pdf", "file_type": "pdf"}
+        ],
+        "calendar_events": [],
+        "case_history": [
+          {"id": "H301", "event_type": "created",   "actor": "system",              "notes": "KYC review opened.",                            "status": "pending"},
+          {"id": "H302", "event_type": "delayed",   "actor": "compliance@bank.com", "notes": "Sanctions screening service down.",             "status": "blocked"},
+          {"id": "H303", "event_type": "delayed",   "actor": "compliance@bank.com", "notes": "Awaiting PEP screening result.",                "status": "blocked"},
+          {"id": "H304", "event_type": "delayed",   "actor": "compliance@bank.com", "notes": "Customer reached out asking for status.",       "status": "blocked"},
+          {"id": "H305", "event_type": "escalated", "actor": "compliance@bank.com", "notes": "Escalated to regulatory liaison.",              "status": "escalated"},
+          {"id": "H306", "event_type": "escalated", "actor": "compliance@bank.com", "notes": "Re-escalated — still blocked.",                 "status": "escalated"}
+        ]
+      },
+      "validation": {"status": "PARTIAL", "missing_fields": ["sla_deadline"], "warnings": ["Regulatory deadline approaching"], "confidence_score": 0.78, "total_chunks": 9}
+    },
+
+    "CASE-1005": {
+      "task_id": "CSA-20260427093000-77AA01",
+      "case_id": "CASE-1005",
+      "case_type": "payment_review",
+      "timestamp": "2026-04-27T09:30:00Z",
+      "context": {
+        "emails": [
+          {"id": "E401", "subject": "Payment package - Vendor Acme - INV001", "sender": "ap@company.com", "date": "2026-04-26 14:00:00", "body": "All paperwork attached. Approver has signed off.", "attachments": ["invoice_INV001.pdf", "purchase_order_PO789.pdf", "approver_signoff.pdf"]}
+        ],
+        "documents": [
+          {"id": "D401", "filename": "invoice_INV001.pdf",         "file_type": "pdf"},
+          {"id": "D402", "filename": "purchase_order_PO789.pdf",   "file_type": "pdf"},
+          {"id": "D403", "filename": "approver_signoff.pdf",       "file_type": "pdf"},
+          {"id": "D404", "filename": "vendor_bank_details.pdf",    "file_type": "pdf"},
+          {"id": "D405", "filename": "tax_invoice_INV001.pdf",     "file_type": "pdf"},
+          {"id": "D406", "filename": "budget_code_FY26Q2.pdf",     "file_type": "pdf"}
+        ],
+        "calendar_events": [
+          {"id": "EV401", "title": "Payment Run - INV001", "start_time": "2026-05-12 10:00:00", "end_time": "2026-05-15 17:00:00", "status": "confirmed"}
+        ],
+        "case_history": [
+          {"id": "H401", "event_type": "created",  "actor": "system",         "notes": "Payment package created.",     "status": "pending"},
+          {"id": "H402", "event_type": "reviewed", "actor": "ap@company.com", "notes": "AP team reviewed paperwork.", "status": "complete"},
+          {"id": "H403", "event_type": "approved", "actor": "cfo@company.com","notes": "Approver signed off.",        "status": "approved"}
+        ]
+      },
+      "validation": {"status": "COMPLETE", "missing_fields": [], "warnings": [], "confidence_score": 1.0, "total_chunks": 7}
+    },
+
+    "CASE-1006": {
+      "task_id": "CSA-20260427100000-88BB02",
+      "case_id": "CASE-1006",
+      "case_type": "onboarding_review",
+      "timestamp": "2026-04-27T10:00:00Z",
+      "context": {
+        "emails": [
+          {"id": "E501", "subject": "New hire onboarding - Jane Smith", "sender": "hr@company.com", "date": "2026-04-25 11:00:00", "body": "All onboarding paperwork is in. Ready for kickoff.", "attachments": ["offer_letter_jane.pdf", "id_verification_passport.pdf"]}
+        ],
+        "documents": [
+          {"id": "D501", "filename": "offer_letter_jane.pdf",         "file_type": "pdf"},
+          {"id": "D502", "filename": "id_verification_passport.pdf",  "file_type": "pdf"},
+          {"id": "D503", "filename": "background_check_clear.pdf",    "file_type": "pdf"},
+          {"id": "D504", "filename": "tax_withholding_w4.pdf",        "file_type": "pdf"},
+          {"id": "D505", "filename": "signed_nda_jane.pdf",           "file_type": "pdf"},
+          {"id": "D506", "filename": "direct_deposit_form.pdf",       "file_type": "pdf"},
+          {"id": "D507", "filename": "equipment_request_laptop.pdf",  "file_type": "pdf"}
+        ],
+        "calendar_events": [
+          {"id": "EV501", "title": "Onboarding kickoff - Jane Smith", "start_time": "2026-05-04 09:00:00", "end_time": "2026-05-04 10:00:00", "status": "confirmed"}
+        ],
+        "case_history": [
+          {"id": "H501", "event_type": "created",  "actor": "system",         "notes": "Onboarding case opened.",  "status": "pending"},
+          {"id": "H502", "event_type": "updated",  "actor": "hr@company.com", "notes": "Documents collected.",     "status": "pending"},
+          {"id": "H503", "event_type": "reviewed", "actor": "hr@company.com", "notes": "All paperwork verified.",  "status": "complete"}
+        ]
+      },
+      "validation": {"status": "COMPLETE", "missing_fields": [], "warnings": [], "confidence_score": 0.98, "total_chunks": 8}
+    },
+
+    "CASE-1007": {
+      "task_id": "CSA-20260427110000-99CC03",
+      "case_id": "CASE-1007",
+      "case_type": "payment_review",
+      "timestamp": "2026-04-27T11:00:00Z",
+      "context": {
+        "emails": [
+          {"id": "E601", "subject": "Repeated payment - vendor Beta - INV998", "sender": "ap@company.com", "date": "2026-04-26 09:00:00", "body": "All docs received. Note: this vendor has had several past delays.", "attachments": ["invoice_INV998.pdf", "purchase_order_PO998.pdf"]}
+        ],
+        "documents": [
+          {"id": "D601", "filename": "invoice_INV998.pdf",       "file_type": "pdf"},
+          {"id": "D602", "filename": "purchase_order_PO998.pdf", "file_type": "pdf"},
+          {"id": "D603", "filename": "approver_signoff.pdf",     "file_type": "pdf"},
+          {"id": "D604", "filename": "vendor_bank_details.pdf",  "file_type": "pdf"},
+          {"id": "D605", "filename": "budget_code_FY26Q2.pdf",   "file_type": "pdf"},
+          {"id": "D606", "filename": "tax_invoice_INV998.pdf",   "file_type": "pdf"}
+        ],
+        "calendar_events": [
+          {"id": "EV601", "title": "Payment Run - INV998", "start_time": "2026-05-08 10:00:00", "end_time": "2026-05-10 17:00:00", "status": "confirmed"}
+        ],
+        "case_history": [
+          {"id": "H601", "event_type": "created",   "actor": "system",         "notes": "Case created.",                                "status": "pending"},
+          {"id": "H602", "event_type": "delayed",   "actor": "ap@company.com", "notes": "Vendor late submitting bank details.",         "status": "pending"},
+          {"id": "H603", "event_type": "delayed",   "actor": "ap@company.com", "notes": "Vendor late again.",                           "status": "pending"},
+          {"id": "H604", "event_type": "delayed",   "actor": "ap@company.com", "notes": "Third delay this quarter.",                    "status": "pending"},
+          {"id": "H605", "event_type": "escalated", "actor": "manager@company.com", "notes": "Pattern flagged to procurement.",         "status": "escalated"},
+          {"id": "H606", "event_type": "approved",  "actor": "cfo@company.com","notes": "All docs now received. Final approval given.", "status": "approved"}
+        ]
+      },
+      "validation": {"status": "COMPLETE", "missing_fields": [], "warnings": [], "confidence_score": 1.0, "total_chunks": 11}
+    }
+  }
+}

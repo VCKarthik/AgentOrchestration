@@ -1,0 +1,14 @@
+.env
+# ADK session databases (all locations)
+.adk/*.db
+agent/.adk/
+# Qdrant runtime files
+qdrant_store/.lock
+qdrant_store/meta.json
+qdrant_store/collection/
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+# Runtime logs
+data/predictions.jsonl

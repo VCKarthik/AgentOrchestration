@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# SQLite runtime files
+*.db-shm
+*.db-wal
+*.sqlite-shm
+*.sqlite-wal
+
+# Runtime databases (not source)
+infra/state.db
+infra/swa.db
+infra/_test.db
+infra/qdrant_store/
+GPA/governance_agent.db
+governance_agent.db
+ref/csa.db
+SWA/swa_v3.db
+swa_v3.db
+CSA/data/csa.db
+IAA/qdrant_store/
+IAA/data/predictions.jsonl
+
+# Logs & PID files
+logs/
+output/
+*.log
+*.pids
+
+# ADK / Claude session state
+.adk/
+orchestrator/.adk/
+.claude/settings.local.json
+
+# CSA runtime outputs
+CSA/data/outputs/
+CSA/data/csa.db-shm
+CSA/data/csa.db-wal
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.db-journal
+*.sqlite-journal

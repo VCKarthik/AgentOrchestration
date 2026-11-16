@@ -1,0 +1,70 @@
+[
+  {
+    "task_id": "T1001",
+    "workflow_state": "compliance_review",
+    "priority": "P2",
+    "risk_items": [],
+    "overall_risk_level": "low",
+    "can_proceed": "proceed",
+    "escalate_to_human": false,
+    "escalation_target": null,
+    "reasoning_summary": "This case was classified as LOW risk due to the absence of detected risks. The recommendation is to PROCEED because no adverse factors necessitate further evaluation or mitigation.",
+    "operating_context": "full",
+    "model_used": "rules-plus-llm-summary",
+    "timestamp": "2026-04-18T02:59:26.323105+00:00"
+  },
+  {
+    "task_id": "T1002",
+    "workflow_state": "compliance_review",
+    "priority": "P1",
+    "risk_items": [
+      {
+        "risk_type": "missing_input",
+        "severity": "medium",
+        "reason": "Non-mandatory input(s) missing: ['insurance_cert']. Workflow may proceed but output quality may be reduced.",
+        "blocking": false
+      },
+      {
+        "risk_type": "deadline_risk",
+        "severity": "low",
+        "reason": "SLA within 19.7h.",
+        "blocking": false
+      }
+    ],
+    "overall_risk_level": "medium",
+    "can_proceed": "caution",
+    "escalate_to_human": false,
+    "escalation_target": null,
+    "reasoning_summary": "This case is classified as MEDIUM risk because missing mandatory inputs may reduce output quality, potentially impacting business operations. The CAUTION recommendation advises caution while proceeding with the onboarding process, as it may compromise the quality of output.",
+    "operating_context": "full",
+    "model_used": "rules-plus-llm-summary",
+    "timestamp": "2026-04-18T02:59:26.840043+00:00"
+  },
+  {
+    "task_id": "T1003",
+    "workflow_state": "compliance_review",
+    "priority": "P1",
+    "risk_items": [
+      {
+        "risk_type": "missing_input",
+        "severity": "critical",
+        "reason": "Mandatory input(s) missing: ['compliance_certificate']. Workflow cannot safely proceed without these.",
+        "blocking": true
+      },
+      {
+        "risk_type": "deadline_risk",
+        "severity": "critical",
+        "reason": "SLA breached by 2.3h. Severity elevated due to 3 prior delays on similar cases.",
+        "blocking": true
+      }
+    ],
+    "overall_risk_level": "critical",
+    "can_proceed": "hold",
+    "escalate_to_human": true,
+    "escalation_target": "task_owner",
+    "reasoning_summary": "This case was classified as CRITICAL risk due to the missing compliance certificate and breached Service Level Agreement (SLA) with a 2.3-hour delay, further exacerbated by three prior delays on similar cases. The recommendation to HOLD is to prevent workflow progression and ensure that the vendor onboarding process meets the necessary compliance and timing requirements.",
+    "operating_context": "full",
+    "model_used": "rules-plus-llm-summary",
+    "timestamp": "2026-04-18T02:59:27.527141+00:00"
+  }
+]

@@ -1,0 +1,4811 @@
+{
+  "metadata": {
+    "domain": "interview_scheduling",
+    "description": "30 prior interview schedulings with repeated reminder patterns. Use as SWA backdrop for interview scheduling demos.",
+    "version": "1.0"
+  },
+  "cases": [
+    {
+      "case_id": "seed_int_001",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-23T23:02:12.646582+00:00",
+      "closed_at": "2026-03-28T03:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_002",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-05T10:02:12.646582+00:00",
+      "closed_at": "2026-03-09T14:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_003",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-07T18:02:12.646582+00:00",
+      "closed_at": "2026-03-11T22:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_004",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-23T00:02:12.646582+00:00",
+      "closed_at": "2026-04-27T04:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_005",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-07T02:02:12.646582+00:00",
+      "closed_at": "2026-04-11T06:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_006",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-20T13:02:12.646582+00:00",
+      "closed_at": "2026-04-24T17:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_007",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-23T05:02:12.646582+00:00",
+      "closed_at": "2026-03-27T09:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_008",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-27T09:02:12.646582+00:00",
+      "closed_at": "2026-03-31T13:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_009",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-11T19:02:12.646582+00:00",
+      "closed_at": "2026-04-15T23:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_010",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-14T12:02:12.646582+00:00",
+      "closed_at": "2026-04-18T16:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_011",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-29T19:02:12.646582+00:00",
+      "closed_at": "2026-04-02T23:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_012",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-07T16:02:12.646582+00:00",
+      "closed_at": "2026-03-11T20:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_013",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-03T23:02:12.646582+00:00",
+      "closed_at": "2026-04-08T03:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_014",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-18T08:02:12.646582+00:00",
+      "closed_at": "2026-04-22T12:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_015",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-12T16:02:12.646582+00:00",
+      "closed_at": "2026-04-16T20:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_016",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-30T13:02:12.646582+00:00",
+      "closed_at": "2026-04-03T17:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_017",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-12T21:02:12.646582+00:00",
+      "closed_at": "2026-03-17T01:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_018",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-24T02:02:12.646582+00:00",
+      "closed_at": "2026-04-28T06:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_019",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-30T12:02:12.646582+00:00",
+      "closed_at": "2026-04-03T16:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_020",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-20T11:02:12.646582+00:00",
+      "closed_at": "2026-03-24T15:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_021",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-07T19:02:12.646582+00:00",
+      "closed_at": "2026-03-11T23:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_022",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-05T16:02:12.646582+00:00",
+      "closed_at": "2026-04-09T20:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_023",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-17T18:02:12.646582+00:00",
+      "closed_at": "2026-03-21T22:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_024",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-11T01:02:12.646582+00:00",
+      "closed_at": "2026-03-15T05:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_025",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-10T20:02:12.646582+00:00",
+      "closed_at": "2026-03-15T00:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_026",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-04-24T00:02:12.646582+00:00",
+      "closed_at": "2026-04-28T04:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_027",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-09T20:02:12.646582+00:00",
+      "closed_at": "2026-03-14T00:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_028",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-15T11:02:12.646582+00:00",
+      "closed_at": "2026-03-19T15:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_029",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-21T06:02:12.646582+00:00",
+      "closed_at": "2026-03-25T10:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_int_030",
+      "case_type": "interview_scheduling",
+      "status": "closed",
+      "created_at": "2026-03-27T09:02:12.646582+00:00",
+      "closed_at": "2026-03-31T13:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_id": "seed_int_002_e00_9dc467",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-05T10:13:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e01_51740a",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-05T11:05:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e02_49de8f",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-05T13:49:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e03_a2e766",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-06T10:35:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e04_22964a",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-07T09:49:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e05_adc6d4",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-07T11:32:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e06_bc1b4e",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-07T12:51:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e07_0a1d48",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-07T13:34:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e00_9f52a6",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-07T16:29:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e01_641117",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-07T17:31:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e00_dc7c64",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-07T18:48:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e00_bee185",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-07T19:28:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e01_5ad031",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-07T19:31:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e02_8bb8ff",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-07T19:57:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e01_47036c",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-07T20:45:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e02_10a03c",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-07T21:03:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e02_4f2f94",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-07T22:17:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e08_8dfcbb",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-08T10:08:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e03_87f1eb",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-08T16:38:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e03_d2cde2",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-08T18:32:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e03_71d476",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-08T19:41:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_002_e09_a1e97f",
+      "case_id": "seed_int_002",
+      "timestamp": "2026-03-09T14:34:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e04_4c8200",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-09T15:38:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e04_569561",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-09T17:29:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e05_67c8a1",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-09T17:47:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e06_901496",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-09T18:20:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e04_4a559a",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-09T18:50:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e07_8e5d26",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-09T19:27:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e05_afc85b",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-09T19:33:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e06_d2b623",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-09T20:06:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e05_1b30c2",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-09T20:16:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e00_956a69",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-09T20:35:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e06_221e1d",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-09T21:21:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e07_539016",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-09T21:22:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e01_fd5b0d",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-09T21:26:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e07_4c6b91",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-09T22:59:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e02_fa93bb",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-09T23:04:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e08_732502",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-10T16:22:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e08_effa9e",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-10T18:11:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e08_ab9c69",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-10T19:25:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e00_38554a",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-10T20:03:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e03_bdde72",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-10T20:25:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e01_ed1200",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-10T21:15:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e02_8ccada",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-10T23:37:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e00_ca95a5",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-11T01:25:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e01_e4de97",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-11T02:03:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e02_da8bbe",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-11T05:01:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e04_cb521c",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-11T19:49:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e03_2f04b6",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-11T20:09:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_012_e09_222cd3",
+      "case_id": "seed_int_012",
+      "timestamp": "2026-03-11T20:53:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e05_54346b",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-11T21:24:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_003_e09_b68e2d",
+      "case_id": "seed_int_003",
+      "timestamp": "2026-03-11T22:10:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e06_573a43",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-11T22:24:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_021_e09_d191bd",
+      "case_id": "seed_int_021",
+      "timestamp": "2026-03-11T23:31:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e07_74ed89",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-11T23:48:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e03_544c4a",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-12T01:55:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e04_d3b627",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-12T19:17:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e08_d279b9",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-12T20:42:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e05_83a6e7",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-12T21:09:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e00_1e3632",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-12T21:53:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e06_bcaa4d",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-12T22:17:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e01_174050",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-12T22:47:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e07_f12622",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-12T23:42:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e02_d990d0",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-13T00:34:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e04_0aebc9",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-13T00:52:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e05_b956a5",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-13T02:10:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e06_0e4ce0",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-13T03:20:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e07_e049d9",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-13T04:46:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e08_fb0985",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-13T20:31:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e03_726abd",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-13T21:04:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_027_e09_5ca731",
+      "case_id": "seed_int_027",
+      "timestamp": "2026-03-14T00:51:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e08_4446be",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-14T01:50:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e04_4fd4b7",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-14T20:47:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e05_4d2646",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-14T22:30:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e06_9cf009",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-14T23:25:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_025_e09_c6ac31",
+      "case_id": "seed_int_025",
+      "timestamp": "2026-03-15T00:09:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e07_3bb7c6",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-15T01:00:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_024_e09_80d162",
+      "case_id": "seed_int_024",
+      "timestamp": "2026-03-15T05:30:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e00_d65c8a",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-15T11:04:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e01_5eab36",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-15T12:36:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e02_bb5138",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-15T14:54:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e08_13cabd",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-15T21:26:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e03_30925c",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-16T11:55:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_017_e09_d63042",
+      "case_id": "seed_int_017",
+      "timestamp": "2026-03-17T01:51:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e04_b5b218",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-17T10:46:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e05_6f5e97",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-17T12:42:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e06_83f244",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-17T13:53:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e07_edc19d",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-17T14:06:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e00_164ccd",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-17T18:19:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e01_68222a",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-17T19:59:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e02_5f3231",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-17T21:11:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e08_8c347f",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-18T11:51:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e03_d713de",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-18T18:07:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_028_e09_b42b91",
+      "case_id": "seed_int_028",
+      "timestamp": "2026-03-19T15:04:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e04_5941da",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-19T17:54:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e05_836460",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-19T19:58:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e06_27631d",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-19T21:01:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e07_38dc2e",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-19T21:28:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e00_12d762",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-20T11:16:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e01_b7ea7f",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-20T12:11:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e02_f442e3",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-20T14:20:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e08_9a6689",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-20T18:27:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e00_bc917e",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-21T06:04:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e01_92b3f3",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-21T07:58:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e02_053cdd",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-21T09:22:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e03_d82471",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-21T11:34:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_023_e09_fb7112",
+      "case_id": "seed_int_023",
+      "timestamp": "2026-03-21T22:17:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e03_9efc39",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-22T06:34:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e04_546158",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-22T10:44:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e05_c3c866",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-22T12:58:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e06_33343a",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-22T13:40:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e07_d4fa4f",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-22T14:11:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e04_693662",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-23T05:54:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e00_e610e7",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-23T05:56:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e01_bd60d5",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-23T06:24:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e05_5cc30d",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-23T07:18:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e02_548145",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-23T08:25:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e06_63e77f",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-23T08:50:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e07_ed1e28",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-23T09:20:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e08_0d2146",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-23T11:13:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e00_37e5bb",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-23T23:23:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e01_28a34c",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-24T00:52:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e02_66624f",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-24T02:02:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e03_1714ea",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-24T05:50:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e08_2a7753",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-24T06:57:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_020_e09_2f0048",
+      "case_id": "seed_int_020",
+      "timestamp": "2026-03-24T15:48:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e03_7f0889",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-24T23:56:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e04_7fdbca",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-25T04:38:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e05_c37661",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-25T06:53:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e06_a0d6d2",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-25T07:56:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e07_6e83d5",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-25T08:40:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_029_e09_f57d65",
+      "case_id": "seed_int_029",
+      "timestamp": "2026-03-25T10:57:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e04_96705e",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-25T22:10:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e05_49d616",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-26T00:53:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e06_d2d2d2",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-26T01:09:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e07_b30542",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-26T02:10:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e08_f35a56",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-26T05:55:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e08_a65887",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-26T23:24:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_007_e09_cf7cbb",
+      "case_id": "seed_int_007",
+      "timestamp": "2026-03-27T09:03:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e00_b35f07",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-27T09:09:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e00_44a9df",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-27T09:46:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e01_42c06d",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-27T10:29:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e01_1c7b54",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-27T11:00:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e02_253181",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-27T12:24:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e02_6e4cbd",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-27T12:49:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_001_e09_53d908",
+      "case_id": "seed_int_001",
+      "timestamp": "2026-03-28T03:39:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e03_40e18e",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-28T09:13:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e03_71b31d",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-28T09:59:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e04_73e14b",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-29T08:23:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e04_11c1ae",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-29T08:38:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e05_73c93b",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-29T10:06:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e05_af81ce",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-29T10:33:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e06_db5e9a",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-29T11:25:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e06_0983f3",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-29T11:49:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e07_f1f29b",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-29T12:07:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e07_0d4b24",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-29T12:53:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e00_51f4d0",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-03-29T19:15:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e01_67e151",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-03-29T20:50:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e02_f373ea",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-03-29T22:20:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e08_b3c224",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-30T09:35:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e08_fd25a7",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-30T09:48:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e00_9e610f",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-03-30T12:37:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e00_d6f80f",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-03-30T13:31:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e01_94826f",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-03-30T13:43:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e01_2dda8a",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-03-30T14:04:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e02_fc4659",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-03-30T15:54:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e02_7aaee0",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-03-30T16:25:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e03_b47756",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-03-30T19:09:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e03_f6ee6c",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-03-31T12:44:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e03_75f51f",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-03-31T13:06:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_030_e09_fe1ee9",
+      "case_id": "seed_int_030",
+      "timestamp": "2026-03-31T13:07:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_008_e09_c83dd6",
+      "case_id": "seed_int_008",
+      "timestamp": "2026-03-31T13:26:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e04_f197fe",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-03-31T18:33:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e05_a16125",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-03-31T20:13:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e06_ca5dd0",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-03-31T21:26:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e07_0a53fc",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-03-31T22:34:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e04_ec284f",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-04-01T11:43:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e04_dccce9",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-04-01T12:41:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e05_b20f0e",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-04-01T13:34:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e06_fa5099",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-04-01T14:03:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e05_2ad1f9",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-04-01T14:31:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e07_0803f0",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-04-01T15:21:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e06_bd08b1",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-04-01T15:30:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e07_9e3599",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-04-01T16:22:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e08_47ccaf",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-04-01T19:55:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e08_4bcfdb",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-04-02T12:15:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e08_e02611",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-04-02T13:32:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_011_e09_dfc373",
+      "case_id": "seed_int_011",
+      "timestamp": "2026-04-02T23:06:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_019_e09_5ac483",
+      "case_id": "seed_int_019",
+      "timestamp": "2026-04-03T16:51:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_016_e09_b501dc",
+      "case_id": "seed_int_016",
+      "timestamp": "2026-04-03T17:05:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e00_92169f",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-03T23:07:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e01_244cda",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-04T00:56:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e02_4c5400",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-04T02:17:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e03_bd7049",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-04T23:39:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e00_79b2ee",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-05T16:34:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e01_fb5cd7",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-05T17:12:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e02_060fce",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-05T19:53:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e04_e1e94e",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-05T22:35:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e05_e0dedb",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-06T00:27:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e06_1c01d1",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-06T01:49:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e07_1dc7f1",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-06T02:16:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e03_cae0d0",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-06T16:57:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e08_8a5198",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-06T23:51:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e00_3818bd",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-07T02:28:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e01_f8bd06",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-07T03:22:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e02_7d819e",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-07T05:22:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e04_8344c1",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-07T15:05:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e05_aec8ce",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-07T17:57:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e06_dadc1f",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-07T18:37:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e07_288f63",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-07T19:47:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e03_9428ba",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-08T02:25:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_013_e09_9cd4bc",
+      "case_id": "seed_int_013",
+      "timestamp": "2026-04-08T03:06:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e08_bbea8b",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-08T16:56:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e04_606fea",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-09T01:45:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e05_4f9b58",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-09T03:06:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e06_7298dc",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-09T04:55:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e07_f32faa",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-09T05:07:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_022_e09_fc545f",
+      "case_id": "seed_int_022",
+      "timestamp": "2026-04-09T20:20:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e08_fc9f5a",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-10T02:08:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_005_e09_3b538c",
+      "case_id": "seed_int_005",
+      "timestamp": "2026-04-11T06:53:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e00_dd7110",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-11T19:23:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e01_e2dd29",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-11T20:25:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e02_7219e3",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-11T22:48:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e00_061dee",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-12T16:50:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e01_1fb37e",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-12T17:45:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e02_e86ec6",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-12T19:43:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e03_62c3ee",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-12T19:51:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e03_700acb",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-13T16:57:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e04_d1c276",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-13T18:58:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e05_bdfa34",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-13T20:11:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e06_0c13f8",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-13T21:50:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e07_d4e8ba",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-13T22:45:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e00_bebca9",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-14T12:40:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e01_738c8a",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-14T13:28:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e04_965cce",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-14T15:11:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e02_6d1d2c",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-14T15:15:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e05_dbcc49",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-14T17:06:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e06_2b3ac5",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-14T18:30:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e08_6c0937",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-14T19:19:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e07_120e01",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-14T19:52:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e03_c08516",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-15T12:24:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e08_24ad86",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-15T16:39:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_009_e09_ce6f3e",
+      "case_id": "seed_int_009",
+      "timestamp": "2026-04-15T23:44:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e04_a332f3",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-16T11:09:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e05_d764e4",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-16T13:45:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e06_989b44",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-16T14:35:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e07_45d4a4",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-16T15:04:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_015_e09_5540a6",
+      "case_id": "seed_int_015",
+      "timestamp": "2026-04-16T20:24:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e08_cd4905",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-17T12:27:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e00_28f772",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-18T08:34:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e01_0a983d",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-18T09:59:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e02_6c0cd0",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-18T11:24:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_010_e09_6466a0",
+      "case_id": "seed_int_010",
+      "timestamp": "2026-04-18T16:02:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e03_0642ec",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-19T08:17:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e04_c9f2ad",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-20T07:11:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e05_6e75a7",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-20T09:14:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e06_8e26eb",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-20T10:40:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e07_29e1e9",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-20T11:50:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e00_f868a0",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-20T13:05:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e01_1369fe",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-20T14:44:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e02_909461",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-20T16:28:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e08_a12353",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-21T08:06:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e03_b62ae0",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-21T13:57:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_014_e09_dcf34f",
+      "case_id": "seed_int_014",
+      "timestamp": "2026-04-22T12:51:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e04_755e97",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-22T12:57:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e05_dc310f",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-22T14:20:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e06_12afea",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-22T15:24:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e07_b65297",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-22T16:38:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e00_771864",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-23T00:37:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e01_04617f",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-23T01:26:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e02_f79091",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-23T03:35:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e08_2a3b39",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-23T13:15:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e03_3eac11",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-24T00:31:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e00_4a1cc2",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-24T00:36:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e01_686351",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-24T01:42:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e00_76f474",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-24T02:05:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_int_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e01_69b326",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-24T03:06:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e02_9d9d7e",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-24T03:38:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e02_9c233b",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-24T05:08:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_006_e09_85c84d",
+      "case_id": "seed_int_006",
+      "timestamp": "2026-04-24T17:44:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e04_e161bc",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-24T23:08:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e03_f58179",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-25T00:47:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e05_cb087e",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-25T01:56:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e03_8bbdf8",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-25T02:20:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e06_12d933",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-25T02:29:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e07_2a9ef7",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-25T03:58:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e04_5f0426",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-25T23:20:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e08_415b0d",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-26T00:28:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e05_a05b69",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-26T01:02:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e04_5c4530",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-26T01:48:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e06_3a9641",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-26T02:17:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e07_992d7a",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-26T03:13:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e05_28616c",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-26T03:23:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "status_check",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e06_bd2d16",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-26T04:39:12.646582+00:00",
+      "actor_id": "recruiter_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e07_c45fc2",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-26T06:00:12.646582+00:00",
+      "actor_id": "intent_anticipation_agent",
+      "actor_type": "agent",
+      "action_type": "intent_predicted",
+      "target_entity": "seed_int_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e08_d651a4",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-27T00:44:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e08_f308ce",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-27T02:21:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "scheduled_meeting",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_004_e09_fe90f1",
+      "case_id": "seed_int_004",
+      "timestamp": "2026-04-27T04:54:12.646582+00:00",
+      "actor_id": "hiring_mgr_pm@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_026_e09_0d2d5f",
+      "case_id": "seed_int_026",
+      "timestamp": "2026-04-28T04:35:12.646582+00:00",
+      "actor_id": "hiring_mgr_eng@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_int_018_e09_b25d44",
+      "case_id": "seed_int_018",
+      "timestamp": "2026-04-28T06:10:12.646582+00:00",
+      "actor_id": "recruiter_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_int_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    }
+  ]
+}

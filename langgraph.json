@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "amp_orchestrator": "orchestrator.graph:get_graph"
+  },
+  "env": ".env"
+}

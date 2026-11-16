@@ -1,0 +1,4811 @@
+{
+  "metadata": {
+    "domain": "vendor_onboarding",
+    "description": "30 prior vendor onboardings with realistic missing-cert + repeated follow-up patterns. Use as SWA backdrop for vendor demos.",
+    "version": "1.0"
+  },
+  "cases": [
+    {
+      "case_id": "seed_vnd_001",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-13T14:02:12.646582+00:00",
+      "closed_at": "2026-03-18T20:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_002",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-22T21:02:12.646582+00:00",
+      "closed_at": "2026-03-28T03:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_003",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-24T14:02:12.646582+00:00",
+      "closed_at": "2026-04-29T20:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_004",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-10T21:02:12.646582+00:00",
+      "closed_at": "2026-03-16T03:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_005",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-18T00:02:12.646582+00:00",
+      "closed_at": "2026-03-23T06:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_006",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-06T20:02:12.646582+00:00",
+      "closed_at": "2026-04-12T02:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_007",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-17T03:02:12.646582+00:00",
+      "closed_at": "2026-03-22T09:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_008",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-13T14:02:12.646582+00:00",
+      "closed_at": "2026-03-18T20:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_009",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-24T04:02:12.646582+00:00",
+      "closed_at": "2026-04-29T10:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_010",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-19T23:02:12.646582+00:00",
+      "closed_at": "2026-04-25T05:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_011",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-23T07:02:12.646582+00:00",
+      "closed_at": "2026-04-28T13:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_012",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-07T19:02:12.646582+00:00",
+      "closed_at": "2026-04-13T01:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_013",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-20T07:02:12.646582+00:00",
+      "closed_at": "2026-03-25T13:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_014",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-22T07:02:12.646582+00:00",
+      "closed_at": "2026-03-27T13:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_015",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-30T20:02:12.646582+00:00",
+      "closed_at": "2026-04-05T02:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_016",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-11T01:02:12.646582+00:00",
+      "closed_at": "2026-03-16T07:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_017",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-10T08:02:12.646582+00:00",
+      "closed_at": "2026-03-15T14:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_018",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-12T22:02:12.646582+00:00",
+      "closed_at": "2026-03-18T04:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_019",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-11T23:02:12.646582+00:00",
+      "closed_at": "2026-03-17T05:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_020",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-19T15:02:12.646582+00:00",
+      "closed_at": "2026-04-24T21:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_021",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-24T06:02:12.646582+00:00",
+      "closed_at": "2026-03-29T12:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_022",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-13T05:02:12.646582+00:00",
+      "closed_at": "2026-04-18T11:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_023",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-18T20:02:12.646582+00:00",
+      "closed_at": "2026-04-24T02:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_024",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-04T05:02:12.646582+00:00",
+      "closed_at": "2026-03-09T11:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_025",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-20T09:02:12.646582+00:00",
+      "closed_at": "2026-04-25T15:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_026",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-16T16:02:12.646582+00:00",
+      "closed_at": "2026-04-21T22:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_027",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-22T04:02:12.646582+00:00",
+      "closed_at": "2026-04-27T10:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_028",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-12T00:02:12.646582+00:00",
+      "closed_at": "2026-04-17T06:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_029",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-04-17T13:02:12.646582+00:00",
+      "closed_at": "2026-04-22T19:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    },
+    {
+      "case_id": "seed_vnd_030",
+      "case_type": "vendor_onboarding",
+      "status": "closed",
+      "created_at": "2026-03-09T13:02:12.646582+00:00",
+      "closed_at": "2026-03-14T19:02:12.646582+00:00",
+      "domain_metadata": {
+        "seed_source": "demo_workflow_seed"
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_id": "seed_vnd_024_e00_68ac2e",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-04T05:35:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e01_55ff3f",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-04T06:25:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e02_cab525",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-04T07:06:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e03_cc9be3",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-04T09:41:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e04_7fef46",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-06T09:44:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e05_ac5a58",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-08T09:48:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e06_fa3538",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-09T05:34:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e07_e549d4",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-09T06:44:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_024_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e08_2dc47d",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-09T10:22:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_024_e09_12cf9a",
+      "case_id": "seed_vnd_024",
+      "timestamp": "2026-03-09T11:46:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_024",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e00_0a67ef",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-09T13:28:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e01_ff5e6b",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-09T14:23:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e02_5ee51f",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-09T15:28:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e03_cd44d3",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-09T17:15:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e00_b27c08",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-10T08:36:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e01_b5ce53",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-10T09:34:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e02_b72607",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-10T10:10:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e03_8c4dc8",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-10T12:58:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e00_9ffa19",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-10T21:56:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e01_712edf",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-10T22:57:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e02_2a6efc",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-10T23:26:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e00_ae3126",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-11T01:28:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e03_a69fca",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-11T01:31:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e01_f57ba5",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-11T03:01:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e02_03c154",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-11T03:15:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e03_eab92b",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-11T05:17:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e04_4f2dc5",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-11T17:26:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e00_5a327e",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-11T23:42:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e01_21ccf8",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-12T00:55:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e02_ed5d4b",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-12T01:04:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e03_9d9985",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-12T03:23:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e04_00af0f",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-12T12:58:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e00_683a64",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-12T22:58:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e01_63c54a",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-12T23:18:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e02_a3f79b",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-13T00:58:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e04_f299f8",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-13T01:12:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e03_799dec",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-13T02:49:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e04_590cd5",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-13T05:27:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e00_ce8629",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-13T14:03:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e00_c9f8ee",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-13T14:20:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e01_8c88cb",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-13T15:12:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e01_535586",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-13T15:17:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e02_ca6fb6",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-13T16:02:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e02_b443f4",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-13T16:10:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e05_dc74f4",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-13T17:56:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e03_b0c611",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-13T18:34:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e03_cb27f7",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-13T18:45:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e04_a648d5",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-14T03:42:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e05_e11cf5",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-14T12:25:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e06_e98537",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-14T13:32:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e07_df6d1e",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-14T14:24:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_030_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e08_0b43a8",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-14T18:50:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_030_e09_0379bb",
+      "case_id": "seed_vnd_030",
+      "timestamp": "2026-03-14T19:56:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_030",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e05_b54b07",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-15T01:24:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e04_07e50a",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-15T02:19:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e05_3d4b65",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-15T05:44:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e06_07c7d5",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-15T08:12:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e07_33a250",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-15T09:55:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_017_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e08_23a2e6",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-15T13:41:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_017_e09_139379",
+      "case_id": "seed_vnd_017",
+      "timestamp": "2026-03-15T14:44:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_017",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e04_ea2d9a",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-15T18:34:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e04_2bb38b",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-15T18:39:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e06_9d1fa2",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-15T21:44:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e07_910ae3",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-15T22:46:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_004_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e06_4752d9",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-16T01:31:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e08_d057e1",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-16T02:40:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e07_33bd57",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-16T03:01:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_016_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e05_98e4a8",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-16T03:12:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_004_e09_c44b5a",
+      "case_id": "seed_vnd_004",
+      "timestamp": "2026-03-16T03:36:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_004",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e08_8d39cd",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-16T06:02:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_016_e09_1a01cb",
+      "case_id": "seed_vnd_016",
+      "timestamp": "2026-03-16T07:41:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_016",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e06_d87f61",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-16T23:37:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e07_91ae46",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-17T00:37:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_019_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e05_e2ffe1",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-17T02:40:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e00_026d52",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-17T03:42:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e08_3c912b",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-17T04:09:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e01_9502c9",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-17T04:52:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e02_99fa46",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-17T05:40:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_019_e09_a17063",
+      "case_id": "seed_vnd_019",
+      "timestamp": "2026-03-17T05:58:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_019",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e03_48632b",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-17T07:26:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e05_573ea7",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-17T18:04:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e05_8d87f3",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-17T18:57:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e06_3f7fea",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-17T22:47:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e07_9da80e",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-17T23:15:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_018_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e00_7b8350",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-18T00:31:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e01_28cf93",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-18T01:19:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e02_b390d8",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-18T02:45:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e08_7d6dd6",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-18T03:34:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_018_e09_bf53ad",
+      "case_id": "seed_vnd_018",
+      "timestamp": "2026-03-18T04:18:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_018",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e03_898adc",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-18T04:55:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e06_c50f9a",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-18T14:07:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e06_cfa344",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-18T14:55:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e07_d882d4",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-18T15:11:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_008_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e07_5d768d",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-18T15:16:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_001_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e08_185daf",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-18T19:37:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e08_441a9c",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-18T19:50:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_008_e09_d7b5d2",
+      "case_id": "seed_vnd_008",
+      "timestamp": "2026-03-18T20:36:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_008",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_001_e09_4e1081",
+      "case_id": "seed_vnd_001",
+      "timestamp": "2026-03-18T20:47:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_001",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e04_ba168f",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-19T07:40:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e04_c28673",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-20T04:16:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e00_8e4b8d",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-20T07:36:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e01_f0a608",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-20T08:10:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e02_de2e39",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-20T09:13:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e03_af5288",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-20T11:31:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e05_faf1bb",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-21T07:35:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e06_c3c550",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-22T03:37:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e07_45948f",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-22T04:45:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_007_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e05_2281d7",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-22T04:53:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e00_431318",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-22T07:57:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e08_9bb3d1",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-22T08:45:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e01_cbabc3",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-22T08:59:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e02_cad6df",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-22T09:12:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_007_e09_968bff",
+      "case_id": "seed_vnd_007",
+      "timestamp": "2026-03-22T09:51:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_007",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e03_52bdfd",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-22T11:02:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e04_f8ac72",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-22T11:57:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e00_6a8b57",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-22T21:30:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e01_abe544",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-22T22:53:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e02_9caa1b",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-22T23:50:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e06_7bf295",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-23T00:27:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e07_d97165",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-23T01:06:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_005_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e03_abf710",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-23T01:46:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e08_8a26bf",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-23T06:00:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_005_e09_e7fdd2",
+      "case_id": "seed_vnd_005",
+      "timestamp": "2026-03-23T06:15:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_005",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e00_360693",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-24T06:57:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e01_536381",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-24T07:53:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e02_c97a85",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-24T08:58:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e03_e6bb60",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-24T10:03:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e04_2a8fec",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-24T11:18:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e05_76bd82",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-24T11:30:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e04_60c2e9",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-25T01:23:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e06_36772a",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-25T07:05:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e07_4a5273",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-25T08:07:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_013_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e08_a6fb0b",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-25T12:12:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_013_e09_312acf",
+      "case_id": "seed_vnd_013",
+      "timestamp": "2026-03-25T13:33:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_013",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e04_4d7f8e",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-26T10:49:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e05_48907c",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-26T11:20:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e05_a909fe",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-27T01:11:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e06_2bda7a",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-27T07:46:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e07_34da66",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-27T08:11:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_014_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e08_620796",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-27T12:20:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_014_e09_eb1807",
+      "case_id": "seed_vnd_014",
+      "timestamp": "2026-03-27T13:05:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_014",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e06_e963c6",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-27T21:50:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e07_f5e8c5",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-27T22:08:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_002_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e08_7f6722",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-28T02:26:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_002_e09_d0cdcf",
+      "case_id": "seed_vnd_002",
+      "timestamp": "2026-03-28T03:24:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_002",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e05_fc87a7",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-28T10:52:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e06_6eac33",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-29T06:53:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e07_0f3c5f",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-29T07:19:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_021_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e08_c7539a",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-29T11:52:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_021_e09_f84440",
+      "case_id": "seed_vnd_021",
+      "timestamp": "2026-03-29T12:26:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_021",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e00_ce4005",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-03-30T20:05:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e01_6a3e24",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-03-30T21:39:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e02_8860b8",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-03-30T22:34:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e03_91b659",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-03-31T00:05:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e04_b98f71",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-04-02T00:56:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e05_400e93",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-04-04T00:06:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e06_bf3bb4",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-04-04T20:45:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e07_0a4990",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-04-04T21:27:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_015_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e08_39ea51",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-04-05T01:58:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_015_e09_193e56",
+      "case_id": "seed_vnd_015",
+      "timestamp": "2026-04-05T02:39:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_015",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e00_4ff7b4",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-06T20:58:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e01_249d11",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-06T21:11:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e02_28b3b3",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-06T22:10:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e03_9f04c9",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-07T00:49:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e00_1d33e0",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-07T19:14:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e01_34adef",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-07T20:08:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e02_3f1b8a",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-07T21:24:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e03_d3a5a2",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-07T23:28:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e04_0d9d82",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-09T00:49:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e04_998d2f",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-09T23:57:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e05_2ddeee",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-11T00:59:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e06_f5bc39",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-11T20:25:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e07_0758f8",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-11T21:10:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_006_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e05_b757b6",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-11T23:45:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e00_55f727",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-12T00:10:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e08_e10294",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-12T01:07:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e01_1ecda5",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-12T01:44:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e02_793930",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-12T02:50:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_006_e09_4f711a",
+      "case_id": "seed_vnd_006",
+      "timestamp": "2026-04-12T02:57:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_006",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e03_277e62",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-12T04:41:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e06_2ace3e",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-12T19:05:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e07_290662",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-12T20:48:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_012_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e08_bf3fed",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-13T00:53:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_012_e09_277431",
+      "case_id": "seed_vnd_012",
+      "timestamp": "2026-04-13T01:17:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_012",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e00_8e6c8a",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-13T05:16:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e01_a8bd38",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-13T06:54:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e02_6b0c44",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-13T07:24:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e03_2db4a7",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-13T09:54:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e04_133921",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-14T04:55:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e04_eb5c20",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-15T09:16:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e05_81d87c",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-16T04:59:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e00_f23ea5",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-16T16:32:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e01_c5b8ad",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-16T17:44:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e02_5a1558",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-16T18:20:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e03_19261f",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-16T20:07:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e06_273e3e",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-17T00:49:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e07_f851c4",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-17T01:30:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_028_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e08_6c9ace",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-17T05:50:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_028_e09_4a193f",
+      "case_id": "seed_vnd_028",
+      "timestamp": "2026-04-17T06:55:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_028",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e05_b516d0",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-17T09:44:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e00_e694c6",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-17T13:33:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e01_10a945",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-17T14:19:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e02_7e35e8",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-17T15:06:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e03_86ea3c",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-17T17:17:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e06_b201cd",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-18T05:27:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e07_2c69d5",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-18T06:19:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_022_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e08_add3b2",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-18T10:51:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_022_e09_205b30",
+      "case_id": "seed_vnd_022",
+      "timestamp": "2026-04-18T11:24:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_022",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e00_4afb79",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-18T20:23:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e04_10f3e5",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-18T20:45:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e01_f24750",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-18T21:09:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e02_7f2504",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-18T22:13:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e03_0b9ffc",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-19T00:04:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e00_a3ad82",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-19T15:04:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e01_bcbc0f",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-19T16:39:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e04_326466",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-19T17:23:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e02_17188c",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-19T17:29:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e03_a55e3b",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-19T19:04:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e00_291391",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-19T23:12:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e01_b7a05b",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-20T00:35:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e02_f6e230",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-20T01:15:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e03_3d014b",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-20T03:47:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e00_c540f7",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-20T09:10:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e01_1ac966",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-20T10:28:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e02_9ea950",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-20T11:45:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e03_71290c",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-20T13:41:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e05_9d525a",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-20T20:16:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e04_9d4f31",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-21T00:40:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e06_b4cad0",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-21T16:11:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e07_d18e50",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-21T17:04:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_026_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e05_0f9d2e",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-21T17:59:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e04_3f4ed7",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-21T19:25:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e08_8a0ae6",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-21T21:32:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_026_e09_19c04f",
+      "case_id": "seed_vnd_026",
+      "timestamp": "2026-04-21T22:31:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_026",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e04_a1bf75",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-22T03:27:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e00_d6af82",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-22T04:14:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e01_a7df18",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-22T05:33:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e02_3a2ef8",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-22T06:17:12.646582+00:00",
+      "actor_id": "governance_policy_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e03_10b984",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-22T08:43:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e06_398ae1",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-22T13:10:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e04_3ac7ce",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-22T13:27:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e07_b7fa54",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-22T14:16:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_029_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e08_e12978",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-22T18:46:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_029_e09_991bf0",
+      "case_id": "seed_vnd_029",
+      "timestamp": "2026-04-22T19:47:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_029",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e05_c7e1c0",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-23T00:24:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e00_e48dd8",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-23T07:16:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e01_e5d807",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-23T08:06:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e02_17489b",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-23T09:16:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e03_ca8557",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-23T11:59:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e05_ff452f",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-23T19:59:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e06_c9829c",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-23T20:29:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e07_7c511b",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-23T21:26:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_023_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e08_512eb5",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-24T01:18:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_023_e09_453655",
+      "case_id": "seed_vnd_023",
+      "timestamp": "2026-04-24T02:47:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_023",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e05_cd4b1e",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-24T03:30:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e00_3eff4c",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-24T04:22:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e01_99efb3",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-24T05:03:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e02_e3f50f",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-24T07:01:12.646582+00:00",
+      "actor_id": "risk_radar_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e03_9b8501",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-24T08:58:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e04_7336a6",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-24T08:59:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e05_750581",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-24T13:21:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e00_e7fa8c",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-24T14:18:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_opened",
+      "target_entity": "seed_vnd_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 0
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e06_077cb2",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-24T15:15:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e01_93f8ca",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-24T15:48:12.646582+00:00",
+      "actor_id": "delegation_agent",
+      "actor_type": "agent",
+      "action_type": "context_gathered",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 1
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e02_7e5ce2",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-24T16:36:12.646582+00:00",
+      "actor_id": "context_stitching_agent",
+      "actor_type": "agent",
+      "action_type": "policy_check",
+      "target_entity": "primary_workflow_engine",
+      "target_entity_type": "internal_system",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 2
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e07_13ec3c",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-24T16:44:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_020_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e03_aaa611",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-24T19:01:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "requested_document",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 3
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e08_072fb0",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-24T20:24:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_020_e09_f95ef9",
+      "case_id": "seed_vnd_020",
+      "timestamp": "2026-04-24T21:41:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_020",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e06_ee2434",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-24T23:09:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e07_93528b",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-25T00:16:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_010_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e08_c56d39",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-25T04:23:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_010_e09_0be8fc",
+      "case_id": "seed_vnd_010",
+      "timestamp": "2026-04-25T05:39:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_010",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e06_3c210a",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-25T09:15:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_0",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e07_9dc55c",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-25T10:52:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_025_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e04_603959",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-25T11:57:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e08_8dba44",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-25T14:31:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_025_e09_707b29",
+      "case_id": "seed_vnd_025",
+      "timestamp": "2026-04-25T15:30:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_025",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e04_43d67e",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-26T08:17:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e05_02c712",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-26T08:51:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e04_0f00e8",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-26T18:07:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 4
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e06_7636f0",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-27T04:16:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_2",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e07_be9119",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-27T05:53:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_027_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e08_5f5352",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-27T09:05:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_027_e09_e0277d",
+      "case_id": "seed_vnd_027",
+      "timestamp": "2026-04-27T11:00:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_027",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e05_32e7f4",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-27T11:06:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e06_058c36",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-28T07:19:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_1",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e07_77578a",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-28T08:15:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_011_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e05_28ea29",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-28T08:17:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e08_2a0031",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-28T12:48:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_011_e09_0faff7",
+      "case_id": "seed_vnd_011",
+      "timestamp": "2026-04-28T13:17:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_011",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e05_5b2947",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-28T18:55:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "sent_reminder",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 5
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e06_1a9b8b",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-29T04:07:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_4",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e07_52d838",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-29T05:54:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_009_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e08_2ab3cf",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-29T09:50:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_009_e09_cc79ae",
+      "case_id": "seed_vnd_009",
+      "timestamp": "2026-04-29T10:10:12.646582+00:00",
+      "actor_id": "vendor_mgr_02@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_009",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e06_893a1e",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-29T14:38:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "received_message",
+      "target_entity": "candidate_3",
+      "target_entity_type": "external_contact",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 6
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e07_3cd92b",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-29T15:47:12.646582+00:00",
+      "actor_id": "procurement_lead@corp.com",
+      "actor_type": "human",
+      "action_type": "viewed_document",
+      "target_entity": "doc_seed_vnd_003_7",
+      "target_entity_type": "document",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 7
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e08_ea8d1a",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-29T19:04:12.646582+00:00",
+      "actor_id": "compliance_officer@corp.com",
+      "actor_type": "human",
+      "action_type": "approved",
+      "target_entity": "seed_vnd_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 8
+      },
+      "outcome": "success"
+    },
+    {
+      "event_id": "seed_vnd_003_e09_2dd653",
+      "case_id": "seed_vnd_003",
+      "timestamp": "2026-04-29T20:51:12.646582+00:00",
+      "actor_id": "vendor_mgr_01@corp.com",
+      "actor_type": "human",
+      "action_type": "case_closed",
+      "target_entity": "seed_vnd_003",
+      "target_entity_type": "task",
+      "parent_task_id": null,
+      "context_payload": {
+        "step": 9
+      },
+      "outcome": "success"
+    }
+  ]
+}

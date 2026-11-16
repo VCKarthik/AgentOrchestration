@@ -1,0 +1,32 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: amp_qdrant
+    # Qdrant dashboard at http://localhost:6333/dashboard (Docker only)
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ./qdrant_store:/qdrant/storage
+    restart: unless-stopped
+
+  iaa_app:
+    build: .
+    container_name: amp_iaa
+    # Primary UI: adk web at http://localhost:8000
+    ports:
+      - "8000:8000"   # ADK web UI
+    volumes:
+      - ./qdrant_store:/app/qdrant_store
+      - ./data:/app/data
+    env_file:
+      - .env
+    environment:
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+    depends_on:
+      - qdrant
+    restart: unless-stopped
+    command: ["adk", "web", "--host", "0.0.0.0", "--port", "8000"]
+    # Alternatives:
+    # command: ["uvicorn", "agent.api:app", "--host", "0.0.0.0", "--port", "8000"]

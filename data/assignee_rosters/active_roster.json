@@ -1,0 +1,394 @@
+{
+  "metadata": {
+    "description": "Demo roster aligned with the three PDF-spec workflows. Includes the named assignees the spec calls out (Rachel Green, Priya Sharma, Karen Mills, Mike Chen) plus a representative supporting cast (legal, finance, procurement) so DA always has scoring depth across the three domains.",
+    "version": "2.0",
+    "note": "Replace with your organisation's actual roster for production deployment.",
+    "source": "demo_upload",
+    "original_filename": "sample_roster.json"
+  },
+  "assignees": [
+    {
+      "assignee_id": "EMP-001",
+      "name": "Rachel Green",
+      "role": "Senior Compliance Officer",
+      "skills": [
+        {
+          "skill": "compliance",
+          "proficiency": 95
+        },
+        {
+          "skill": "vendor_onboarding",
+          "proficiency": 90
+        },
+        {
+          "skill": "regulatory_review",
+          "proficiency": 88
+        },
+        {
+          "skill": "documentation",
+          "proficiency": 80
+        }
+      ],
+      "business_domains": [
+        "compliance",
+        "vendor_onboarding",
+        "procurement",
+        "risk"
+      ],
+      "certifications": [
+        "CRCM",
+        "CCEP"
+      ],
+      "seniority": "senior",
+      "performance_score": 93.0,
+      "capacity_limit": 10,
+      "current_workload": 4,
+      "active_tasks_count": 4,
+      "utilization_percent": 40.0,
+      "availability_status": "available",
+      "escalation_authority": true,
+      "department": "Compliance",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    },
+    {
+      "assignee_id": "EMP-002",
+      "name": "Priya Sharma",
+      "role": "HR Coordinator",
+      "skills": [
+        {
+          "skill": "interview_scheduling",
+          "proficiency": 92
+        },
+        {
+          "skill": "compliance",
+          "proficiency": 75
+        },
+        {
+          "skill": "documentation",
+          "proficiency": 85
+        },
+        {
+          "skill": "customer_communication",
+          "proficiency": 88
+        }
+      ],
+      "business_domains": [
+        "interview_scheduling",
+        "human_resources",
+        "hr",
+        "compliance"
+      ],
+      "certifications": [
+        "SHRM-CP"
+      ],
+      "seniority": "intermediate",
+      "performance_score": 89.0,
+      "capacity_limit": 12,
+      "current_workload": 5,
+      "active_tasks_count": 5,
+      "utilization_percent": 41.7,
+      "availability_status": "available",
+      "escalation_authority": false,
+      "department": "Human Resources",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    },
+    {
+      "assignee_id": "EMP-003",
+      "name": "Karen Mills",
+      "role": "Senior Claims Processor",
+      "skills": [
+        {
+          "skill": "claim_review",
+          "proficiency": 96
+        },
+        {
+          "skill": "policy_check",
+          "proficiency": 90
+        },
+        {
+          "skill": "compliance",
+          "proficiency": 78
+        },
+        {
+          "skill": "customer_communication",
+          "proficiency": 85
+        }
+      ],
+      "business_domains": [
+        "claim_review",
+        "insurance",
+        "claims"
+      ],
+      "certifications": [
+        "AIC",
+        "CPCU"
+      ],
+      "seniority": "senior",
+      "performance_score": 94.0,
+      "capacity_limit": 10,
+      "current_workload": 3,
+      "active_tasks_count": 3,
+      "utilization_percent": 30.0,
+      "availability_status": "available",
+      "escalation_authority": true,
+      "department": "Claims",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    },
+    {
+      "assignee_id": "EMP-004",
+      "name": "Mike Chen",
+      "role": "Senior Software Engineer",
+      "skills": [
+        {
+          "skill": "interview_scheduling",
+          "proficiency": 80
+        },
+        {
+          "skill": "technical_review",
+          "proficiency": 95
+        },
+        {
+          "skill": "system_design",
+          "proficiency": 92
+        }
+      ],
+      "business_domains": [
+        "interview_scheduling",
+        "engineering",
+        "human_resources"
+      ],
+      "certifications": [],
+      "seniority": "senior",
+      "performance_score": 91.0,
+      "capacity_limit": 8,
+      "current_workload": 5,
+      "active_tasks_count": 5,
+      "utilization_percent": 62.5,
+      "availability_status": "available",
+      "escalation_authority": false,
+      "department": "Engineering",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    },
+    {
+      "assignee_id": "EMP-005",
+      "name": "James Fitzgerald",
+      "role": "Procurement Officer",
+      "skills": [
+        {
+          "skill": "vendor_onboarding",
+          "proficiency": 88
+        },
+        {
+          "skill": "vendor_management",
+          "proficiency": 85
+        },
+        {
+          "skill": "negotiation",
+          "proficiency": 78
+        },
+        {
+          "skill": "documentation",
+          "proficiency": 80
+        }
+      ],
+      "business_domains": [
+        "procurement",
+        "vendor_onboarding"
+      ],
+      "certifications": [
+        "CPSM"
+      ],
+      "seniority": "intermediate",
+      "performance_score": 86.0,
+      "capacity_limit": 10,
+      "current_workload": 6,
+      "active_tasks_count": 6,
+      "utilization_percent": 60.0,
+      "availability_status": "available",
+      "escalation_authority": false,
+      "department": "Procurement",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    },
+    {
+      "assignee_id": "EMP-006",
+      "name": "Diana Reyes",
+      "role": "Legal Counsel",
+      "skills": [
+        {
+          "skill": "legal_review",
+          "proficiency": 96
+        },
+        {
+          "skill": "compliance",
+          "proficiency": 90
+        },
+        {
+          "skill": "regulatory_review",
+          "proficiency": 92
+        },
+        {
+          "skill": "documentation",
+          "proficiency": 85
+        }
+      ],
+      "business_domains": [
+        "legal",
+        "compliance",
+        "vendor_onboarding",
+        "human_resources"
+      ],
+      "certifications": [
+        "JD"
+      ],
+      "seniority": "senior",
+      "performance_score": 95.0,
+      "capacity_limit": 8,
+      "current_workload": 4,
+      "active_tasks_count": 4,
+      "utilization_percent": 50.0,
+      "availability_status": "available",
+      "escalation_authority": true,
+      "department": "Legal",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    },
+    {
+      "assignee_id": "EMP-007",
+      "name": "David Park",
+      "role": "Finance Officer",
+      "skills": [
+        {
+          "skill": "financial_review",
+          "proficiency": 90
+        },
+        {
+          "skill": "payment_processing",
+          "proficiency": 92
+        },
+        {
+          "skill": "compliance",
+          "proficiency": 75
+        }
+      ],
+      "business_domains": [
+        "finance",
+        "claims",
+        "insurance"
+      ],
+      "certifications": [
+        "CPA"
+      ],
+      "seniority": "intermediate",
+      "performance_score": 88.0,
+      "capacity_limit": 8,
+      "current_workload": 4,
+      "active_tasks_count": 4,
+      "utilization_percent": 50.0,
+      "availability_status": "available",
+      "escalation_authority": false,
+      "department": "Finance",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    },
+    {
+      "assignee_id": "EMP-008",
+      "name": "Angela Torres",
+      "role": "HR Manager",
+      "skills": [
+        {
+          "skill": "interview_scheduling",
+          "proficiency": 88
+        },
+        {
+          "skill": "policy_review",
+          "proficiency": 92
+        },
+        {
+          "skill": "compliance",
+          "proficiency": 85
+        },
+        {
+          "skill": "people_management",
+          "proficiency": 95
+        }
+      ],
+      "business_domains": [
+        "interview_scheduling",
+        "human_resources",
+        "hr"
+      ],
+      "certifications": [
+        "SHRM-SCP"
+      ],
+      "seniority": "lead",
+      "performance_score": 96.0,
+      "capacity_limit": 8,
+      "current_workload": 3,
+      "active_tasks_count": 3,
+      "utilization_percent": 37.5,
+      "availability_status": "available",
+      "escalation_authority": true,
+      "department": "Human Resources",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    },
+    {
+      "assignee_id": "EMP-009",
+      "name": "Tom Bradley",
+      "role": "Compliance Manager",
+      "skills": [
+        {
+          "skill": "compliance",
+          "proficiency": 94
+        },
+        {
+          "skill": "vendor_onboarding",
+          "proficiency": 88
+        },
+        {
+          "skill": "audit",
+          "proficiency": 90
+        },
+        {
+          "skill": "policy_review",
+          "proficiency": 92
+        }
+      ],
+      "business_domains": [
+        "compliance",
+        "vendor_onboarding",
+        "procurement",
+        "risk"
+      ],
+      "certifications": [
+        "CRCM",
+        "CCEP"
+      ],
+      "seniority": "lead",
+      "performance_score": 92.0,
+      "capacity_limit": 8,
+      "current_workload": 7,
+      "active_tasks_count": 7,
+      "utilization_percent": 87.5,
+      "availability_status": "busy",
+      "escalation_authority": true,
+      "department": "Compliance",
+      "geographic_region": null,
+      "time_zone": null,
+      "task_history_ids": []
+    }
+  ]
+}

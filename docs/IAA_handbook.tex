@@ -1,0 +1,1242 @@
+\documentclass[12pt,a4paper]{article}
+
+% ── Packages ─────────────────────────────────────────────────────────────────
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  urlcolor=blue!60!black,
+  citecolor=blue!60!black,
+  pdftitle={IAA Technical Handbook},
+  pdfauthor={Project AMP},
+}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumitem}
+
+% ── Listing style ─────────────────────────────────────────────────────────────
+\definecolor{codebg}{HTML}{F5F5F5}
+\definecolor{codecomment}{HTML}{6A9955}
+\definecolor{codestring}{HTML}{CE9178}
+\definecolor{codekeyword}{HTML}{569CD6}
+\definecolor{codenumber}{HTML}{B5CEA8}
+
+\lstset{
+  language=Python,
+  backgroundcolor=\color{codebg},
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{codekeyword}\bfseries,
+  stringstyle=\color{codestring},
+  commentstyle=\color{codecomment}\itshape,
+  numberstyle=\tiny\color{gray},
+  numbers=left,
+  numbersep=8pt,
+  breaklines=true,
+  breakatwhitespace=true,
+  showstringspaces=false,
+  frame=single,
+  rulecolor=\color{gray!30},
+  tabsize=4,
+  captionpos=b,
+  xleftmargin=15pt,
+  xrightmargin=5pt,
+  aboveskip=10pt,
+  belowskip=10pt,
+}
+
+% ── Verbatim style for ASCII diagrams ────────────────────────────────────────
+\lstdefinestyle{ascii}{
+  language={},
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{codebg},
+  frame=single,
+  rulecolor=\color{gray!30},
+  numbers=none,
+  breaklines=true,
+}
+
+% ── Header / footer ──────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Intent Anticipation Agent --- Technical Handbook}
+\fancyhead[R]{\small Project AMP}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ── Colours ───────────────────────────────────────────────────────────────────
+\definecolor{ampblue}{HTML}{1E3A5F}
+\definecolor{ampgray}{HTML}{6B7280}
+
+% ── Title ─────────────────────────────────────────────────────────────────────
+\title{
+  {\color{ampblue}\Huge\bfseries Intent Anticipation Agent}\\[6pt]
+  {\color{ampgray}\Large Technical Handbook}\\[10pt]
+  {\normalsize Project AMP --- Version 0.2.0}
+}
+\author{Project AMP Engineering}
+\date{April 2026}
+
+% ═════════════════════════════════════════════════════════════════════════════
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\vspace{2em}
+\begin{center}
+\colorbox{ampblue}{\parbox{0.8\textwidth}{\centering\color{white}\bfseries\large
+  AMP $|$ Agentic Microservices Prototyping --- Stage 2 Agent}}
+\end{center}
+
+\vspace{2em}
+\tableofcontents
+\clearpage
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Objective}
+
+The Intent Anticipation Agent (IAA) is a machine-learning inference service that predicts
+the single most likely next action for a multi-step enterprise workflow case, returning
+a ranked set of candidate actions alongside structured task and timeline data for
+downstream consumption.
+
+Within the Project AMP pipeline, IAA occupies \textbf{Stage 2}, running in parallel with
+the Risk Radar Agent (RRA) and the Governance Policy Agent (GPA), after the Context
+Stitching Agent (CSA) has assembled the case's document, email, and event history.
+IAA's output --- an \texttt{ActionRecommendation} object --- is forwarded to the
+Delegation Agent (DA), which uses the recommended action, the associated task list, and
+the escalation flag to decide who (or which automated channel) should handle the case next.
+
+IAA fills the automation gap between coarse risk scoring (RRA) and routing (DA).
+Rule-based routing systems fail when the correct next action depends on the
+combination of case history, document completeness, and organisational context.
+Humans filling this gap introduce latency of hours to days. IAA closes that gap with
+sub-second decisions on the standard path and zero-millisecond decisions on the fast path,
+while still routing genuinely ambiguous cases to human review via an explicit escalation flag.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Problem Statement}
+
+Enterprise workflows --- vendor onboarding, insurance claims, fraud investigations,
+contract reviews --- share a structural challenge: at any given moment in a case,
+the correct next action is not simply the next step in a fixed flowchart.
+It depends on what has already happened (prior event sequence), what is missing
+(document gaps, incomplete risk data), and what external policy constraints are active
+(risk severity, governance rules). This combinatorial space grows exponentially with
+the number of workflow variants, making hard-coded rule engines brittle and expensive to maintain.
+
+Pure rule-based systems fail for two reasons. First, they cannot generalise to new
+workflow variants without explicit rule authoring. Second, the conditionals interact:
+a missing document may or may not require escalation depending on the case's risk level,
+which no static rule set can encode without exponential branching.
+
+Large language models (LLMs) alone are also insufficient. Without access to
+historical case patterns, an LLM can only reason from its training data, which does not
+include the organisation's specific workflow structure, escalation thresholds, or
+actor assignments. LLMs also have no notion of which actions have already been tried,
+causing them to repeat or skip steps.
+
+IAA's hybrid approach resolves both limitations:
+\begin{enumerate}[nosep]
+  \item \textbf{Fast path} --- deterministic rules bypass the LLM entirely for
+    unambiguous cases (high risk, missing inputs), achieving \textasciitilde{}0\,ms latency.
+  \item \textbf{RAG augmentation} --- the Qdrant vector store retrieves historically
+    similar cases (real BPIC event logs and synthetic cases), grounding the LLM prompt
+    with observed next-action patterns from analogous workflows.
+  \item \textbf{Single-shot LLM chain} --- a merged prompt elicits predicted actions,
+    task list, and workflow timeline in one call, cutting the original 3-call design
+    from \textasciitilde{}26\,s to \textasciitilde{}8--10\,s.
+  \item \textbf{Post-LLM rule overrides} --- hard rules applied after the LLM call
+    ensure policy compliance (e.g.\ high-risk cases are always escalated) without
+    filtering the LLM's predictions before they reach the log.
+\end{enumerate}
+
+The free-tier quota constraint on \texttt{gemini-2.0-flash} (20 requests/day)
+directly shaped the fast-path design: by bypassing the LLM for 40--60\% of
+production cases (those with high/critical risk or missing-input flags), the
+daily quota is effectively reserved for genuinely ambiguous cases.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{System Architecture}
+
+\subsubsection{High-Level Design}
+
+Every incoming \texttt{POST /predict} request is processed through one of two mutually
+exclusive execution paths, with the decision made synchronously in \texttt{chain.py::\_fast\_path()}.
+
+\begin{lstlisting}[style=ascii, caption={IAA execution flow}]
+POST /predict
+  |
+  v
+ProcessState validation (api.py or build_process_state from events)
+  |
+  v
+run_iaa() [iaa.py]
+  |
+  +-- IAARetriever.retrieve() [retriever.py]
+  |      embed query with all-MiniLM-L6-v2
+  |      Qdrant top-k=2 cosine search
+  |      returns list[dict] with id, document, metadata, distance
+  |
+  +-- run_chain() [chain.py]
+        |
+        +-- _fast_path(state, retrieved_ids)
+              |
+              +-- [FAST PATH] risk_severity in ("high","critical")
+              |     -> escalate_to_human=True, model_used="fast_path/no_llm"
+              |     -> return ActionRecommendation immediately (~0 ms)
+              |
+              +-- [FAST PATH] "missing"/"incomplete"/"required" in risk_flags
+              |     -> action="request_missing_document", escalate=False
+              |     -> return ActionRecommendation immediately (~0 ms)
+              |
+              +-- [STANDARD PATH] neither fast-path rule triggered
+                    |
+                    v
+                 LLM.invoke(merged_prompt)
+                    |
+                    v
+                 _extract_json(raw_response)
+                    |
+                    v
+                 parse predicted_actions, task_list, workflow_timeline,
+                 recommended_action  (all in one JSON response)
+                    |
+                    v
+                 return ActionRecommendation (before overrides)
+  |
+  +-- apply_overrides(recommendation, state) [chain.py]
+        |
+        +-- HARD RULES (fire before confidence check):
+        |     - high_risk_escalation: risk_severity in ("high","critical")
+        |     - missing_critical_input: risk_flags contains missing/incomplete/required
+        |
+        +-- SOFT RULE: confidence < 0.45
+        |     -> escalate_to_human=True, prediction preserved
+        |
+        +-- else: recommendation returned unchanged
+  |
+  v
+_log(state, final) [iaa.py]
+  append to data/predictions.jsonl
+  |
+  v
+return ActionRecommendation
+  |
+  v
+PredictResponse (api.py): {recommendation, latency_ms, corpus_size}
+\end{lstlisting}
+
+\subsubsection{Component Interaction}
+
+The IAA codebase is decomposed into seven modules with strict calling relationships:
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Module} & \textbf{Calls} & \textbf{Role} \\
+\midrule
+\texttt{api.py} & \texttt{iaa.py}, \texttt{schemas.py} & HTTP interface, request routing \\
+\texttt{iaa.py} & \texttt{retriever.py}, \texttt{chain.py} & Core pipeline, logging, LangGraph node \\
+\texttt{chain.py} & \texttt{schemas.py} & Fast path, LLM call, JSON parsing, overrides \\
+\texttt{retriever.py} & \texttt{qdrant\_client\_singleton.py}, \texttt{schemas.py} & Vector search \\
+\texttt{ingest.py} & \texttt{qdrant\_client\_singleton.py} & Corpus population \\
+\texttt{schemas.py} & --- & Pydantic model definitions only \\
+\texttt{qdrant\_client\_singleton.py} & --- & Shared Qdrant client + embedder \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Data flows in one direction: \texttt{api.py} receives an HTTP request, deserialises it
+into \texttt{ProcessState} (directly or via \texttt{build\_process\_state} from raw events),
+passes it to \texttt{run\_iaa()} in \texttt{iaa.py}. \texttt{iaa.py} calls
+\texttt{IAARetriever.retrieve()} to get historical context, then calls
+\texttt{run\_chain()} which either returns a fast-path result or invokes the LLM.
+After \texttt{apply\_overrides()}, the final \texttt{ActionRecommendation} is logged
+and returned up through \texttt{api.py} as a \texttt{PredictResponse}.
+
+\subsubsection{Integration with Orchestrator}
+
+The LangGraph orchestrator (\texttt{orchestrator/tools.py}) calls IAA via HTTP POST to
+\texttt{http://localhost:8003/predict}. The payload is built by
+\texttt{orchestrator/shims.py::build\_iaa\_input()}, which constructs a slim
+\texttt{ProcessState} from AmpState fields: the last five case history events,
+the last three email headers (subject/from/date only, no bodies), risk flags from RRA,
+and governance decision from GPA. This bounded payload is the IAA latency fix --- it
+prevents the LLM prompt from growing unboundedly with large case histories.
+
+The raw HTTP response is unwrapped by \texttt{shims.py::iaa\_to\_amp()}, which extracts
+the \texttt{recommendation} field from the \texttt{PredictResponse} wrapper and maps it
+directly to \texttt{AmpState.iaa\_output}. The AmpState fields populated by IAA are:
+\texttt{predicted\_actions}, \texttt{recommended\_action}, \texttt{override\_applied},
+\texttt{override\_reason}, \texttt{retrieved\_context\_ids}, \texttt{escalate\_to\_human},
+\texttt{operating\_context}, \texttt{model\_used}, \texttt{timestamp}, \texttt{task\_list},
+and \texttt{workflow\_timeline}.
+
+\textbf{Decision D1} (\texttt{context\_summary} removal): IAA's \texttt{ProcessState}
+originally included a \texttt{context\_summary} field that was expected to be populated by
+CSA. CSA never generated this field, causing a \texttt{KeyError} in the prompt assembly.
+The field was removed from \texttt{ProcessState} as a required input and demoted to an
+optional nullable field. The orchestrator shim was updated accordingly.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Database Design}
+
+\subsubsection{Qdrant Vector Store}
+
+IAA uses a single Qdrant collection named \texttt{iaa\_corpus}. All domains share this
+collection; domain identity is encoded in payload metadata rather than separate collections.
+This avoids collection sprawl and allows cross-domain retrieval when filtering is not applied.
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Source} \\
+\midrule
+Collection name & \texttt{iaa\_corpus} & \texttt{ingest.py:COLLECTION} \\
+Vector dimension & 384 & \texttt{ingest.py:VECTOR\_SIZE} \\
+Distance metric & Cosine & \texttt{ingest.py::ensure\_collection()} \\
+Embedding model & \texttt{all-MiniLM-L6-v2} & \texttt{qdrant\_client\_singleton.py} \\
+Top-k at retrieval & 2 & \texttt{retriever.py:DEFAULT\_K} \\
+Max doc chars in prompt & 400 & \texttt{retriever.py:MAX\_DOC\_CHARS} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Each Qdrant point contains a vector (384-dim float) and a payload with the following fields:
+
+\begin{center}
+\begin{longtable}{@{}lll@{}}
+\toprule
+\textbf{Payload Field} & \textbf{Type} & \textbf{Description} \\
+\midrule
+\endhead
+\texttt{document} & string & Natural-language process state description \\
+\texttt{source} & string & Origin tag: \texttt{synthetic}, \texttt{bpic\_2012}, \texttt{bpic\_2018}, \texttt{cuad} \\
+\texttt{domain} & string & Domain: \texttt{finance}, \texttt{legal}, \texttt{procurement}, \texttt{generic} \\
+\texttt{process\_type} & string & Process name: \texttt{loan\_application}, \texttt{claim\_processing}, etc. \\
+\texttt{next\_action} & string & Ground-truth next action observed in the historical log \\
+\texttt{entity\_id} & string & Original case ID for audit traceability \\
+\texttt{current\_event} & string & The current event type at the time of snapshot \\
+\texttt{stage} & string & Process stage at time of snapshot \\
+\texttt{actor} & string & Who performed the current event \\
+\texttt{doc\_type} & string & \texttt{process\_trace}, \texttt{real\_trace}, \texttt{synthetic\_trace}, \texttt{policy\_clause} \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+Documents are inserted via \texttt{ingest.py::\_batch\_add()}, which embeds documents
+using \texttt{LocalEmbeddingFn} (wrapping \texttt{SentenceTransformer}), then upserts
+batches of 100 \texttt{PointStruct} objects. Deduplication is two-stage: content-hash
+UUIDs prevent in-batch duplicates, and a pre-flight \texttt{client.retrieve()} call
+skips IDs already present in the collection.
+
+\subsubsection{Singleton Client Design}
+
+The embedded Qdrant file client takes an exclusive lock on the storage directory.
+If two \texttt{QdrantClient(path=...)} instances are created in the same process
+(e.g.\ one in \texttt{ingest.py} and one in \texttt{retriever.py}), the second raises:
+\begin{quote}\ttfamily Storage folder ./qdrant\_store is already accessed by another instance\end{quote}
+
+\texttt{qdrant\_client\_singleton.py::get\_qdrant\_client()} prevents this via a
+module-level \texttt{\_client} global, initialised lazily on first call and reused
+by all subsequent callers. The same pattern is applied to the embedding model
+(\texttt{get\_embedding\_model()} with \texttt{\_embedding\_model} global), which
+avoids the 90-second cold start cost of loading \texttt{all-MiniLM-L6-v2} more than once.
+
+Connection mode is controlled by the \texttt{QDRANT\_HOST} environment variable:
+if unset, the local file client is used at \texttt{QDRANT\_PATH} (default \texttt{./qdrant\_store});
+if set (e.g.\ \texttt{qdrant} in Docker), a network client connects to port 6333.
+
+\subsubsection{Corpus Sources}
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Source} & \textbf{Format} & \textbf{Domain} & \textbf{Volume} \\
+\midrule
+Synthetic cases & JSON (200 cases) & claims, approvals, audits & \textasciitilde{}200 docs \\
+BPIC 2012 & XES (loan applications) & finance & up to 500 cases \\
+BPIC 2018 & XES (permit requests) & government & up to 500 cases \\
+BPIC 2019 & XES (purchase orders) & procurement & up to 500 cases \\
+CUAD & HuggingFace dataset & legal (contract clauses) & up to 200 docs \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Synthetic cases are JSON files at \texttt{data/synthetic\_cases.json} (200 cases,
+generated by \texttt{scripts/generate\_synthetic.py}). Each case contains:
+\texttt{entity\_id}, \texttt{event\_type}, \texttt{prior\_actions}, \texttt{next\_action},
+\texttt{stage}, \texttt{risk\_severity}, \texttt{process\_type}, \texttt{domain},
+and \texttt{actor\_sequence} (list of \texttt{\{event\_type, actor\}} dicts).
+
+The audit log is written to \texttt{data/predictions.jsonl} (configured via the
+\texttt{LOG\_FILE} env var). Each line is a JSON object written by \texttt{iaa.py::\_log()}
+containing: \texttt{timestamp}, \texttt{entity\_id}, \texttt{current\_stage},
+\texttt{current\_event}, \texttt{operating\_context}, \texttt{recommended},
+\texttt{confidence}, \texttt{override\_applied}, \texttt{override\_reason},
+\texttt{escalate}, \texttt{model\_used}, \texttt{task\_count}, \texttt{timeline\_steps}.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Code File Explanations}
+
+\subsubsection{\texttt{api.py}}
+
+\textbf{Purpose.} FastAPI REST server providing the HTTP interface consumed by the
+LangGraph orchestrator. Runs on port 8003 in the AMP stack.
+
+\textbf{Key functions/classes:}
+\begin{itemize}[nosep]
+  \item \texttt{PredictRequest} --- accepts either a pre-built \texttt{ProcessState}
+    or a raw list of \texttt{EventLogEntry} objects; optional \texttt{domain\_filter}
+    and \texttt{process\_type\_filter} for scoped retrieval.
+  \item \texttt{PredictResponse} --- wraps \texttt{ActionRecommendation} with
+    \texttt{latency\_ms} and optional \texttt{corpus\_size}.
+  \item \texttt{predict(req: PredictRequest) -> PredictResponse} --- main endpoint;
+    builds \texttt{ProcessState} from events if needed, calls \texttt{run\_iaa()},
+    measures wall-clock latency, appends corpus count.
+  \item \texttt{ingest\_documents(req: IngestRequest, background\_tasks)} --- accepts
+    raw documents + metadata, kicks off \texttt{\_batch\_add()} asynchronously so
+    the HTTP response is immediate.
+  \item \texttt{startup()} --- pre-warms \texttt{IAARetriever} and LLM on FastAPI
+    startup, reducing first-call latency.
+  \item \texttt{health()} --- liveness check returning \texttt{status: ok} and
+    the active \texttt{LLM\_PROVIDER}.
+\end{itemize}
+
+\textbf{Notable details.} The \texttt{/workflow} endpoint delegates to
+\texttt{orchestrator.orchestrator.run\_workflow()} (the IAA's own local orchestrator,
+not the AMP LangGraph orchestrator). This endpoint is used by the CLI demo but not
+by the production AMP pipeline, which calls \texttt{/predict} directly.
+
+\subsubsection{\texttt{chain.py}}
+
+\textbf{Purpose.} Implements the LLM chain: a single merged prompt replacing the
+original three-step chain, plus the fast-path bypass and post-LLM rule overrides.
+
+\textbf{Key functions/classes:}
+\begin{itemize}[nosep]
+  \item \texttt{get\_llm(temperature=0.1)} --- provider factory; returns
+    \texttt{ChatGoogleGenerativeAI} or \texttt{ChatOpenAI} based on \texttt{LLM\_PROVIDER}.
+    Temperature fixed at 0.1 for determinism.
+  \item \texttt{\_fast\_path(state, retrieved\_ids) -> ActionRecommendation | None} ---
+    returns a fully-formed \texttt{ActionRecommendation} with
+    \texttt{model\_used="fast\_path/no\_llm"} when either hard rule fires; returns
+    \texttt{None} if standard path is required.
+  \item \texttt{run\_chain(state, retrieved\_context, retrieved\_ids, llm)} ---
+    checks fast path first; on standard path, formats the merged prompt
+    (\texttt{MERGED\_SYSTEM} + \texttt{MERGED\_USER}), calls \texttt{llm.invoke()},
+    extracts JSON via \texttt{\_extract\_json()}, and parses
+    \texttt{predicted\_actions}, \texttt{task\_list}, \texttt{workflow\_timeline},
+    and \texttt{recommended\_action}.
+  \item \texttt{apply\_overrides(recommendation, state) -> ActionRecommendation} ---
+    iterates \texttt{HARD\_RULES}, then checks confidence threshold (0.45).
+    Returns a new immutable \texttt{ActionRecommendation}; never mutates input.
+  \item \texttt{\_extract\_json(text)} --- strips markdown fences (\texttt{```json}),
+    uses regex to find the first \texttt{\{...\}} block, and raises \texttt{ValueError}
+    if no JSON is found.
+\end{itemize}
+
+\textbf{HARD\_RULES} list contains three entries:
+\begin{enumerate}[nosep]
+  \item \texttt{high\_risk\_escalation}: fires when \texttt{risk\_severity} is
+    \texttt{"high"} or \texttt{"critical"}, action = \texttt{escalate\_to\_human},
+    confidence = 0.99, escalate = True.
+  \item \texttt{missing\_critical\_input}: fires when any word in
+    \texttt{risk\_flags} contains \texttt{"missing"}, \texttt{"incomplete"}, or
+    \texttt{"required"}, action = \texttt{request\_missing\_document},
+    confidence = 0.95, escalate = False.
+  \item \texttt{low\_confidence\_escalation}: not evaluated via the condition lambda
+    (lambda always returns \texttt{False}); the confidence check is handled separately
+    as a soft escalation --- the original prediction is preserved.
+\end{enumerate}
+
+\textbf{CONFIDENCE\_THRESHOLD} is 0.45; predictions below this set
+\texttt{escalate\_to\_human=True} without replacing the recommended action.
+
+\textbf{Notable quirk.} The merged prompt instructs the LLM to ``return valid JSON
+only, no markdown'', but in practice Gemini occasionally wraps output in
+\texttt{```json} fences. \texttt{\_extract\_json()} handles this defensively.
+
+\subsubsection{\texttt{retriever.py}}
+
+\textbf{Purpose.} Domain-agnostic RAG retrieval: embeds the current process state
+as a natural-language query, searches Qdrant for the most similar historical
+process snapshots, and formats results for LLM prompt injection.
+
+\textbf{Key functions/classes:}
+\begin{itemize}[nosep]
+  \item \texttt{build\_query(state: ProcessState) -> str} --- constructs a plain-text
+    search query from current stage, current event, last three prior actions, risk
+    severity, risk flags, and optional context summary.
+  \item \texttt{IAARetriever} class:
+    \begin{itemize}[nosep]
+      \item \texttt{retrieve(state, domain\_filter=None, process\_type\_filter=None) -> list[dict]} ---
+        embeds the query with \texttt{get\_embedding\_model()}, calls
+        \texttt{client.query\_points()} with \texttt{limit=k}, applies optional
+        payload filters. Graceful degradation: returns \texttt{[]} on any exception.
+      \item \texttt{format\_for\_prompt(retrieved: list[dict]) -> str} --- formats
+        each result as a numbered \texttt{[Context N]} block with source, process type,
+        next-action label, and truncated document body (\texttt{MAX\_DOC\_CHARS=400}).
+    \end{itemize}
+\end{itemize}
+
+\textbf{Notable details.} \texttt{DEFAULT\_K=2} (reduced from 4 in the Phase 1
+latency fix) keeps the injected context small. The retriever client is lazy-loaded:
+the property \texttt{IAARetriever.client} initialises the singleton and calls
+\texttt{ensure\_collection()} on first access.
+
+\subsubsection{\texttt{iaa.py}}
+
+\textbf{Purpose.} Core IAA entrypoint. Exposes two interfaces:
+\texttt{run\_iaa()} for direct invocation and \texttt{iaa\_node()} as a
+LangGraph-compatible node.
+
+\textbf{Key functions:}
+\begin{itemize}[nosep]
+  \item \texttt{build\_process\_state(events, context\_summary=None, risk\_flags=None, ...)} ---
+    sorts \texttt{EventLogEntry} objects by timestamp, treats the last event as the
+    current state and all prior events as history. Infers \texttt{operating\_context}:
+    \texttt{"full"} only when risk severity, policy constraints, and assigned owner are
+    all provided; otherwise \texttt{"partial --- <missing agents>"}.
+  \item \texttt{run\_iaa(state, domain\_filter=None, process\_type\_filter=None, retriever=None, llm=None)} ---
+    lazy-initialises the module-level \texttt{\_retriever} and \texttt{\_llm} singletons,
+    retrieves context, runs the chain, applies overrides, logs the result.
+  \item \texttt{iaa\_node(graph\_state: dict) -> dict} --- reads
+    \texttt{graph\_state["process\_state"]}, optionally supplements it with
+    \texttt{csa\_output["context\_summary"]} and \texttt{rra\_output["severity"]},
+    calls \texttt{run\_iaa()}, writes \texttt{iaa\_recommendation},
+    \texttt{iaa\_routing\_action}, and \texttt{iaa\_escalate} to the state dict.
+    Returns a fallback escalation if \texttt{process\_state} is absent.
+  \item \texttt{\_log(state, rec)} --- appends a JSON line to \texttt{LOG\_FILE}
+    (default \texttt{./data/predictions.jsonl}), creating the directory if needed.
+    Failures are suppressed with a warning log.
+\end{itemize}
+
+\textbf{Notable detail.} Module-level \texttt{\_retriever} and \texttt{\_llm} are
+initialised to \texttt{None} and populated on first \texttt{run\_iaa()} call.
+Injecting these via the function parameters (as tests do) bypasses the globals,
+enabling test isolation without patching module state.
+
+\subsubsection{\texttt{schemas.py}}
+
+\textbf{Purpose.} All Pydantic v2 models for IAA input and output. No business logic.
+
+\textbf{Key classes:}
+\begin{itemize}[nosep]
+  \item \texttt{EventLogEntry} --- universal event log row; accepts BPIC XES data,
+    CUAD events, or custom logs. Required fields: \texttt{event\_id}, \texttt{entity\_id},
+    \texttt{event\_type}, \texttt{stage}, \texttt{timestamp}.
+  \item \texttt{ProcessStep} --- structured prior step with \texttt{event\_type},
+    \texttt{actor}, \texttt{timestamp}, \texttt{outcome}.
+  \item \texttt{ProcessState} --- primary input to the chain; assembled from event
+    history. Contains optional upstream agent fields (\texttt{risk\_flags},
+    \texttt{risk\_severity}, \texttt{policy\_constraints}, \texttt{assigned\_owner}).
+  \item \texttt{TaskItem} --- one task for DA: \texttt{task\_id}, \texttt{action},
+    \texttt{assigned\_role}, \texttt{priority}, \texttt{depends\_on}, \texttt{reasoning}.
+  \item \texttt{WorkflowStep} --- one step in the timeline: \texttt{step},
+    \texttt{event\_type}, \texttt{actor}, \texttt{status}, \texttt{timestamp}.
+  \item \texttt{PredictedAction} --- one ranked action: \texttt{action\_id},
+    \texttt{label}, \texttt{confidence} (0.0--1.0 constrained), \texttt{reasoning}.
+  \item \texttt{ActionRecommendation} --- top-level output; \texttt{predicted\_actions}
+    is constrained \texttt{min\_length=1, max\_length=3}.
+  \item \texttt{IAAState} --- LangGraph shared state contract; serves as the integration
+    contract for the AITS team.
+\end{itemize}
+
+\subsubsection{\texttt{ingest.py}}
+
+\textbf{Purpose.} Universal corpus ingestion pipeline. Converts BPIC XES files,
+CUAD clauses, tabular CSV/JSON logs, and synthetic cases into Qdrant points.
+
+\textbf{Key functions:}
+\begin{itemize}[nosep]
+  \item \texttt{ensure\_collection(client)} --- idempotent collection creation.
+  \item \texttt{\_make\_id(text, prefix) -> str} --- deterministic MD5-based UUID
+    from content + prefix; identical content with different prefixes yields different IDs.
+  \item \texttt{ingest\_bpic\_xes(xes\_path, source\_name, process\_type, domain, max\_cases, client) -> int} ---
+    reads XES via pm4py, converts to DataFrame, samples up to 500 cases, generates
+    process-state snapshots (one per event step, up to 8 per case), embeds and upserts.
+  \item \texttt{ingest\_cuad(client=None, max\_docs=200) -> int} --- loads CUAD from
+    HuggingFace, wraps each contract clause as a process document.
+  \item \texttt{ingest\_tabular(file\_path, column\_map, source\_name, domain, process\_type, ...) -> int} ---
+    generic entry point for client-specific CSV or JSON event logs via a column mapping dict.
+  \item \texttt{ingest\_synthetic\_cases(cases, source\_name, domain, process\_type, client) -> int} ---
+    ingests pre-built synthetic case dicts. Includes \texttt{entity\_id} in the hash
+    to prevent dedup collisions on cases with identical event sequences.
+  \item \texttt{bootstrap\_corpus(include\_synthetic, include\_bpic, include\_cuad, ...)} ---
+    one-shot setup function; fastest path is \texttt{bootstrap\_corpus(include\_synthetic=True)}.
+  \item \texttt{\_batch\_add(client, docs, ids, metas, batch\_size=100)} --- two-stage
+    dedup then embed + upsert in batches of 100.
+\end{itemize}
+
+\subsubsection{\texttt{qdrant\_client\_singleton.py}}
+
+\textbf{Purpose.} Process-wide singleton for the Qdrant client and embedding model,
+preventing file lock conflicts in local mode.
+
+\textbf{Key functions/classes:}
+\begin{itemize}[nosep]
+  \item \texttt{get\_qdrant\_client() -> QdrantClient} --- returns the process-wide
+    client; creates it on first call. Uses network client if \texttt{QDRANT\_HOST}
+    is set, otherwise file client at \texttt{QDRANT\_PATH}.
+  \item \texttt{get\_embedding\_model() -> SentenceTransformer} --- lazy-loads
+    \texttt{all-MiniLM-L6-v2}; cached in \texttt{\_embedding\_model} global.
+  \item \texttt{LocalEmbeddingFn} --- wrapper class with \texttt{\_\_call\_\_},
+    \texttt{embed\_documents()}, and \texttt{embed\_query()} so it works as both
+    a callable and a LangChain-compatible embedder.
+\end{itemize}
+
+\textbf{Config constants:} \texttt{QDRANT\_PATH} (env: \texttt{QDRANT\_PATH},
+default \texttt{./qdrant\_store}), \texttt{QDRANT\_HOST} (env: \texttt{QDRANT\_HOST},
+default \texttt{None}), \texttt{QDRANT\_PORT} (env: \texttt{QDRANT\_PORT}, default 6333).
+
+\subsubsection{\texttt{conftest.py}}
+
+\textbf{Purpose.} pytest configuration that mocks the LLM globally so all 77 unit
+tests run without any API key.
+
+\textbf{Mechanism.} The \texttt{mock\_llm\_globally} fixture is marked
+\texttt{autouse=True}, applying it to every test automatically. Tests marked
+\texttt{@pytest.mark.integration} receive a \texttt{yield} without any mock applied,
+allowing real API calls. Non-integration tests receive a \texttt{MagicMock} LLM whose
+\texttt{invoke.side\_effect} cycles through three pre-baked responses:
+
+\begin{enumerate}[nosep]
+  \item \texttt{MOCK\_STEP1} --- plain-text process summary string.
+  \item \texttt{MOCK\_STEP2} --- JSON with \texttt{predicted\_actions},
+    \texttt{task\_list}, \texttt{workflow\_timeline}.
+  \item \texttt{MOCK\_STEP3} --- JSON with \texttt{action\_id}, \texttt{label},
+    \texttt{confidence}, \texttt{justification}.
+\end{enumerate}
+
+The patch target is \texttt{agent.chain.get\_llm}; since \texttt{run\_chain()} calls
+\texttt{get\_llm()} only when \texttt{llm} is not injected, tests that pass a mock
+LLM directly bypass the patch entirely.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Input Specification}
+
+\subsubsection{PredictRequest Schema}
+
+\begin{longtable}{@{}p{3.8cm}p{3cm}p{1.5cm}p{6cm}@{}}
+\toprule
+\textbf{Field} & \textbf{Type} & \textbf{Required} & \textbf{Description} \\
+\midrule
+\endhead
+\texttt{process\_state} & \texttt{ProcessState} & No* & Pre-built process state (path 1) \\
+\texttt{events} & \texttt{list[EventLogEntry]} & No* & Raw event log (path 2 --- IAA builds state) \\
+\texttt{context\_summary} & \texttt{str | None} & No & Optional CSA context summary \\
+\texttt{risk\_flags} & \texttt{list[str] | None} & No & RRA risk flags \\
+\texttt{risk\_severity} & \texttt{str | None} & No & RRA severity: low/medium/high/critical \\
+\texttt{policy\_constraints} & \texttt{list[str] | None} & No & GPA active constraints \\
+\texttt{assigned\_owner} & \texttt{str | None} & No & DA assigned owner (if pre-assigned) \\
+\texttt{domain\_filter} & \texttt{str | None} & No & Scope Qdrant search to this domain \\
+\texttt{process\_type\_filter} & \texttt{str | None} & No & Scope Qdrant search to this process type \\
+\bottomrule
+\multicolumn{4}{@{}l@{}}{\small * Either \texttt{process\_state} or \texttt{events} must be provided; both absent returns HTTP 422.}
+\end{longtable}
+
+\subsubsection{ProcessState Schema}
+
+\begin{longtable}{@{}p{3.8cm}p{3.2cm}p{1.5cm}p{5.5cm}@{}}
+\toprule
+\textbf{Field} & \textbf{Type} & \textbf{Required} & \textbf{Description} \\
+\midrule
+\endhead
+\texttt{entity\_id} & \texttt{str} & Yes & Case/claim/contract identifier \\
+\texttt{current\_stage} & \texttt{str} & Yes & Current process stage \\
+\texttt{current\_event\_type} & \texttt{str} & Yes & Most recent event type \\
+\texttt{prior\_actions} & \texttt{list[str]} & No & Ordered prior event types (default: \texttt{[]}) \\
+\texttt{prior\_steps} & \texttt{list[ProcessStep]} & No & Structured steps with actor/timestamp \\
+\texttt{actor} & \texttt{str | None} & No & Who performed the current event \\
+\texttt{timestamp} & \texttt{datetime} & Yes & When the current event occurred \\
+\texttt{metadata} & \texttt{dict} & No & Domain-specific extras (amounts, priority, etc.) \\
+\texttt{context\_summary} & \texttt{str | None} & No & CSA summary (optional, rarely populated) \\
+\texttt{risk\_flags} & \texttt{list[str]} & No & RRA flags (default: \texttt{[]}) \\
+\texttt{risk\_severity} & \texttt{str | None} & No & \texttt{low | medium | high | critical} \\
+\texttt{policy\_constraints} & \texttt{list[str]} & No & GPA constraints (default: \texttt{[]}) \\
+\texttt{assigned\_owner} & \texttt{str | None} & No & Pre-assigned owner (optional) \\
+\texttt{operating\_context} & \texttt{str} & No & \texttt{"full"} or \texttt{"partial --- <agents>"} \\
+\bottomrule
+\end{longtable}
+
+The \texttt{risk\_severity} field directly controls fast-path routing. Values
+\texttt{"high"} and \texttt{"critical"} trigger the \texttt{high\_risk\_escalation}
+fast-path rule, bypassing the LLM entirely and returning
+\texttt{escalate\_to\_human=True} with confidence 0.99. Values \texttt{"low"} and
+\texttt{"medium"} take the standard path. A \texttt{None} value also takes the
+standard path but the LLM receives \texttt{"unknown"} for the risk level field in
+the prompt, potentially reducing prediction quality.
+
+The \texttt{risk\_flags} field triggers the second fast-path rule when any flag
+contains the substrings \texttt{"missing"}, \texttt{"incomplete"}, or
+\texttt{"required"} (case-insensitive substring match on the joined flags string).
+This covers common flag patterns such as \texttt{"missing\_required\_attachment"},
+\texttt{"incomplete\_documentation"}, and \texttt{"required\_field\_absent"}.
+
+\subsubsection{Example Inputs}
+
+\begin{lstlisting}[caption={Standard path input: medium-risk vendor onboarding}]
+{
+  "process_state": {
+    "entity_id":          "CASE-VND-001",
+    "current_stage":      "document_verification",
+    "current_event_type": "document_submitted",
+    "prior_actions":      ["vendor_profile_created", "initial_review"],
+    "actor":              "procurement_officer",
+    "timestamp":          "2026-04-30T10:00:00Z",
+    "metadata":           {"monetary_value": 150000},
+    "risk_flags":         ["new_vendor", "high_value"],
+    "risk_severity":      "medium",
+    "policy_constraints": [],
+    "operating_context":  "full"
+  },
+  "domain_filter":       "procurement",
+  "process_type_filter": "vendor_onboarding"
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Fast-path input: critical-risk fraud investigation}]
+{
+  "events": [
+    {
+      "event_id":   "e1",
+      "entity_id":  "CASE-FRD-003",
+      "event_type": "suspicious_transaction_flagged",
+      "stage":      "fraud_detection",
+      "timestamp":  "2026-04-30T09:00:00Z",
+      "metadata":   {"amount": 12000}
+    },
+    {
+      "event_id":   "e2",
+      "entity_id":  "CASE-FRD-003",
+      "event_type": "manual_review_initiated",
+      "stage":      "investigation",
+      "timestamp":  "2026-04-30T09:30:00Z",
+      "metadata":   {}
+    }
+  ],
+  "risk_flags":    ["fraud_risk", "regulatory_risk"],
+  "risk_severity": "critical"
+}
+\end{lstlisting}
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Output Specification}
+
+\subsubsection{PredictResponse Schema}
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Field} & \textbf{Type} & \textbf{Nullable} & \textbf{Description} \\
+\midrule
+\texttt{recommendation} & \texttt{ActionRecommendation} & No & Full IAA output \\
+\texttt{latency\_ms} & \texttt{float} & No & Wall-clock time for the full request \\
+\texttt{corpus\_size} & \texttt{int | None} & Yes & Number of docs in Qdrant at time of call \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{ActionRecommendation Schema}
+
+\begin{longtable}{@{}p{4.2cm}p{3.5cm}p{6cm}@{}}
+\toprule
+\textbf{Field} & \textbf{Type} & \textbf{Description} \\
+\midrule
+\endhead
+\texttt{predicted\_actions} & \texttt{list[PredictedAction]} & Top 1--3 actions ranked by confidence descending \\
+\texttt{recommended\_action} & \texttt{PredictedAction} & The single best action to surface \\
+\texttt{override\_applied} & \texttt{bool} & True if a hard rule fired (default: False) \\
+\texttt{override\_reason} & \texttt{str | None} & Human-readable rule name + reason \\
+\texttt{retrieved\_context\_ids} & \texttt{list[str]} & Qdrant point IDs used for retrieval \\
+\texttt{escalate\_to\_human} & \texttt{bool} & True if human review required (default: False) \\
+\texttt{operating\_context} & \texttt{str} & Passed from ProcessState for audit \\
+\texttt{model\_used} & \texttt{str} & e.g.\ \texttt{gemini/gemini-2.0-flash} or \texttt{fast\_path/no\_llm} \\
+\texttt{timestamp} & \texttt{datetime} & When this recommendation was generated \\
+\texttt{task\_list} & \texttt{list[TaskItem]} & Tasks for Delegation Agent to consume \\
+\texttt{workflow\_timeline} & \texttt{list[WorkflowStep]} & Chronological case timeline \\
+\bottomrule
+\end{longtable}
+
+Confidence scoring uses the raw LLM output's confidence float (0.0--1.0), constrained
+by the \texttt{PredictedAction} field validator. The LLM is instructed to rank
+\texttt{predicted\_actions} descending by confidence and to include
+\texttt{"escalate\_for\_review"} as the last action when any confidence falls below 0.3.
+The \texttt{escalate\_to\_human} flag on \texttt{ActionRecommendation} is set to True
+when: (a) the recommended action's \texttt{action\_id} is \texttt{"escalate\_for\_review"}
+or \texttt{"escalate\_to\_human"}, (b) the fast-path high-risk rule fires, or (c) the
+confidence threshold override fires.
+
+\subsubsection{WorkflowTimeline and TaskList}
+
+\textbf{WorkflowStep} fields:
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Field} & \textbf{Type} & \textbf{Required} & \textbf{Description} \\
+\midrule
+\texttt{step} & \texttt{int} & Yes & Ordinal position (1-indexed) \\
+\texttt{event\_type} & \texttt{str} & Yes & Event type label \\
+\texttt{actor} & \texttt{str | None} & No & Role responsible for this step \\
+\texttt{status} & \texttt{str} & Yes & \texttt{completed | current | predicted} \\
+\texttt{timestamp} & \texttt{datetime | None} & No & Null for predicted steps \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{TaskItem} fields:
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Field} & \textbf{Type} & \textbf{Required} & \textbf{Description} \\
+\midrule
+\texttt{task\_id} & \texttt{str} & Yes & Unique ID e.g.\ \texttt{T001} \\
+\texttt{action} & \texttt{str} & Yes & Snake\_case action identifier \\
+\texttt{assigned\_role} & \texttt{str | None} & No & Role for DA to consume \\
+\texttt{priority} & \texttt{str} & No & \texttt{high | medium | low} (default: \texttt{medium}) \\
+\texttt{depends\_on} & \texttt{list[str]} & No & task\_ids this task depends on \\
+\texttt{reasoning} & \texttt{str} & Yes & Why this task is included \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Streamlit dashboard (\texttt{demo/app.py}) renders the \texttt{workflow\_timeline}
+as a status list with icons (\texttt{\checkmark} for completed, \texttt{▶} for current,
+\texttt{○} for predicted) and renders \texttt{task\_list} as a \texttt{st.dataframe}
+table in the IAA tab. The DA uses the first \texttt{TaskItem.assigned\_role} from
+\texttt{task\_list[0]} to populate \texttt{recommended\_candidates} in its input.
+
+\subsubsection{Fast-Path vs Standard-Path Output Differences}
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Field} & \textbf{Fast Path} & \textbf{Standard Path} \\
+\midrule
+\texttt{predicted\_actions} & Exactly 1 item & 1--3 items \\
+\texttt{task\_list} & \texttt{[]} (empty) & Populated by LLM \\
+\texttt{workflow\_timeline} & \texttt{[]} (empty) & Populated by LLM \\
+\texttt{override\_applied} & \texttt{True} & \texttt{False} (unless soft rule fires) \\
+\texttt{model\_used} & \texttt{"fast\_path/no\_llm"} & \texttt{"gemini/gemini-2.0-flash"} \\
+\texttt{latency\_ms} & \textasciitilde{}0--5\,ms & \textasciitilde{}3000--10000\,ms \\
+\texttt{escalate\_to\_human} & \texttt{True} (risk) or \texttt{False} (missing doc) & Depends on LLM + overrides \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Human-in-the-Loop Conditions}
+
+The \texttt{escalate\_to\_human} flag on \texttt{ActionRecommendation} is set to
+\texttt{True} under the following conditions, in priority order:
+
+\begin{enumerate}
+  \item \textbf{Fast-path rule 1 --- high/critical risk} (\texttt{chain.py::\_fast\_path()}).
+    When \texttt{ProcessState.risk\_severity} is \texttt{"high"} or \texttt{"critical"},
+    the LLM is bypassed entirely. \texttt{escalate\_to\_human=True},
+    \texttt{recommended\_action.action\_id="escalate\_to\_human"},
+    \texttt{confidence=0.99}, \texttt{model\_used="fast\_path/no\_llm"}.
+
+  \item \textbf{Fast-path rule 2 --- missing required inputs} (\texttt{chain.py::\_fast\_path()}).
+    When any string in \texttt{risk\_flags} contains \texttt{"missing"},
+    \texttt{"incomplete"}, or \texttt{"required"} (case-insensitive substring match
+    on the space-joined flags). The LLM is bypassed.
+    \texttt{escalate\_to\_human=False}, \texttt{recommended\_action.action\_id="request\_missing\_document"}.
+    Note: this fast-path rule does \emph{not} set escalate; it routes to document
+    retrieval instead. However it preserves the same output shape.
+
+  \item \textbf{Post-LLM hard rule 1 --- high/critical risk override}
+    (\texttt{chain.py::apply\_overrides()}).
+    If the fast path was not triggered (e.g.\ the fast path check ran but
+    risk\_severity changed between the fast-path check and override application,
+    which should not normally occur), \texttt{apply\_overrides()} re-applies the
+    same \texttt{high\_risk\_escalation} rule. In practice, fast path always fires first
+    for high/critical risk, so this override is a belt-and-suspenders safety net.
+
+  \item \textbf{Post-LLM hard rule 2 --- missing input override}
+    (\texttt{chain.py::apply\_overrides()}).
+    Same condition as fast-path rule 2, applied post-LLM in the rare case where
+    fast path did not fire but the state has missing-input flags.
+
+  \item \textbf{Post-LLM soft rule --- low confidence} (\texttt{chain.py::apply\_overrides()}).
+    When \texttt{recommended\_action.confidence < CONFIDENCE\_THRESHOLD} (0.45),
+    \texttt{escalate\_to\_human=True} is set and \texttt{override\_applied=True},
+    but the original \texttt{recommended\_action} is \emph{preserved} (not replaced).
+    The override reason records the exact confidence and threshold values.
+
+  \item \textbf{Standard-path auto-escalation via action\_id}
+    (\texttt{chain.py::run\_chain()} line 298).
+    When the LLM's \texttt{recommended\_action.action\_id} is either
+    \texttt{"escalate\_for\_review"} or \texttt{"escalate\_to\_human"},
+    \texttt{escalate\_to\_human=True} is set on the returned \texttt{ActionRecommendation}
+    without any override rule firing. The LLM itself chose to escalate.
+\end{enumerate}
+
+\textbf{Downstream effect.} When the orchestrator receives
+\texttt{escalate\_to\_human=True} in the IAA output, the \texttt{iaa\_to\_amp()} shim
+propagates it to \texttt{AmpState.iaa\_output.escalate\_to\_human}. Decision D7
+then sets \texttt{AmpState.meta.requires\_escalation=True} if any of IAA, RRA, GPA,
+or DA has an escalation signal. The Delegation Agent receives this flag and sets
+\texttt{da\_output.escalation\_required=True}, routing the case to the
+\texttt{human\_owner} channel rather than an automated agent or queue.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Role in the Multi-Agent System}
+
+IAA is the second stage of the AMP pipeline (Stage 2), running concurrently with
+RRA and GPA after CSA completes. It does \emph{not} call CSA, RRA, or GPA directly;
+it consumes pre-populated fields from \texttt{AmpState} via orchestrator shims.
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Agent} & \textbf{Direction} & \textbf{What IAA gets/gives} \\
+\midrule
+CSA (Stage 1) & CSA $\to$ IAA & Last 5 case history events + last 3 email headers \\
+RRA (Stage 2, parallel) & RRA $\to$ IAA & \texttt{risk\_flags}, \texttt{risk\_severity} \\
+GPA (Stage 2, parallel) & GPA $\to$ IAA & \texttt{governance\_decision}, \texttt{requires\_approval} \\
+DA (Stage 3) & IAA $\to$ DA & \texttt{recommended\_action}, \texttt{task\_list}, \texttt{escalate\_to\_human} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The orchestrator's \texttt{build\_iaa\_input()} shim constructs a slim \texttt{ProcessState}
+from AmpState: it truncates case history to the last 5 events (structured as
+\texttt{\{timestamp, actor, event\_type, status\}}) and emails to the last 3 headers
+only (no bodies, no attachments). This is the IAA latency fix --- it prevents the
+prompt from growing with large case histories.
+
+RRA and GPA run in parallel with IAA via \texttt{asyncio.gather()} in the orchestrator.
+IAA therefore does not have access to RRA or GPA results at call time. The orchestrator
+may provide \texttt{risk\_flags}/\texttt{risk\_severity} from a fast-completing RRA
+call, but in the production flow these are typically absent or null when IAA starts,
+so IAA infers \texttt{operating\_context="partial"} and proceeds without them.
+
+DA consumes IAA's \texttt{recommended\_action.action\_id} (mapped via
+\texttt{build\_da\_input()} shim as \texttt{iaa\_recommended\_action}),
+the \texttt{assigned\_role} from \texttt{task\_list[0]} (mapped as
+\texttt{iaa\_recommended\_action.assigned\_role}), and the \texttt{escalate\_to\_human}
+flag (mapped into \texttt{escalate\_flags.iaa}). The DA uses these three signals,
+along with RRA's \texttt{risk\_level} and GPA's \texttt{governance\_decision}, to
+make its final routing decision.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Key Features}
+
+\subsubsection{Fast-Path Escalation}
+
+The fast path (\texttt{chain.py::\_fast\_path()}) checks two conditions before any
+embedding or LLM call: whether \texttt{risk\_severity} is \texttt{"high"} or
+\texttt{"critical"}, and whether any \texttt{risk\_flag} contains keywords suggesting
+missing inputs. For the high-risk case, it returns an \texttt{ActionRecommendation}
+with \texttt{action\_id="escalate\_to\_human"}, \texttt{confidence=0.99}, and
+\texttt{model\_used="fast\_path/no\_llm"} in approximately 0--5\,ms wall-clock time,
+compared to 3,000--10,000\,ms for a standard Gemini call. The business rationale is
+twofold: first, high-risk cases should always go to humans regardless of what the
+LLM might predict, so the LLM call would be wasted computation; second, on the Gemini
+free tier (20 requests/day), preserving quota for genuinely ambiguous medium-risk
+cases is operationally critical. The fast path was introduced in Session 3 of the
+project to address quota exhaustion during demo runs with multiple fraud investigation
+cases.
+
+\subsubsection{RAG-Augmented Prediction}
+
+The retrieval step (\texttt{retriever.py::IAARetriever.retrieve()}) embeds the current
+process state as a natural-language query using \texttt{all-MiniLM-L6-v2} (384-dim,
+local, no API calls) and searches the \texttt{iaa\_corpus} Qdrant collection for the
+top-$k$ most similar historical process snapshots (default $k=2$, reduced from 4 in
+the Phase 1 latency fix). Each retrieved document contains the process type, current
+stage, prior action sequence, actor, and the observed next action --- exactly the
+ground-truth signal needed to ground the LLM's prediction in real workflow patterns.
+Retrieved documents are formatted by \texttt{format\_for\_prompt()} as numbered
+\texttt{[Context N]} blocks with their metadata and truncated body (400 chars max),
+then injected into the \texttt{MERGED\_USER} prompt. The retriever degrades gracefully:
+if the corpus is empty or the Qdrant search fails, it returns an empty list and
+the LLM proceeds with no historical context.
+
+\subsubsection{Rule-Based Post-LLM Overrides}
+
+The override layer (\texttt{chain.py::apply\_overrides()}) runs after the LLM
+chain returns, not before. This design choice is deliberate: running overrides
+after the LLM ensures that the original LLM predictions are always logged in
+\texttt{predicted\_actions}, enabling post-hoc analysis of model behaviour even
+for overridden cases. The two hard rules (high risk and missing inputs) \emph{replace}
+the \texttt{recommended\_action} entirely while preserving the LLM's \texttt{predicted\_actions}
+in the returned object. The soft rule (low confidence) sets the \texttt{escalate\_to\_human}
+flag without replacing the prediction. The \texttt{task\_list} and
+\texttt{workflow\_timeline} are explicitly threaded through all override paths to
+prevent their loss.
+
+\subsubsection{Structured Output for Downstream Consumption}
+
+The merged LLM prompt (\texttt{MERGED\_USER}) instructs the model to produce
+\texttt{task\_list} and \texttt{workflow\_timeline} alongside the action prediction,
+in the same JSON response. The \texttt{task\_list} gives DA a structured list of
+tasks with \texttt{assigned\_role} values, enabling intelligent routing beyond simple
+escalation. The \texttt{workflow\_timeline} provides the Streamlit dashboard with a
+chronological view of the case from start to end, with each step labelled as
+\texttt{completed}, \texttt{current}, or \texttt{predicted}. Both structures default
+to empty lists on the fast path and when the LLM omits them.
+
+\subsubsection{Configurable LLM Backend}
+
+The LLM provider is controlled by the \texttt{LLM\_PROVIDER} environment variable
+(\texttt{"gemini"} or \texttt{"openai"}). The factory function \texttt{get\_llm()}
+in \texttt{chain.py} instantiates the appropriate LangChain chat model. The Gemini
+model name is further configurable via \texttt{GEMINI\_MODEL} (default
+\texttt{"gemini-2.0-flash"}), enabling model switching without code changes. During
+Session 3, the default was changed from \texttt{gemini-2.5-flash} to
+\texttt{gemini-2.0-flash} as the 2.0 model had more available quota on the free tier.
+The OpenAI path instantiates \texttt{gpt-4o-mini} but has not been tested end-to-end;
+it is present as a fallback for environments without Gemini access.
+
+\subsubsection{Test Isolation}
+
+The \texttt{conftest.py} \texttt{autouse} fixture patches \texttt{agent.chain.get\_llm}
+for every non-integration test, returning a \texttt{MagicMock} whose \texttt{invoke}
+cycles through three pre-baked JSON strings. This design means no network connection,
+no API key, and no rate limits are required for the 77-test unit suite. The retriever
+is not mocked at the conftest level --- tests that need a mock retriever inject it
+via \texttt{run\_iaa(state, retriever=mock\_retriever)}, isolating chain logic from
+Qdrant state. Integration tests (marked \texttt{@pytest.mark.integration}) bypass
+the fixture and make real API calls.
+
+\subsubsection{Corpus Ingestion Pipeline}
+
+The ingestion pipeline (\texttt{ingest.py}) supports three source types: BPIC XES
+process logs (parsed via pm4py), CUAD contract clauses (loaded from HuggingFace),
+and tabular CSV/JSON event logs (via a column mapping config). All sources feed a
+single Qdrant collection, with domain and process type stored as payload metadata.
+Ingestion is idempotent: document IDs are deterministic MD5-based UUIDs
+(\texttt{\_make\_id()}), so re-running ingestion on the same data skips already-present
+documents. The \texttt{bootstrap\_corpus()} function provides a one-shot setup path;
+the fastest bootstrap uses synthetic cases only and takes under 60 seconds including
+embedding.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Challenges and Solutions}
+
+\subsubsection{Gemini Quota Exhaustion}
+
+\textbf{Problem.} The Gemini 2.0-Flash model on the free tier is limited to
+20 requests per day. During demo dry-runs with multiple workflow cases (vendor
+onboarding + claim review + fraud investigation), the quota was exhausted within
+a single session, causing HTTP 429 errors from the Gemini API and IAA returning
+HTTP 500 to the orchestrator.
+
+\textbf{Solution.} Two changes were made. First, the \texttt{GEMINI\_MODEL} env var
+was introduced so the model can be switched without code changes
+(\texttt{gemini-2.0-flash-lite} offers 1,000 requests/day on the free tier at
+reduced capability). Second, and more significantly, the fast-path bypass was
+implemented: by returning a deterministic escalation decision for high/critical risk
+cases without calling the LLM, approximately 40--60\% of demo cases no longer
+consume quota. For a 3-case demo (one vendor, one claim, one fraud), the fraud case
+always takes the fast path, leaving quota for the two standard-path cases.
+
+\subsubsection{Qdrant File Lock in Local Mode}
+
+\textbf{Problem.} During development, multiple modules (ingest script, retriever,
+Streamlit app) each instantiated a \texttt{QdrantClient(path=./qdrant\_store)}.
+The second instantiation in the same process raised the exception:
+\begin{quote}\ttfamily Storage folder ./qdrant\_store is already accessed by another instance\end{quote}
+
+\textbf{Solution.} \texttt{qdrant\_client\_singleton.py} implements a module-level
+\texttt{\_client} global with lazy initialisation via \texttt{get\_qdrant\_client()}.
+Every module that needs Qdrant access imports \texttt{get\_qdrant\_client} from
+the singleton rather than constructing its own \texttt{QdrantClient}. The same
+pattern is applied to the embedding model (\texttt{\_embedding\_model} global), which
+also takes a significant hit on cold start (\textasciitilde{}90 seconds for the first
+\texttt{SentenceTransformer("all-MiniLM-L6-v2")} call on a machine without the model cached).
+
+\subsubsection{Contract Mismatch: context\_summary (Decision D1)}
+
+\textbf{Problem.} IAA's \texttt{ProcessState} was originally designed with a
+\texttt{context\_summary} field, expected to be populated by the Context Stitching
+Agent with a plain-English summary of all retrieved documents. When the IAA chain
+was first integrated into the AMP orchestrator, the orchestrator shim
+(\texttt{csa\_to\_iaa()}) tried to pass \texttt{context\_summary} from CSA's output,
+but CSA's \texttt{CsaOutput} model had no such field --- CSA returns structured JSON
+(emails, documents, case\_history, calendar events), not a prose summary.
+This caused a \texttt{KeyError} in the prompt assembly step.
+
+\textbf{Solution.} The \texttt{context\_summary} field was demoted from required to
+optional (\texttt{Optional[str] = None}) in \texttt{ProcessState}. The orchestrator
+shim no longer attempts to pass it. The retriever's \texttt{build\_query()} function
+includes \texttt{context\_summary} in the query only if it is non-null, so the query
+degrades gracefully. This was documented as Decision D1 in the project decision log.
+
+\subsubsection{BERT Model Cold Start}
+
+\textbf{Problem.} The \texttt{sentence-transformers/all-MiniLM-L6-v2} model
+(\textasciitilde{}80\,MB) is downloaded and loaded from disk on the first call to
+\texttt{get\_embedding\_model()}. On a cold machine without the model in the
+sentence-transformers cache, this takes 60--90 seconds and blocks the IAA server
+from accepting requests.
+
+\textbf{Solution.} The \texttt{/health} endpoint in \texttt{api.py} allows the
+orchestrator to poll readiness before sending the first \texttt{/predict} request.
+The \texttt{startup()} event handler in \texttt{api.py} pre-warms both the retriever
+and LLM on server start, triggering the model download during the warm-up window.
+The \texttt{start\_agents.sh} script uses a staggered startup sequence to give IAA
+additional time before the orchestrator sends the first workflow.
+
+\subsubsection{Fast-Path / Standard-Path Output Shape Consistency}
+
+\textbf{Problem.} Early versions of the fast path returned a minimal
+\texttt{ActionRecommendation} without \texttt{task\_list} and \texttt{workflow\_timeline}.
+The downstream shim (\texttt{shims.py::iaa\_to\_amp()}) expected both fields to be
+present and iterable, causing a \texttt{TypeError} when the orchestrator tried to
+access \texttt{recommendation.task\_list} on a fast-path response.
+
+\textbf{Solution.} Both fast-path constructors in \texttt{\_fast\_path()} now
+explicitly pass \texttt{task\_list=[]}, \texttt{workflow\_timeline=[]} to the
+\texttt{ActionRecommendation} constructor. The \texttt{ActionRecommendation} model
+has \texttt{task\_list} and \texttt{workflow\_timeline} with \texttt{default\_factory=list},
+but the fast path is explicit to avoid reliance on defaults. All override paths in
+\texttt{apply\_overrides()} also thread through the original recommendation's
+\texttt{task\_list} and \texttt{workflow\_timeline} using named constructor arguments.
+
+\subsubsection{Three-Step Chain Latency}
+
+\textbf{Problem.} The original chain design made three sequential LLM calls
+(Contextualize $\to$ Anticipate $\to$ Recommend). On Gemini 2.5-Flash, each call
+took approximately 8--10 seconds, giving a total latency of \textasciitilde{}26 seconds
+per IAA invocation. This made the orchestrator's total workflow time exceed 30 seconds
+on the standard path.
+
+\textbf{Solution.} The three calls were merged into a single \texttt{MERGED\_SYSTEM} +
+\texttt{MERGED\_USER} prompt that elicits all outputs (summary, predicted actions,
+task list, workflow timeline, recommended action) in one JSON response. The JSON
+parsing step was split into four separate parsers (for \texttt{predicted\_actions},
+\texttt{task\_list}, \texttt{workflow\_timeline}, \texttt{recommended\_action}) applied
+to the single LLM response. Total standard-path latency dropped from
+\textasciitilde{}26\,s to \textasciitilde{}8--10\,s, and quota consumption dropped by 67\%.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{Future Enhancements}
+
+\subsubsection{Loop + Critic Pattern}
+
+The current IAA makes a single LLM call and returns its output (modulo rule overrides).
+A critic pass --- a second, shorter LLM call that receives the recommendation and
+asks ``is this the right action given the case state?'' --- would reduce hallucinated
+action labels and improve confidence calibration. The critic could also flag
+cases where the recommended action contradicts the workflow timeline (e.g.\ recommending
+a step that has already been completed). Implementation requires a second prompt template
+and chain call in \texttt{chain.py}, returning a criticised version of the
+\texttt{recommended\_action} with adjusted confidence. Complexity: medium. Risk:
+doubles LLM latency on the standard path (to \textasciitilde{}16--20\,s); mitigated
+by running the critic only for confidence below a configurable threshold.
+
+\subsubsection{Retrieval Confidence Scoring}
+
+Qdrant's \texttt{query\_points()} already returns cosine similarity scores for each
+retrieved document (available as \texttt{r.score} in \texttt{retriever.py}). These
+scores are currently discarded. Surfacing them in \texttt{PredictResponse} (e.g.\ as
+a \texttt{retrieval\_score} field alongside \texttt{retrieved\_context\_ids}) would
+allow the orchestrator and dashboard to weight IAA's output by retrieval quality:
+a recommendation backed by highly similar historical cases (score $>$ 0.9) should be
+trusted more than one backed by weakly similar cases (score $<$ 0.6). Complexity: low.
+The \texttt{ActionRecommendation} schema would need one new field; no change to the
+retrieval logic itself.
+
+\subsubsection{Multi-Step Lookahead}
+
+The current IAA predicts only the single next action. For well-known workflow types
+(e.g.\ vendor onboarding: submit $\to$ verify $\to$ approve $\to$ onboard), the IAA
+could predict the next $N$ steps, enabling DA to pre-assign work to the right agents
+or humans for the entire known workflow path before the first step completes. This
+would require a multi-turn LLM chain where each predicted action becomes the input
+to the next prediction call. Complexity: high. Requires redesigning the chain to
+accumulate a growing action sequence and stop when confidence falls below threshold.
+
+\subsubsection{Automated Corpus Feedback Loop}
+
+Currently the IAA corpus is static after initial bootstrapping. When the Delegation
+Agent assigns a case and the case is eventually resolved, the outcome (what action
+was actually taken and whether it led to a good resolution) is not fed back into the
+corpus. Closing this loop would allow the RAG store to improve with every resolved
+case: the \texttt{/ingest} endpoint already accepts runtime documents, so DA would
+only need to POST the resolution event after case close. Complexity: medium.
+Requires an event hook in DA (or a background job reading DA's audit log) and a
+format converter from DA's \texttt{AssignmentDecision} to IAA's ingestion format.
+
+\subsubsection{OpenAI Provider Completion}
+
+\texttt{LLM\_PROVIDER=openai} is wired in \texttt{chain.py} and the env var
+documentation, but has not been tested end-to-end through the full AMP workflow.
+The \texttt{ChatOpenAI} factory branch exists (\texttt{chain.py:46}) and returns
+\texttt{gpt-4o-mini} at \texttt{temperature=0.1}. What is missing is an integration
+test (\texttt{@pytest.mark.integration}) that runs a full \texttt{run\_iaa()} call
+with a real OpenAI key and verifies the response shape. Complexity: low. A single
+integration test and a note in \texttt{.env.example} would complete the feature.
+
+% ═════════════════════════════════════════════════════════════════════════════
+\subsection{File Structure}
+
+\begin{lstlisting}[style=ascii, caption={IAA directory tree with roles}]
+IAA/
+|
++-- agent/                        # Active production code
+|   +-- __init__.py
+|   +-- api.py                    # FastAPI REST server — port 8003 (active interface)
+|   +-- chain.py                  # Fast path + merged LLM chain + rule overrides
+|   +-- iaa.py                    # run_iaa() + iaa_node() LangGraph wrapper + audit log
+|   +-- ingest.py                 # Corpus ingestion: BPIC / CUAD / CSV / synthetic
+|   +-- main.py                   # ADK entry point (root_agent) — NOT used in AMP flow
+|   +-- qdrant_client_singleton.py# Process-wide Qdrant + embedder singletons
+|   +-- retriever.py              # Qdrant vector search + prompt formatting
+|   +-- schemas.py                # All Pydantic v2 models (input, output, state)
+|
++-- orchestrator/
+|   +-- orchestrator.py           # Local 4-agent orchestrator — NOT the AMP LangGraph
+|
++-- docs/                         # Reference documentation (read-only reference)
+|   +-- data_ingestion.md         # Corpus strategy, embedding model, ingest commands
+|   +-- deployment.md             # ADK web, REST API, Docker, env vars, known issues
+|   +-- iaa_schema.json           # JSON Schema for IAA schemas (generated)
+|   +-- iaa_schema.yaml           # YAML Schema for IAA schemas (generated)
+|   +-- tech_stack.md             # LLM decisions, Qdrant singleton rationale, chain design
+|   +-- testing.md                # Mock design, pytest commands, test structure
+|
++-- data/                         # Runtime data (mostly gitignored)
+|   +-- synthetic_cases.json      # 200 synthetic process cases for bootstrap corpus
+|   +-- predictions.jsonl         # Audit log: one JSON line per IAA invocation
+|
++-- qdrant_store/                 # Persisted Qdrant local store (gitignored at root)
+|   +-- collection/
+|   |   +-- iaa_corpus/           # Collection storage (SQLite + payload files)
+|   +-- meta.json                 # Qdrant collection registry
+|
++-- fixtures/                     # Test fixtures
+|   +-- sample_case.json          # Single reference case for fixture-based tests
+|
++-- test_iaa.py                   # 77 unit tests across 8 test classes
++-- conftest.py                   # autouse LLM mock — zero API calls in tests
++-- iaa_demo.py                   # CLI demo: list cases, single case, high-risk, workflow
++-- requirements.txt              # Python dependencies
++-- CLAUDE.md                     # Agent collaboration rules (checked in)
+\end{lstlisting}
+
+\textbf{Active code} (called in the production AMP flow):
+\texttt{api.py}, \texttt{chain.py}, \texttt{iaa.py}, \texttt{retriever.py},
+\texttt{schemas.py}, \texttt{qdrant\_client\_singleton.py}, \texttt{ingest.py}.
+
+\textbf{Reference / standalone only} (not called by the AMP orchestrator):
+\texttt{agent/main.py} (ADK interface), \texttt{orchestrator/orchestrator.py}
+(IAA's own local orchestrator, used by \texttt{/workflow} endpoint and CLI demo only).
+
+\textbf{Test infrastructure}:
+\texttt{test\_iaa.py}, \texttt{conftest.py}, \texttt{fixtures/sample\_case.json}.
+
+\end{document}
