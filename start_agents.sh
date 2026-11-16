@@ -17,7 +17,13 @@ AGENTS=(
 HEALTH_TIMEOUT=30   # seconds to wait for each agent (overridden per-agent below)
 
 # Per-agent health-check timeouts (CSA and IAA both load a BERT model — need more time)
-declare -A AGENT_TIMEOUTS=( [csa]=90 [iaa]=90 )
+# (function instead of an associative array: macOS ships bash 3.2)
+agent_timeout() {
+    case "$1" in
+        csa|iaa) echo 90 ;;
+        *)       echo "$HEALTH_TIMEOUT" ;;
+    esac
+}
 LOG_DIR="logs"
 PID_FILE="$LOG_DIR/amp.pids"
 
@@ -45,7 +51,8 @@ kill_port() {
 
 wait_healthy() {
     local name=$1 port=$2
-    local timeout=${AGENT_TIMEOUTS[$name]:-$HEALTH_TIMEOUT}
+    local timeout
+    timeout=$(agent_timeout "$name")
     local deadline=$(( $(date +%s) + timeout ))
     while [ "$(date +%s)" -lt "$deadline" ]; do
         if curl -sf "http://localhost:$port/health" &>/dev/null; then
