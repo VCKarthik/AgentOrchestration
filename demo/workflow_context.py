@@ -212,7 +212,7 @@ def render_sidebar_panel() -> None:
     if has_anything:
         if st.sidebar.button(
             "Reset SWA database",
-            use_container_width=True,
+            width='stretch',
             key="reset_swa_btn",
             help="Clears all cases, events, findings, and run history. "
                  "Use between demos for a clean slate.",

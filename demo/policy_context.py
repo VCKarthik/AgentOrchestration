@@ -353,7 +353,7 @@ def render_sidebar_panel() -> None:
     if has_anything:
         if st.sidebar.button(
             "Reset GPA database",
-            use_container_width=True,
+            width='stretch',
             key="reset_gpa_btn",
             help="Clears all policy documents, chunks, rules, and decisions.",
         ):

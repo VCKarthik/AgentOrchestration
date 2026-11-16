@@ -793,7 +793,7 @@ with left_col:
         unsafe_allow_html=True,
     )
 
-    if st.button("＋ NEW CASE", use_container_width=True):
+    if st.button("＋ NEW CASE", width='stretch'):
         _new_case_dialog()
 
     st.markdown('<div style="height:1px;background:#1F2937;margin:12px 0;"></div>', unsafe_allow_html=True)
@@ -828,7 +828,7 @@ with left_col:
             f"</div>",
             unsafe_allow_html=True,
         )
-        if st.button("Select", key=f"sel_{idx}", use_container_width=True):
+        if st.button("Select", key=f"sel_{idx}", width='stretch'):
             st.session_state.active_idx      = idx
             st.session_state.agent_statuses  = {a: "waiting" for a in AGENTS}
             st.session_state.log_messages    = []
@@ -875,7 +875,7 @@ with center_col:
 
         # RUN button
         if not st.session_state.running:
-            run_btn = st.button("▶ RUN WORKFLOW", type="primary", use_container_width=True)
+            run_btn = st.button("▶ RUN WORKFLOW", type="primary", width='stretch')
         else:
             run_btn = False
             st.info("⏳ Workflow in progress…")
@@ -1088,7 +1088,7 @@ with center_col:
                     rows = [{"Name":_get(c,"name"),"Role":_get(c,"role"),"Seniority":_get(c,"seniority"),
                              "Score":round(_get(c,"composite_score",0),3),"Utilization":f"{_get(c,'utilization_percent',0):.0f}%"}
                             for c in da.candidate_rankings[:5]]
-                    st.dataframe(_pd.DataFrame(rows), use_container_width=True, hide_index=True)
+                    st.dataframe(_pd.DataFrame(rows), width='stretch', hide_index=True)
             else:
                 st.info("No DA output")
             st.markdown('</div></div>', unsafe_allow_html=True)
@@ -1216,7 +1216,7 @@ with center_col:
                     import pandas as _pd
                     st.markdown("**Task List**")
                     rows = [{"Task ID":t.task_id,"Action":t.action,"Assigned Role":t.assigned_role or "—","Priority":t.priority} for t in iaa.task_list]
-                    st.dataframe(_pd.DataFrame(rows), use_container_width=True, hide_index=True)
+                    st.dataframe(_pd.DataFrame(rows), width='stretch', hide_index=True)
                 st.caption(f"model_used: {iaa.model_used}")
             else:
                 st.info("No IAA output")

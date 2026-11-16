@@ -4,6 +4,12 @@ Blockers that would take >2 hours to resolve. Logged and moved on per refactor r
 
 ---
 
+## ~~BLOCKER-1: SWA PostgreSQL → SQLite migration~~ — RESOLVED (Session 7)
+
+> **Resolved:** SWA was replaced wholesale from `ref/SWA/` with a SQLite-backed
+> build (`SWA/db/db.py` uses `sqlite3`, DB at `SWA/swa_v3.db`). Postgres vars and
+> the `psycopg` dependency have been removed. Original blocker kept for history:
+
 ## BLOCKER-1: SWA PostgreSQL → SQLite migration
 
 **Phase 3** planned to drop Postgres and run everything on SQLite. SWA's DB uses:

@@ -178,7 +178,7 @@ def render_sidebar_panel() -> None:
     if current:
         if st.sidebar.button(
             "Reset team roster",
-            use_container_width=True,
+            width='stretch',
             key="reset_roster_btn",
             help="Removes the active roster — DA will have no assignees until "
                  "a new roster is uploaded.",

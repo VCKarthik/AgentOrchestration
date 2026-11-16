@@ -8,7 +8,7 @@ Cases flow through a LangGraph-orchestrated pipeline: **context retrieval → pa
 
 ## Tech Stack
 
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=flat&logo=fastapi&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-0.2+-FF6B35?style=flat)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-FF4B4B?style=flat&logo=streamlit&logoColor=white)
@@ -86,7 +86,7 @@ Cases flow through a LangGraph-orchestrated pipeline: **context retrieval → pa
 
 | Requirement | Notes |
 |-------------|-------|
-| Python 3.11+ | `python --version` |
+| Python 3.12 (pinned venv) | `uv venv --python 3.12 .venv && uv pip install -r requirements.lock.txt` |
 | Google AI Studio key | Required for IAA LLM calls |
 | Docker + Compose | Optional — only needed for `make demo` |
 
@@ -355,7 +355,7 @@ export LANGCHAIN_PROJECT=amp-orchestrator
 | `GOOGLE_API_KEY` | — | Google AI Studio key (IAA + optional RRA summarizer) |
 | `GEMINI_API_KEY` | — | Same value — different agents use different var names |
 | `LLM_PROVIDER` | `gemini` | `gemini` or `openai` — IAA LLM backend |
-| `GEMINI_MODEL` | `gemini-2.0-flash` | Gemini model ID passed to IAA |
+| `GEMINI_MODEL` | `gemini-2.5-flash` | Gemini model ID passed to IAA (2.0-flash retired Nov 2026) |
 | `SWA_DB_PATH` | `infra/swa.db` | SWA SQLite write-path |
 | `LANGCHAIN_TRACING_V2` | `false` | Enable LangSmith tracing |
 | `LANGCHAIN_API_KEY` | — | LangSmith API key |

@@ -189,7 +189,7 @@ def render() -> None:
     # included regardless of timestamp.
     _, run_col = st.columns([4, 1])
     with run_col:
-        run_now = st.button("Run analysis now", use_container_width=True, key="obs_run_now")
+        run_now = st.button("Run analysis now", width='stretch', key="obs_run_now")
 
     if run_now:
         with st.spinner("Running SWA analysis…"):
@@ -273,7 +273,7 @@ def render() -> None:
             if not visible:
                 st.info("No findings above the chosen confidence threshold.")
             else:
-                st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+                st.dataframe(pd.DataFrame(rows), width='stretch', hide_index=True)
 
                 st.divider()
                 st.markdown("**Detailed view**")
@@ -495,7 +495,7 @@ def render() -> None:
                             if c.get("mean_interval_hours") is not None else None
                         ),
                     })
-                st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+                st.dataframe(pd.DataFrame(rows), width='stretch', hide_index=True)
 
     # Activity timeline
     with tab_act:
@@ -538,7 +538,7 @@ def render() -> None:
             df_perf["events_per_case"] = (
                 df_perf["events"] / df_perf["cases"].replace(0, 1)
             ).round(2)
-            st.dataframe(df_perf, use_container_width=True, hide_index=True)
+            st.dataframe(df_perf, width='stretch', hide_index=True)
             st.bar_chart(df_perf.set_index("agent")["events"], height=240)
 
     conn.close()

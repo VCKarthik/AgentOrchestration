@@ -79,6 +79,14 @@ trap cleanup EXIT INT TERM
 
 # ── Pre-flight ────────────────────────────────────────────────────────────────
 
+# Use the project venv if present — bare `python`/`uvicorn` from PATH may be
+# a different (older) interpreter without the project's dependencies.
+if [ -f ".venv/bin/activate" ]; then
+    # shellcheck disable=SC1091
+    source .venv/bin/activate
+    log "Using project venv: $(python --version 2>&1)"
+fi
+
 if [ ! -f ".env" ]; then
     log "WARNING: .env not found — agents may fail without API keys"
 fi

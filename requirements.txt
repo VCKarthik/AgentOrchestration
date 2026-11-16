@@ -39,9 +39,6 @@ sentence-transformers>=2.7.0
 # ── Database (GPA + CSA) ──────────────────────────────────────────────────────
 sqlalchemy>=2.0.0
 
-# ── Database (SWA — PostgreSQL) ───────────────────────────────────────────────
-psycopg[binary]>=3.1
-
 # ── Document processing (GPA) ─────────────────────────────────────────────────
 pypdf>=4.0.0
 

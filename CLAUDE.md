@@ -249,3 +249,54 @@ Full decision rationale for all sessions: see `docs/decisions.md` (D1–D13).
 - `cd SWA && python -m pytest test_agent.py -v` → 6/6 passed.
 - `python -c "from orchestrator.graph import get_graph; print(list(get_graph().nodes))"` → `['__start__', 'csa', 'stage2', 'da']`.
 - Smoke-called `analyze()` on empty DB → returns tuple, `AgentOutput` shape preserved.
+
+### Session 8 — (May 2026, reconstructed) Demo "bring your own data" upload panels
+
+Undocumented at the time; reconstructed from file timestamps during Session 9.
+
+- `demo/workflow_context.py` — NEW: sidebar panel to upload past-case JSON per workflow
+  domain; ingested into SWA SQLite DB as analysis backdrop. Samples in `data/workflow_contexts/`.
+- `demo/policy_context.py` — NEW: sidebar panel to upload policy docs (PDF/markdown);
+  chunked + rule-extracted into `GPA/governance_agent.db`. Supports "production mode"
+  where GPA starts empty and the customer uploads their own policies.
+- `demo/assignee_context.py` — NEW: sidebar panel to upload a team-roster JSON;
+  DA's `AssigneeRepository` picks it up per-request (no restart). Samples in
+  `data/assignee_rosters/` (`active_roster.json` is the live one).
+- `data/policies/interview_scheduling.md` — NEW policy domain + `CASE-2001` demo case.
+- Demo cases renamed to `CASE-1001/2001/3001` (vendor / interview / claim).
+
+### Session 9 — 2026-11-16: Revival after 6-month dormancy
+
+**Version control**
+- `git init` (folder had no `.git` — it was a copy). Initial commit of 263 source files;
+  runtime DBs, logs, qdrant stores, `.env` excluded via expanded `.gitignore`.
+- Remote: https://github.com/VCKarthik/AgentOrchestration
+
+**Environment — Python 3.9 → 3.12**
+- `.venv` rebuilt with `uv venv --python 3.12` (old venv was empty; everything had been
+  running on user-site Python 3.9 packages). All deps reinstalled fresh.
+- `requirements.lock.txt` — NEW: exact verified versions (langgraph 1.2.22,
+  langchain 1.5.0, streamlit 1.67.0, pydantic 2.14.3). Install with
+  `uv pip install -r requirements.lock.txt`.
+- `psycopg` removed from `requirements.txt` (dead since Session 7 SQLite swap).
+
+**Fixes**
+- `start_agents.sh` — `declare -A` replaced with a case function (macOS ships bash 3.2,
+  which aborts with "csa: unbound variable"); auto-sources `.venv/bin/activate`.
+- `GEMINI_MODEL=gemini-2.5-flash` — Google retired `gemini-2.0-flash` (GoogleModelNotFoundError);
+  IAA had been silently falling back to "Review case manually (40%)" — including in the
+  May demo runs. `.env` and `.env.example` updated.
+- `demo/*.py` — all 12 `use_container_width=True` → `width='stretch'` (removed in
+  newer Streamlit).
+- `IAA/test_iaa.py` — two stale tests rewritten for the merged single-shot chain
+  (were still mocking the old 3-step chain; failed since Session 3).
+- `RRA/tests/conftest.py` — aliases `risk_radar` → `RRA` so the standalone-era test
+  imports resolve (suite could not even collect before).
+
+**Verified**
+- All 5 agents healthy on :8001–:8005 (Python 3.12 venv); Streamlit dashboard on :8501.
+- Full CASE-1001 workflow against live agents: CSA confidence 1.0 (11 sources) →
+  RRA low/proceed → GPA ESCALATE (approvers: procurement_director, cfo — $150k rule) →
+  IAA "Start Document Review" via gemini/gemini-2.5-flash (real LLM call) →
+  DA assigned Rachel Green / Senior Compliance Officer, confidence 95.3.
+- Tests: IAA 77/77, RRA 6/6, SWA 6/6.

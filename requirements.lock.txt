@@ -81,8 +81,6 @@ pluggy==1.7.0
 pm4py==2.7.23.12
 portalocker==4.4.2
 protobuf==7.36.2
-psycopg==3.3.9
-psycopg-binary==3.3.9
 pyarrow==26.0.1
 pyasn1==0.6.5
 pyasn1-modules==0.4.2
