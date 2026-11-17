@@ -36,13 +36,23 @@ def _model_name(llm) -> str:
 # ── LLM provider factory ──────────────────────────────────────────────────────
 
 def get_llm(temperature: float = 0.1):
-    """Return a LangChain chat model. Swap provider via LLM_PROVIDER env var."""
+    """
+    Return a LangChain chat model. Swap provider via LLM_PROVIDER env var.
+
+    Both clients are configured to fail FAST instead of retrying on transient
+    errors. Without this, a Gemini quota 429 triggers ~60 s of internal
+    exponential-backoff retries before the chain's own try/except kicks in —
+    a workflow run that should take 5 s ends up taking 65 s. Capping
+    max_retries=0 makes the chain's own no-LLM fallback fire immediately.
+    """
     if PROVIDER == "openai":
         from langchain_openai import ChatOpenAI
         return ChatOpenAI(
             model="gpt-4o-mini",
             temperature=temperature,
             api_key=OPENAI_KEY,
+            max_retries=0,
+            timeout=20,
         )
     else:
         from langchain_google_genai import ChatGoogleGenerativeAI
@@ -50,6 +60,8 @@ def get_llm(temperature: float = 0.1):
             model=GEMINI_MODEL,
             temperature=temperature,
             google_api_key=GOOGLE_KEY,
+            max_retries=0,
+            timeout=20,
         )
 
 
@@ -76,17 +88,13 @@ RETRIEVED HISTORICAL CONTEXT (similar past cases):
 
 Return a single JSON object with this exact schema:
 {{
-  "state_summary": "<2-3 sentence summary of what is happening and what factors matter most>",
+  "state_summary": "<1-2 sentence summary of what is happening>",
   "predicted_actions": [
     {{"action_id": "snake_case_id", "label": "Human readable label", "confidence": 0.0, "reasoning": "Why this action"}}
   ],
   "task_list": [
     {{"task_id": "T001", "action": "snake_case_action", "assigned_role": "role or null",
       "priority": "high|medium|low", "depends_on": [], "reasoning": "why this task"}}
-  ],
-  "workflow_timeline": [
-    {{"step": 1, "event_type": "event_name", "actor": "role or null",
-      "status": "completed|current|predicted", "timestamp": null}}
   ],
   "recommended_action": {{
     "action_id": "snake_case_id",
@@ -101,9 +109,9 @@ Rules:
 - confidence between 0.0 and 1.0; rank predicted_actions by confidence descending
 - maximum 3 predicted_actions; if confidence < 0.3 include "escalate_for_review" as the last action
 - task_list: one task per predicted action; assigned_role reflects who does the work
-- workflow_timeline: prior steps as "completed", current event as "current", future as "predicted"
 - recommended_action must match one of the predicted_actions action_ids
-- recommended_action.justification is written for a business user, not a developer"""
+- recommended_action.justification is written for a business user, not a developer
+- Be concise — this is a low-latency operational tool, not a report"""
 
 
 # ── JSON extraction helper ────────────────────────────────────────────────────
@@ -233,6 +241,12 @@ def run_chain(
     # pipeline (RRA, GPA, DA) still completes.
     try:
         raw = llm.invoke(merged_prompt).content
+        # Gemini 3.x returns content as a list of typed blocks, not a str
+        if isinstance(raw, list):
+            raw = "".join(
+                b.get("text", "") if isinstance(b, dict) else str(b)
+                for b in raw
+            )
         data = _extract_json(raw)
     except Exception as exc:
         logger.warning(

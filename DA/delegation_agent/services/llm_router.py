@@ -21,7 +21,18 @@ logger = logging.getLogger(__name__)
 class LLMRouter:
     def __init__(self) -> None:
         self.api_key = os.getenv("GOOGLE_API_KEY", "").strip()
-        self.client = genai.Client(api_key=self.api_key) if self.api_key else None
+        # Fail-fast config — see LLMService for rationale.
+        if self.api_key:
+            from google.genai import types
+            self.client = genai.Client(
+                api_key=self.api_key,
+                http_options=types.HttpOptions(
+                    timeout=5000,
+                    retry_options=types.HttpRetryOptions(attempts=1),
+                ),
+            )
+        else:
+            self.client = None
         self.model_name = "gemini-2.5-flash"
 
     def recommend_assignee(self, task, candidate_rankings) -> dict:

@@ -355,7 +355,7 @@ export LANGCHAIN_PROJECT=amp-orchestrator
 | `GOOGLE_API_KEY` | — | Google AI Studio key (IAA + optional RRA summarizer) |
 | `GEMINI_API_KEY` | — | Same value — different agents use different var names |
 | `LLM_PROVIDER` | `gemini` | `gemini` or `openai` — IAA LLM backend |
-| `GEMINI_MODEL` | `gemini-2.5-flash` | Gemini model ID passed to IAA (2.0-flash retired Nov 2026) |
+| `GEMINI_MODEL` | `gemini-3.8-flash` | Gemini model ID passed to IAA (2.0-flash retired; 2.5-flash gated for new keys, Nov 2026) |
 | `SWA_DB_PATH` | `infra/swa.db` | SWA SQLite write-path |
 | `LANGCHAIN_TRACING_V2` | `false` | Enable LangSmith tracing |
 | `LANGCHAIN_API_KEY` | — | LangSmith API key |

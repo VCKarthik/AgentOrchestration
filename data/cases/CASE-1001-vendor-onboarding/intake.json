@@ -1,0 +1,14 @@
+{
+  "case_id": "CASE-1001",
+  "case_type": "vendor_onboarding",
+  "task_type": "vendor_onboarding",
+  "title": "Vendor onboarding \u2014 incomplete documents \u2014 TechSupply Inc.",
+  "description": "TechSupply Inc. onboarding stalled. Insurance certificate missing and NDA pending review. Must complete before May 6 onboarding meeting.",
+  "priority": "high",
+  "urgency": "urgent",
+  "requester": "procurement@acme.com",
+  "requester_role": "procurement_manager",
+  "business_domain": "procurement",
+  "estimated_effort": 4.0,
+  "monetary_value": 150000
+}

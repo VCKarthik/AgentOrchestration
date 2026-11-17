@@ -1,0 +1,14 @@
+{
+  "case_id": "CASE-2001",
+  "case_type": "interview_scheduling",
+  "task_type": "interview_scheduling",
+  "title": "Interview scheduled \u2014 Sarah Johnson \u2014 background check and conflict of interest pending",
+  "description": "Technical interview confirmed May 7. Background check not complete. Candidate's prior employer is a direct competitor \u2014 conflict of interest review required before interview proceeds.",
+  "priority": "medium",
+  "urgency": "moderate",
+  "requester": "hr@acme.com",
+  "requester_role": "hr_manager",
+  "business_domain": "human_resources",
+  "estimated_effort": 2.0,
+  "monetary_value": 175000
+}

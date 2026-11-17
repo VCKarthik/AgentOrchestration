@@ -43,20 +43,15 @@ def resolve_stage2_agents(state: dict) -> list[Callable]:
     missing_fields: list[str] = getattr(validation, "missing_fields", []) or []
     validation_status: str = (getattr(validation, "status", None) or "COMPLETE").upper()
 
-    needs_rra = (
-        any(kw in combined_text for kw in _RISK_KEYWORDS)
-        or bool(missing_fields)
-        or validation_status in ("PARTIAL", "EMPTY")
-    )
-    needs_gpa = (
-        any(kw in combined_text for kw in _GOV_KEYWORDS)
-        or getattr(task_intake, "task_type", "") in (
-            "compliance_review", "financial_approval", "vendor_onboarding"
-        )
-    )
-    # IAA always runs — it provides intent prediction for DA regardless of risk/governance path.
-    # The previous "or not needs_rra" accidentally excluded IAA when RRA fires (the common case).
+    # RRA and GPA always run — both are rule-based and fast (≤300 ms each),
+    # and the demo expects every case to surface a risk verdict and a policy
+    # decision. Earlier keyword/whitelist gating silently dropped them on
+    # claim_review and interview_scheduling cases (no matching keywords),
+    # producing workflows with no GPA / RRA output.
+    needs_rra = True
+    needs_gpa = True
     needs_iaa = True
+    _ = combined_text, missing_fields, validation_status  # kept for logging clarity
 
     agents: list[Callable] = []
     if needs_rra:

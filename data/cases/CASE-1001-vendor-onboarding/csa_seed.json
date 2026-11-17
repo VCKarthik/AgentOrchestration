@@ -1,0 +1,140 @@
+{
+  "case_id": "CASE-1001",
+  "emails": [
+    {
+      "id": "EM-001",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "subject": "Vendor Registration Request - TechSupply Inc.",
+      "sender": "vendor@techsupply.com",
+      "recipients": "procurement@acme.com",
+      "date": "2026-05-01 09:00:00",
+      "body": "Hi \u2014 submitting our vendor registration package. Tax certificate attached. Please confirm next steps for insurance and NDA.",
+      "attachments": "tax_certificate_techsupply.pdf",
+      "thread_id": "VTHREAD-1001",
+      "file_path": ""
+    },
+    {
+      "id": "EM-002",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "subject": "Re: Vendor Registration - Documents Required",
+      "sender": "procurement@acme.com",
+      "recipients": "vendor@techsupply.com",
+      "date": "2026-05-01 11:30:00",
+      "body": "Tax cert received. Still need: (1) certificate of insurance (min $1M liability), (2) signed NDA. Onboarding meeting May 6.",
+      "attachments": "",
+      "thread_id": "VTHREAD-1001",
+      "file_path": ""
+    },
+    {
+      "id": "EM-003",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "subject": "Re: Vendor Registration - NDA Signed",
+      "sender": "vendor@techsupply.com",
+      "recipients": "procurement@acme.com",
+      "date": "2026-05-02 08:00:00",
+      "body": "Signed NDA attached. Insurance certificate is in process \u2014 expected by EOD May 3.",
+      "attachments": "nda_signed_techsupply.pdf",
+      "thread_id": "VTHREAD-1001",
+      "file_path": ""
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC-001",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "filename": "tax_certificate_techsupply.pdf",
+      "file_type": "pdf",
+      "description": "TechSupply Inc. tax certificate",
+      "tags": "tax,verified",
+      "created_at": "2026-05-01",
+      "file_path": "",
+      "status": "verified"
+    },
+    {
+      "id": "DOC-002",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "filename": "insurance_certificate_techsupply.pdf",
+      "file_type": "pdf",
+      "description": "Public liability insurance \u2014 outstanding",
+      "tags": "insurance,missing",
+      "created_at": "2026-05-01",
+      "file_path": "",
+      "status": "missing"
+    },
+    {
+      "id": "DOC-003",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "filename": "nda_signed_techsupply.pdf",
+      "file_type": "pdf",
+      "description": "Mutual NDA \u2014 signed by vendor, pending legal review",
+      "tags": "nda,pending_review",
+      "created_at": "2026-05-02",
+      "file_path": "",
+      "status": "pending_review"
+    }
+  ],
+  "calendar_events": [
+    {
+      "id": "CAL-001",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "title": "Vendor Onboarding Review - TechSupply Inc.",
+      "start_time": "2026-05-06 10:00:00",
+      "end_time": "2026-05-06 11:00:00",
+      "attendees": "procurement@acme.com,vendor@techsupply.com,compliance@acme.com",
+      "location": "Conf Room A / Zoom",
+      "description": "Review onboarding package \u2014 insurance + NDA must be cleared.",
+      "status": "scheduled"
+    },
+    {
+      "id": "CAL-002",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "title": "Compliance Sign-off Meeting - TechSupply",
+      "start_time": "2026-05-08 14:00:00",
+      "end_time": "2026-05-08 14:30:00",
+      "attendees": "compliance@acme.com,procurement@acme.com",
+      "location": "Conf Room B",
+      "description": "Final compliance sign-off on TechSupply onboarding.",
+      "status": "pending"
+    }
+  ],
+  "case_history": [
+    {
+      "id": "CH-001",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "event_type": "case_opened",
+      "actor": "procurement@acme.com",
+      "timestamp": "2026-05-01 09:05:00",
+      "notes": "Vendor onboarding case created for TechSupply Inc.",
+      "status": "open"
+    },
+    {
+      "id": "CH-002",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "event_type": "document_reviewed",
+      "actor": "compliance@acme.com",
+      "timestamp": "2026-05-01 14:00:00",
+      "notes": "Tax cert verified; insurance + NDA still required.",
+      "status": "in_progress"
+    },
+    {
+      "id": "CH-003",
+      "case_id": "CASE-1001",
+      "case_type": "vendor_onboarding",
+      "event_type": "document_received",
+      "actor": "vendor@techsupply.com",
+      "timestamp": "2026-05-02 08:05:00",
+      "notes": "NDA received. Insurance still outstanding.",
+      "status": "in_progress"
+    }
+  ]
+}

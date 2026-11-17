@@ -109,48 +109,85 @@ def csa_to_rra(csa_output) -> dict:
     """
     Build RRAPredictRequest-compatible payload from AmpState.csa_output.
 
-    RRAPredictRequest fields sourced from CsaOutput:
-      task_id         ← csa_output.task_id (CSA run ID)
-      workflow_type   ← csa_output.case_type (e.g. "vendor_onboarding")
-      workflow_state  ← csa_output.validation.status (COMPLETE | PARTIAL | EMPTY)
-      required_inputs ← validation.missing_fields + known document types
-      received_inputs ← all doc types present (document types seen in context)
-      mandatory_inputs← validation.missing_fields (treat missing as mandatory gaps)
-      policy_flag     ← True if validation status is PARTIAL or EMPTY
-      blocker_flag    ← False by default (no dependency info at this stage)
+    Translates CSA's source-type-level validation AND document-level status
+    into RRA's input shape. Without the document-level read, RRA always saw
+    "everything present" because all four source-type buckets had rows — even
+    when a document inside them was flagged `missing` or `pending_review`.
+    That made every case low-risk, including ones with missing inputs.
+
+    Mapping rules:
+      task_id          ← csa_output.task_id (CSA run ID)
+      workflow_type    ← csa_output.case_type
+      workflow_state   ← elevated to PARTIAL if any document.status indicates
+                         missing / pending / outstanding work
+      required_inputs  ← all four source-type buckets + each document.filename
+      received_inputs  ← buckets actually populated + verified documents only
+      mandatory_inputs ← any document with status `missing` (these block the
+                         workflow); used as the missing-mandatory-input signal
+      policy_flag      ← True if there's a missing/pending document or the
+                         validation status is PARTIAL/EMPTY
+      blocker_flag     ← True if any document is `missing`
     """
     validation = getattr(csa_output, "validation", None) or {}
     if hasattr(validation, "model_dump"):
         validation = validation.model_dump()
 
-    missing_fields: list[str] = validation.get("missing_fields", []) or []
-    status: str = (validation.get("status") or "COMPLETE").upper()
+    bucket_missing: list[str] = validation.get("missing_fields", []) or []
+    csa_status: str = (validation.get("status") or "COMPLETE").upper()
 
-    # derive received_inputs from what we have in context
+    # ── Bucket-level: which source types have ANY rows ──────────────────────
     context = getattr(csa_output, "context", None) or {}
     if hasattr(context, "model_dump"):
         context = context.model_dump()
-    received: list[str] = []
-    if context.get("emails"):
-        received.append("emails")
-    if context.get("documents"):
-        received.append("documents")
-    if context.get("calendar_events"):
-        received.append("calendar_events")
-    if context.get("case_history"):
-        received.append("case_history")
 
-    all_expected = ["emails", "documents", "calendar_events", "case_history"]
+    received_buckets: list[str] = []
+    for bucket in ("emails", "documents", "calendar_events", "case_history"):
+        if context.get(bucket):
+            received_buckets.append(bucket)
+
+    # ── Document-level: parse status of each individual document ────────────
+    documents = context.get("documents") or []
+    missing_docs: list[str] = []
+    pending_docs: list[str] = []
+    verified_docs: list[str] = []
+    for d in documents:
+        d_dump = d if isinstance(d, dict) else (d.model_dump() if hasattr(d, "model_dump") else {})
+        status = (d_dump.get("status") or "").lower()
+        fname  = d_dump.get("filename") or d_dump.get("id") or "unnamed_document"
+        if status in ("missing", "absent", "not_received"):
+            missing_docs.append(fname)
+        elif status in ("pending", "pending_review", "in_review", "outstanding"):
+            pending_docs.append(fname)
+        else:
+            verified_docs.append(fname)
+
+    # ── Required / received as RRA expects ──────────────────────────────────
+    all_expected_buckets = ["emails", "documents", "calendar_events", "case_history"]
+    required_inputs = all_expected_buckets + [
+        f"document:{fn}" for fn in missing_docs + pending_docs + verified_docs
+    ]
+    received_inputs = received_buckets + [f"document:{fn}" for fn in verified_docs]
+
+    # ── Mandatory inputs that are NOT received are the blocking risks ───────
+    mandatory_missing = list(bucket_missing) + [f"document:{fn}" for fn in missing_docs]
+
+    # ── Workflow state escalation ───────────────────────────────────────────
+    # If documents are missing / pending, override CSA's COMPLETE status.
+    has_doc_gaps = bool(missing_docs or pending_docs)
+    if has_doc_gaps and csa_status == "COMPLETE":
+        rra_workflow_state = "PARTIAL"
+    else:
+        rra_workflow_state = csa_status
 
     return {
         "task_id":          csa_output.task_id or "unknown",
         "workflow_type":    csa_output.case_type or "general",
-        "workflow_state":   status,
-        "required_inputs":  all_expected,
-        "received_inputs":  received,
-        "mandatory_inputs": missing_fields,
-        "policy_flag":      status in ("PARTIAL", "EMPTY"),
-        "blocker_flag":     False,
+        "workflow_state":   rra_workflow_state,
+        "required_inputs":  required_inputs,
+        "received_inputs":  received_inputs,
+        "mandatory_inputs": mandatory_missing,
+        "policy_flag":      has_doc_gaps or rra_workflow_state in ("PARTIAL", "EMPTY"),
+        "blocker_flag":     bool(missing_docs),
         "prior_delay_count": 0,
         "prior_escalation_count": 0,
     }
@@ -358,6 +395,13 @@ def da_to_amp(raw: dict) -> dict:
     Map DA AssignmentDecision.model_dump() → AmpState.da_output field dict.
     Direct field mapping — DA output matches AmpState.da_output exactly.
     Enum values are already strings (use_enum_values=True on DA models).
+
+    Escalation fallback: when DA returns `status=escalated` with no named
+    `selected_assignee` (it picked a channel + queue but no individual),
+    promote the top of `candidate_rankings` to selected_assignee so the UI
+    can still surface a recommended owner. The original escalation flag is
+    preserved — the case still flows through the human-approval gate, the
+    audience just sees the candidate the system would recommend.
     """
     ts = raw.get("timestamp")
     if ts is not None and not isinstance(ts, str):
@@ -365,6 +409,17 @@ def da_to_amp(raw: dict) -> dict:
     ec = raw.get("expected_completion")
     if ec is not None and not isinstance(ec, str):
         ec = str(ec)
+
+    selected_assignee = raw.get("selected_assignee")
+    rankings = raw.get("candidate_rankings", []) or []
+    if selected_assignee is None and rankings:
+        top = rankings[0]
+        if isinstance(top, dict):
+            selected_assignee = {
+                "assignee_id": top.get("assignee_id") or top.get("id"),
+                "name":        top.get("name"),
+                "role":        top.get("role"),
+            }
 
     return {
         "assignment_id":      raw.get("assignment_id"),
@@ -376,8 +431,8 @@ def da_to_amp(raw: dict) -> dict:
         "selected_channel":   raw.get("selected_channel"),
         "selected_owner_type": raw.get("selected_owner_type"),
         "selected_owner":     raw.get("selected_owner"),
-        "selected_assignee":  raw.get("selected_assignee"),
-        "candidate_rankings": raw.get("candidate_rankings", []),
+        "selected_assignee":  selected_assignee,
+        "candidate_rankings": rankings,
         "decision_factors":   raw.get("decision_factors"),
         "escalation_required": raw.get("escalation_required", False),
         "escalation_reason":  raw.get("escalation_reason"),

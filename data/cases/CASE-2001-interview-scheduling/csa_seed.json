@@ -1,0 +1,162 @@
+{
+  "case_id": "CASE-2001",
+  "emails": [
+    {
+      "id": "EM-004",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "subject": "Application for Senior Developer Role",
+      "sender": "sarah.johnson@gmail.com",
+      "recipients": "hr@acme.com",
+      "date": "2026-05-02 08:45:00",
+      "body": "Submitting my application for the Senior Developer role. Resume attached. Available for interviews on weekday mornings.",
+      "attachments": "sarah_johnson_resume.pdf",
+      "thread_id": "ITHREAD-2001",
+      "file_path": ""
+    },
+    {
+      "id": "EM-005",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "subject": "Interview Invitation - Senior Developer Position",
+      "sender": "hr@acme.com",
+      "recipients": "sarah.johnson@gmail.com",
+      "date": "2026-05-02 10:00:00",
+      "body": "Pleased to invite you to a technical interview on May 7 at 11:00. Interviewer: Mike Chen. We will follow up with calendar invite.",
+      "attachments": "",
+      "thread_id": "ITHREAD-2001",
+      "file_path": ""
+    },
+    {
+      "id": "EM-006",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "subject": "Re: Interview Invitation - Confirmed",
+      "sender": "sarah.johnson@gmail.com",
+      "recipients": "hr@acme.com",
+      "date": "2026-05-02 12:15:00",
+      "body": "Confirmed. Looking forward to it. For context my prior employer was TechRival Inc. (left 2 weeks ago).",
+      "attachments": "",
+      "thread_id": "ITHREAD-2001",
+      "file_path": ""
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC-004",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "filename": "sarah_johnson_resume.pdf",
+      "file_type": "pdf",
+      "description": "Candidate resume \u2014 7 years backend experience",
+      "tags": "resume,verified",
+      "created_at": "2026-05-02",
+      "file_path": "",
+      "status": "verified"
+    },
+    {
+      "id": "DOC-005",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "filename": "interview_scorecard_senior_dev.pdf",
+      "file_type": "pdf",
+      "description": "Senior Developer interview scorecard template",
+      "tags": "scorecard,active",
+      "created_at": "2026-05-02",
+      "file_path": "",
+      "status": "active"
+    },
+    {
+      "id": "DOC-006",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "filename": "job_description_senior_developer.pdf",
+      "file_type": "pdf",
+      "description": "Senior Developer job description",
+      "tags": "jd,active",
+      "created_at": "2026-04-15",
+      "file_path": "",
+      "status": "active"
+    },
+    {
+      "id": "DOC-BG001",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "filename": "background_check_status.pdf",
+      "file_type": "pdf",
+      "description": "Background check report \u2014 pending vendor turnaround",
+      "tags": "background_check,pending",
+      "created_at": "2026-05-02",
+      "file_path": "",
+      "status": "pending"
+    }
+  ],
+  "calendar_events": [
+    {
+      "id": "CAL-003",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "title": "Technical Interview - Sarah Johnson",
+      "start_time": "2026-05-07 11:00:00",
+      "end_time": "2026-05-07 12:00:00",
+      "attendees": "sarah.johnson@gmail.com,mike.chen@acme.com",
+      "location": "Zoom",
+      "description": "Senior Developer technical screen \u2014 system design + coding.",
+      "status": "scheduled"
+    },
+    {
+      "id": "CAL-004",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "title": "HR Debrief - Senior Developer Round 1",
+      "start_time": "2026-05-07 14:00:00",
+      "end_time": "2026-05-07 14:30:00",
+      "attendees": "hr@acme.com,mike.chen@acme.com",
+      "location": "Conf Room A",
+      "description": "Calibration call after Sarah Johnson's technical round.",
+      "status": "scheduled"
+    }
+  ],
+  "case_history": [
+    {
+      "id": "CH-004",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "event_type": "case_opened",
+      "actor": "hr@acme.com",
+      "timestamp": "2026-05-02 09:00:00",
+      "notes": "Application received for Senior Developer role.",
+      "status": "open"
+    },
+    {
+      "id": "CH-005",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "event_type": "interview_scheduled",
+      "actor": "hr@acme.com",
+      "timestamp": "2026-05-02 10:05:00",
+      "notes": "Technical interview scheduled for May 7 11:00.",
+      "status": "in_progress"
+    },
+    {
+      "id": "CH-006",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "event_type": "interviewer_assigned",
+      "actor": "mike.chen@acme.com",
+      "timestamp": "2026-05-02 10:10:00",
+      "notes": "Mike Chen assigned as interviewer.",
+      "status": "in_progress"
+    },
+    {
+      "id": "CH-COI-001",
+      "case_id": "CASE-2001",
+      "case_type": "interview_scheduling",
+      "event_type": "conflict_of_interest_flagged",
+      "actor": "hr_system",
+      "timestamp": "2026-05-02 10:15:00",
+      "notes": "Candidate's prior employer (TechRival Inc.) is a competitor \u2014 policy HR-09 review required.",
+      "status": "in_progress"
+    }
+  ]
+}

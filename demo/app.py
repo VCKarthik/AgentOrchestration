@@ -813,18 +813,27 @@ with left_col:
         is_active = (idx == st.session_state.active_idx)
         extra_cls = " selected" if is_active else ""
         case_type = entry["data"]["case_type"]
-        type_color = _CASE_TYPE_COLORS.get(case_type, "#475569")
         type_label = case_type.replace("_", " ").title()
 
+        # Neutral enterprise styling:
+        #  • Title in dark slate (#0F172A) — readable on white
+        #  • Case-type chip uses the same neutral .case-type-badge as the
+        #    Active Case header — no per-domain greens/blues/reds
+        #  • Active card's left rule is the brand navy, not the domain colour
+        active_rule = "#0F2A47" if is_active else "transparent"
+
         st.markdown(
-            f'<div class="task-item{extra_cls}" style="border-left:3px solid {type_color if is_active else "transparent"};">'
-            f'<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">'
+            f'<div class="task-item{extra_cls}" '
+            f'style="border-left:3px solid {active_rule};">'
+            f'<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">'
             f'{badge} &nbsp; {chip}'
-            f'<span style="margin-left:auto;background:{type_color}22;color:{type_color};'
-            f'padding:1px 7px;border-radius:4px;font-size:10px;font-weight:600;">{type_label}</span>'
+            f'<span class="case-type-badge" style="margin-left:auto;">{type_label}</span>'
             f'</div>'
-            f'<div style="font-size:13px;font-weight:600;color:#E2E8F0;">{entry["label"]}</div>'
-            f'<div style="font-size:11px;color:#475569;margin-top:3px;">{entry["data"]["case_id"]}</div>'
+            f'<div style="font-size:13px;font-weight:600;color:#0F172A;line-height:1.35;">'
+            f'{entry["label"]}</div>'
+            f'<div style="font-size:11px;color:#64748B;margin-top:4px;'
+            f'font-family:&#39;JetBrains Mono&#39;,&#39;SF Mono&#39;,monospace;'
+            f'letter-spacing:0.3px;">{entry["data"]["case_id"]}</div>'
             f"</div>",
             unsafe_allow_html=True,
         )
@@ -873,12 +882,37 @@ with center_col:
         agent_bar = st.empty()
         _render_agent_bar(st.session_state.agent_statuses, agent_bar)
 
+        # Self-heal: if a previous run set running=True but its st.rerun()
+        # never reached the browser (websocket dropped, browser idled, etc.),
+        # the page can be stuck on "Workflow in progress" forever even though
+        # the result is sitting in session_state. Detect that and clear the
+        # flag so the next render shows the result.
+        if (
+            st.session_state.running
+            and st.session_state.workflow_result is not None
+        ):
+            st.session_state.running = False
+            st.session_state.task_queue[active_idx]["status"] = "done"
+
         # RUN button
         if not st.session_state.running:
             run_btn = st.button("▶ RUN WORKFLOW", type="primary", width='stretch')
+            # Manual escape hatch — surfaces only when result is already
+            # sitting in session_state. Lets a presenter recover from a
+            # frozen-spinner browser state without losing the run.
+            if st.session_state.workflow_result is None:
+                st.empty()
         else:
             run_btn = False
-            st.info("⏳ Workflow in progress…")
+            spin_a, spin_b = st.columns([3, 1])
+            with spin_a:
+                st.info("⏳ Workflow in progress…")
+            with spin_b:
+                if st.button("Reset", help="Cancel and reset the in-progress flag",
+                             width='stretch', key="reset_running_btn"):
+                    st.session_state.running = False
+                    st.session_state.task_queue[active_idx]["status"] = "pending"
+                    st.rerun()
 
         if run_btn:
             # Reset state for this run
@@ -976,9 +1010,25 @@ with center_col:
             risk_color = {"LOW":"#4ADE80","MEDIUM":"#FBBF24","HIGH":"#EF4444","CRITICAL":"#991B1B"}.get(risk_val,"#94A3B8")
             da = result.da_output
             if da:
-                _raw = da.selected_owner
-                _owner = _raw.model_dump() if hasattr(_raw,"model_dump") else (_raw if isinstance(_raw,dict) else {})
-                owner_display = _owner.get("role") or da.selected_owner_type or "—"
+                # Prefer the actual person's name (selected_assignee). Fall back to
+                # the owner-channel role only when no person is named.
+                _assignee_raw = da.selected_assignee
+                _assignee = (
+                    _assignee_raw.model_dump() if hasattr(_assignee_raw, "model_dump")
+                    else (_assignee_raw if isinstance(_assignee_raw, dict) else {})
+                )
+                _owner_raw = da.selected_owner
+                _owner = (
+                    _owner_raw.model_dump() if hasattr(_owner_raw, "model_dump")
+                    else (_owner_raw if isinstance(_owner_raw, dict) else {})
+                )
+                owner_display = (
+                    _assignee.get("name")
+                    or _owner.get("name")
+                    or _owner.get("role")
+                    or da.selected_owner_type
+                    or "—"
+                )
                 raw_conf = da.confidence_score or 0
                 conf_pct = int(raw_conf if raw_conf > 1 else raw_conf * 100)
             else:
@@ -1031,29 +1081,116 @@ with center_col:
             if csa:
                 val = csa.validation
                 status = (val.status if val else "—").upper()
-                _STATUS_COLORS = {"COMPLETE":"#4ADE80","PARTIAL":"#FBBF24","EMPTY":"#EF4444"}
-                badge = _pill(status, _STATUS_COLORS.get(status, "#6B7280"))
-                st.markdown(f"Context Status: {badge}", unsafe_allow_html=True)
-                conf = int((val.confidence_score or 0) * 100) if val else 0
-                total = val.total_sources if val else 0
-                c1, c2 = st.columns(2)
-                c1.metric("Confidence", f"{conf}%")
-                c2.metric("Total Sources", total)
+                _STATUS_COLORS = {
+                    "COMPLETE": ("#DCFCE7", "#15803D", "#86EFAC"),
+                    "PARTIAL":  ("#FEF3C7", "#B45309", "#FCD34D"),
+                    "EMPTY":    ("#FEE2E2", "#B91C1C", "#FCA5A5"),
+                }
+                badge = _pill(status, _STATUS_COLORS.get(status, ("#F1F5F9","#475569","#E2E8F0")))
+                st.markdown(f"**Context Status:** {badge}", unsafe_allow_html=True)
+
+                # ── 5-tile metric row ─────────────────────────────────────
                 ctx = csa.context
+                emails_n = len(ctx.emails or []) if ctx else 0
+                docs_n   = len(ctx.documents or []) if ctx else 0
+                cal_n    = len(ctx.calendar_events or []) if ctx else 0
+                hist_n   = len(ctx.case_history or []) if ctx else 0
+
+                conf = int((val.confidence_score or 0) * 100) if val else 0
+                total = val.total_sources if val else (emails_n + docs_n + cal_n + hist_n)
+
+                # Document status counts
+                docs_verified = docs_pending = docs_missing = 0
+                if ctx and ctx.documents:
+                    for d in ctx.documents:
+                        d_dump = d.model_dump() if hasattr(d, "model_dump") else d
+                        s = (d_dump.get("status") or "").lower()
+                        if s in ("verified", "active"):
+                            docs_verified += 1
+                        elif s in ("pending", "pending_review", "outstanding"):
+                            docs_pending += 1
+                        elif s in ("missing", "absent", "not_received"):
+                            docs_missing += 1
+
+                t1, t2, t3, t4, t5 = st.columns(5)
+                t1.metric("Total Sources", total)
+                t2.metric("Confidence", f"{conf}%")
+                t3.metric("Documents",  docs_n,
+                          delta=(f"{docs_missing} missing" if docs_missing else f"{docs_verified} verified"),
+                          delta_color=("inverse" if docs_missing else "off"))
+                t4.metric("Emails",      emails_n)
+                t5.metric("History",     hist_n,
+                          delta=(f"{cal_n} cal events" if cal_n else None),
+                          delta_color="off")
+
+                # ── Source breakdown — one expander per source type ──────
                 if ctx:
-                    emails_n = len(ctx.emails or [])
-                    docs_n   = len(ctx.documents or [])
-                    cal_n    = len(ctx.calendar_events or [])
-                    hist_n   = len(ctx.case_history or [])
-                    st.markdown(
-                        f"**Retrieved:** {emails_n} emails · {docs_n} documents · "
-                        f"{cal_n} calendar events · {hist_n} history items"
-                    )
+                    st.markdown("**Source Breakdown**")
+
+                    if ctx.emails:
+                        with st.expander(f"Emails ({len(ctx.emails)})", expanded=False):
+                            for e in ctx.emails:
+                                e_d = e.model_dump() if hasattr(e, "model_dump") else e
+                                subj = e_d.get("subject") or "(no subject)"
+                                sndr = e_d.get("sender") or "—"
+                                dt   = (e_d.get("date") or "")[:16]
+                                st.markdown(f"- **{subj}**  \n"
+                                            f"  _{sndr} · {dt}_")
+
+                    if ctx.documents:
+                        _DOC_BADGE = {
+                            "verified":       ("#DCFCE7", "#15803D", "#86EFAC"),
+                            "active":         ("#DCFCE7", "#15803D", "#86EFAC"),
+                            "pending":        ("#FEF3C7", "#B45309", "#FCD34D"),
+                            "pending_review": ("#FEF3C7", "#B45309", "#FCD34D"),
+                            "missing":        ("#FEE2E2", "#B91C1C", "#FCA5A5"),
+                        }
+                        with st.expander(f"Documents ({len(ctx.documents)})", expanded=False):
+                            for d in ctx.documents:
+                                d_d = d.model_dump() if hasattr(d, "model_dump") else d
+                                fname = d_d.get("filename") or "(unnamed)"
+                                stat  = (d_d.get("status") or "active").lower()
+                                badge = _pill(stat.upper(), _DOC_BADGE.get(stat, ("#F1F5F9","#475569","#E2E8F0")))
+                                desc  = d_d.get("description") or ""
+                                st.markdown(f"- **{fname}** &nbsp; {badge}  \n  _{desc}_",
+                                            unsafe_allow_html=True)
+
+                    if ctx.calendar_events:
+                        with st.expander(f"Calendar ({len(ctx.calendar_events)})", expanded=False):
+                            for c in ctx.calendar_events:
+                                c_d = c.model_dump() if hasattr(c, "model_dump") else c
+                                title = c_d.get("title") or "(untitled)"
+                                start = (c_d.get("start_time") or "")[:16]
+                                stat  = c_d.get("status") or "scheduled"
+                                st.markdown(f"- **{title}** — {start} _({stat})_")
+
+                    if ctx.case_history:
+                        with st.expander(f"Case History ({len(ctx.case_history)})", expanded=False):
+                            for h in ctx.case_history:
+                                h_d = h.model_dump() if hasattr(h, "model_dump") else h
+                                evt = h_d.get("event_type") or "—"
+                                actor = h_d.get("actor") or "system"
+                                ts  = (h_d.get("timestamp") or "")[:16]
+                                stat= h_d.get("status") or ""
+                                st.markdown(f"- **{evt.replace('_',' ').title()}** by `{actor}` · {ts} _({stat})_")
+
+                # ── Footer — provenance + warnings ───────────────────────
+                _foot = []
                 meta = csa.meta
                 if meta:
-                    st.caption(f"Retrieval method: {meta.retrieval_method or '—'}")
-                    if meta.keywords_used:
-                        st.markdown(f"**Keywords:** {', '.join(meta.keywords_used)}")
+                    if meta.retrieval_method:
+                        _foot.append(f"**Retrieval:** `{meta.retrieval_method}`")
+                    if meta.sql_hits is not None:
+                        _foot.append(f"**SQL hits:** {meta.sql_hits}")
+                    if meta.qdrant_hits is not None:
+                        _foot.append(f"**Qdrant hits:** {meta.qdrant_hits}")
+                    if meta.csa_version:
+                        _foot.append(f"**CSA:** v{meta.csa_version}")
+                if _foot:
+                    st.caption(" &nbsp;·&nbsp; ".join(_foot))
+                if meta and meta.keywords_used:
+                    st.caption(f"Keywords: {', '.join(meta.keywords_used)}")
+
                 if val and val.warnings:
                     for w in val.warnings:
                         st.warning(w)
@@ -1067,15 +1204,30 @@ with center_col:
             st.markdown('<div class="agent-section-body">', unsafe_allow_html=True)
             da = result.da_output
             if da:
-                _raw = da.selected_owner
-                owner = _raw.model_dump() if hasattr(_raw,"model_dump") else (_raw if isinstance(_raw,dict) else {})
-                role  = owner.get("role") or da.selected_owner_type or "—"
-                team  = owner.get("team","")
-                owner_label = f"{role} ({team})" if team else role
+                # Prefer the named assignee. Fall back to owner role / channel.
+                _assignee_raw = da.selected_assignee
+                assignee = (
+                    _assignee_raw.model_dump() if hasattr(_assignee_raw, "model_dump")
+                    else (_assignee_raw if isinstance(_assignee_raw, dict) else {})
+                )
+                _owner_raw = da.selected_owner
+                owner = (
+                    _owner_raw.model_dump() if hasattr(_owner_raw, "model_dump")
+                    else (_owner_raw if isinstance(_owner_raw, dict) else {})
+                )
+                name = assignee.get("name") or owner.get("name") or "—"
+                role = (
+                    assignee.get("role")
+                    or owner.get("role")
+                    or da.selected_owner_type
+                    or ""
+                )
+                # Sub-line shows role; the tile value shows the person.
+                role_sub = f"{role}" if role and role != "—" else None
                 raw = da.confidence_score or 0
                 conf_pct = int(raw if raw > 1 else raw * 100)
                 c1, c2 = st.columns(2)
-                c1.metric("Assigned to", owner_label)
+                c1.metric("Assigned to", name, delta=role_sub, delta_color="off")
                 c1.metric("Channel", da.selected_channel or "—")
                 c2.metric("Confidence", f"{conf_pct}%")
                 c2.metric("Escalation Required", "Yes" if da.escalation_required else "No")
@@ -1099,33 +1251,163 @@ with center_col:
             st.markdown('<div class="agent-section-body">', unsafe_allow_html=True)
             rra = result.risk_output
             if rra:
-                level = (rra.overall_risk_level or "low").lower()
-                badge = _pill(level.upper(), _RISK_COLORS.get(level, ("#F1F5F9", "#475569", "#E2E8F0")))
-                st.markdown(f"**Overall Risk:** {badge}", unsafe_allow_html=True)
+                _sev_color = {
+                    "critical": ("#FECACA", "#7F1D1D", "#F87171"),
+                    "high":     ("#FEE2E2", "#B91C1C", "#FCA5A5"),
+                    "medium":   ("#FEF3C7", "#B45309", "#FCD34D"),
+                    "low":      ("#DCFCE7", "#15803D", "#86EFAC"),
+                }
+                _proceed_color = {
+                    "proceed":  ("#DCFCE7", "#15803D", "#86EFAC"),
+                    "caution":  ("#FEF3C7", "#B45309", "#FCD34D"),
+                    "hold":     ("#FECACA", "#7F1D1D", "#F87171"),
+                }
 
-                # Top-line summary first — it's the single most useful field.
-                if rra.reasoning_summary:
-                    st.markdown(rra.reasoning_summary)
+                level   = (rra.overall_risk_level or "low").lower()
+                proceed = (rra.can_proceed or "proceed").lower()
+                op_ctx  = (rra.operating_context or "full").lower()
 
-                # Three-up metric row.
-                c1, c2, c3 = st.columns(3)
-                c1.metric("Status", (rra.can_proceed or "—").title())
-                c2.metric("Escalation",
-                          "Required" if rra.escalate_to_human else "Not required")
-                c3.metric("Workflow State", rra.workflow_state or "—")
+                # ── Verdict banner ──────────────────────────────────────────
+                # Mirror the RRA standalone dashboard's "Hold — Action Required"
+                # framing — the verdict is the single most communicative thing
+                # the agent produces, so it leads.
+                verdict_text = {
+                    "proceed": "Proceed — Clear",
+                    "caution": "Caution — Review Required",
+                    "hold":    "Hold — Action Required",
+                }.get(proceed, f"{proceed.title()} — see details")
+                verdict_accent = {
+                    "proceed": "#15803D",
+                    "caution": "#B45309",
+                    "hold":    "#B91C1C",
+                }.get(proceed, "#475569")
 
-                # Per-item breakdown — severity + reason + blocking flag.
-                # Falls back to risk_flags pills if risk_items wasn't carried
-                # (older runs / before the shim forwarded the rich shape).
+                pills_html = (
+                    _pill(f"{level} risk".upper(),
+                          _sev_color.get(level, _sev_color["low"]))
+                    + " "
+                    + _pill(proceed.upper(),
+                            _proceed_color.get(proceed, _proceed_color["caution"]))
+                    + " "
+                    + _pill(f"{op_ctx} context".upper(),
+                            ("#F8FAFC", "#475569", "#CBD5E1"))
+                )
+                escalation_line = (
+                    f'<div style="font-size:13px;color:#475569;margin-top:8px;">'
+                    f'Escalation: <strong>{rra.escalation_target}</strong></div>'
+                    if rra.escalate_to_human and rra.escalation_target else ""
+                )
+                st.markdown(
+                    f'<div style="background:#F8FAFC;border:1px solid #E2E8F0;'
+                    f'border-left:3px solid {verdict_accent};border-radius:3px;'
+                    f'padding:14px 18px;margin-bottom:14px;">'
+                    f'<div style="font-size:10px;letter-spacing:1.5px;'
+                    f'color:#64748B;font-weight:600;text-transform:uppercase;">Verdict</div>'
+                    f'<div style="font-size:20px;font-weight:700;color:#0F172A;'
+                    f'margin-top:4px;letter-spacing:-0.3px;">{verdict_text}</div>'
+                    f'<div style="margin-top:10px;">{pills_html}</div>'
+                    f'{escalation_line}'
+                    f'</div>',
+                    unsafe_allow_html=True,
+                )
+
+                # ── 5 metric tiles ──────────────────────────────────────────
                 _items = getattr(rra, "risk_items", None) or []
+                n_risks    = len(_items)
+                n_blocking = sum(1 for i in _items if i.get("blocking"))
+
+                # SLA — derived from task_intake.due_date if present
+                sla_value, sla_sub = "—", ""
+                ti = getattr(result, "task_intake", None)
+                _due_raw = getattr(ti, "due_date", None) if ti else None
+                if _due_raw:
+                    try:
+                        from datetime import datetime as _dt, timezone as _tz
+                        _due = _dt.fromisoformat(str(_due_raw).replace("Z", "+00:00"))
+                        if _due.tzinfo is None:
+                            _due = _due.replace(tzinfo=_tz.utc)
+                        _now = _dt.now(_tz.utc)
+                        _delta = _due - _now
+                        _hrs = _delta.total_seconds() / 3600
+                        if _hrs < 0:
+                            d, h = divmod(int(-_hrs), 24)
+                            sla_value = f"BREACHED · -{d}D {h}H"
+                            sla_sub   = f"Was due {_due.strftime('%Y-%m-%d %H:%M')} UTC"
+                        else:
+                            d, h = divmod(int(_hrs), 24)
+                            sla_value = f"OK · {d}D {h}H"
+                            sla_sub   = f"Due {_due.strftime('%Y-%m-%d %H:%M')} UTC"
+                    except Exception:
+                        pass
+
+                # Sources — from CSA validation
+                src_value, src_sub = "—", ""
+                csa_out = getattr(result, "csa_output", None)
+                if csa_out is not None:
+                    val = getattr(csa_out, "validation", None)
+                    if val is not None:
+                        ts  = getattr(val, "total_sources", None)
+                        cs  = getattr(val, "confidence_score", None)
+                        if ts is not None:
+                            src_value = str(ts)
+                        if cs is not None:
+                            src_sub = f"{int(round(cs * 100))}% confidence"
+
+                # Decision engine — model + timestamp
+                eng_value, eng_sub = (rra.model_used or "—"), ""
+                if rra.timestamp:
+                    eng_sub = str(rra.timestamp)[:19].replace("T", " ") + " UTC"
+
+                # History events — from CSA case_history rows
+                hist_count = 0
+                if csa_out is not None:
+                    ctx = getattr(csa_out, "context", None)
+                    if ctx is not None:
+                        hist = getattr(ctx, "case_history", None) or []
+                        hist_count = len(hist)
+
+                t1, t2, t3, t4, t5 = st.columns(5)
+                t1.metric("Risks Detected", n_risks,
+                          delta=f"{n_blocking} blocking" if n_blocking else None,
+                          delta_color="inverse")
+                t2.metric("Sources", src_value, delta=src_sub or None,
+                          delta_color="off")
+                t3.metric("SLA", sla_value, delta=sla_sub or None,
+                          delta_color="inverse" if sla_value.startswith("BREACHED") else "off")
+                t4.metric("Case History", hist_count,
+                          delta=f"{hist_count} events" if hist_count else None,
+                          delta_color="off")
+                t5.metric("Decision Engine", eng_value, delta=eng_sub or None,
+                          delta_color="off")
+
+                # ── Reasoning + Severity Distribution ───────────────────────
+                col_reason, col_chart = st.columns([2, 1])
+                with col_reason:
+                    st.markdown("**Reasoning summary**")
+                    st.markdown(
+                        rra.reasoning_summary or
+                        "_No detailed reasoning emitted by the detector._"
+                    )
+
+                with col_chart:
+                    if _items:
+                        st.markdown("**Severity distribution**")
+                        _order = ["critical", "high", "medium", "low"]
+                        _counts = {sev: 0 for sev in _order}
+                        for it in _items:
+                            s = (it.get("severity") or "low").lower()
+                            if s in _counts:
+                                _counts[s] += 1
+                        import pandas as _pd
+                        _df = _pd.DataFrame(
+                            {"count": [_counts[s] for s in _order]},
+                            index=_order,
+                        )
+                        st.bar_chart(_df, height=180)
+
+                # ── Per-item breakdown ──────────────────────────────────────
                 if _items:
                     st.markdown("**Risk Items**")
-                    _sev_color = {
-                        "critical": ("#FECACA", "#7F1D1D", "#F87171"),
-                        "high":     ("#FEE2E2", "#B91C1C", "#FCA5A5"),
-                        "medium":   ("#FEF3C7", "#B45309", "#FCD34D"),
-                        "low":      ("#DCFCE7", "#15803D", "#86EFAC"),
-                    }
                     for it in _items:
                         rtype     = (it.get("risk_type") or "unknown").replace("_", " ").title()
                         sev       = (it.get("severity") or "low").lower()
@@ -1144,7 +1426,7 @@ with center_col:
                             if reason:
                                 st.markdown(reason)
                 elif rra.risk_flags:
-                    # Legacy fallback
+                    # Legacy fallback when risk_items isn't forwarded
                     st.markdown("**Risk Flags**")
                     st.markdown(
                         " ".join(_pill(f, ("#FEE2E2", "#B91C1C", "#FCA5A5"))
@@ -1152,16 +1434,16 @@ with center_col:
                         unsafe_allow_html=True,
                     )
 
-                # Footer — escalation target + provenance, small caption.
+                # ── Footer — provenance ────────────────────────────────────
                 _foot: list[str] = []
-                if rra.escalate_to_human and rra.escalation_target:
-                    _foot.append(f"**Escalation target:** {rra.escalation_target}")
                 if rra.priority:
                     _foot.append(f"**Priority:** {rra.priority}")
+                if rra.workflow_state:
+                    _foot.append(f"**Workflow state:** {rra.workflow_state}")
                 if rra.operating_context:
                     _foot.append(f"**Operating context:** {rra.operating_context}")
-                if rra.model_used:
-                    _foot.append(f"**Detector:** `{rra.model_used}`")
+                if rra.task_id:
+                    _foot.append(f"**Task ID:** `{rra.task_id}`")
                 if _foot:
                     st.caption(" &nbsp;·&nbsp; ".join(_foot))
             else:

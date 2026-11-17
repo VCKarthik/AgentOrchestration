@@ -304,15 +304,19 @@ def render_sidebar_panel() -> None:
         "these rules during the workflow."
     )
 
-    sample_path = os.path.join(_REPO_ROOT, "data", "policies")
-    if os.path.isdir(sample_path):
+    # Sample files live in `data/cases/<CASE-ID>-<workflow>/<original-filename>.md`
+    # The original filename (e.g. procurement.md, claims.md) is preserved so
+    # GPA's curated-rules lookup in seed_policies._POLICIES still matches.
+    cases_root = os.path.join(_REPO_ROOT, "data", "cases")
+    if os.path.isdir(cases_root):
         with st.sidebar.expander("Sample policy files"):
-            samples = sorted(
-                f for f in os.listdir(sample_path)
-                if f.endswith((".md", ".pdf", ".txt"))
-            )
-            for s in samples:
-                st.markdown(f"- `data/policies/{s}`")
+            for case_dir in sorted(os.listdir(cases_root)):
+                case_full = os.path.join(cases_root, case_dir)
+                if not os.path.isdir(case_full):
+                    continue
+                for fname in sorted(os.listdir(case_full)):
+                    if fname.endswith((".md", ".pdf", ".txt")):
+                        st.markdown(f"- `data/cases/{case_dir}/{fname}`")
             st.caption("Drag any of these into the uploader below.")
 
     uploaded = st.sidebar.file_uploader(

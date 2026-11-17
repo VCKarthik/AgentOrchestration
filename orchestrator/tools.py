@@ -256,15 +256,45 @@ async def _call_da_impl(state: AmpState) -> DaOutput:
             payload["task_type"] = _coerce_task_type(payload.get("task_type"))
 
     if state.risk_output:
-        payload["risk_flags"] = [
-            {
-                "flag_id":     f,
-                "label":       f,
-                "severity":    state.risk_output.overall_risk_level or "low",
-                "description": f,
-            }
-            for f in (state.risk_output.risk_flags or [])
-        ]
+        # DA reads severity to decide channel routing. If it sees ANY
+        # `critical` flag it short-circuits to the "Lead Review Queue" with no
+        # named assignee — useful for true emergencies but it overrides
+        # candidate scoring entirely. We want DA to pick a person AND surface
+        # `escalation_required=True`, which is the "named owner + flagged for
+        # human approval" pattern the demo expects.
+        #
+        # Two adjustments:
+        #   (1) prefer per-item severity from risk_items (some items are
+        #       medium even when overall is critical) over the blanket
+        #       overall_risk_level
+        #   (2) cap severity at "high" — the case still flows through DA's
+        #       elevated-review path (escalation_required=True) but a human
+        #       owner gets named.
+        items = getattr(state.risk_output, "risk_items", None) or []
+        flags_payload: list[dict] = []
+        if items:
+            for it in items:
+                sev = (it.get("severity") or "low").lower()
+                if sev == "critical":
+                    sev = "high"
+                flags_payload.append({
+                    "flag_id":     it.get("risk_type") or "unknown",
+                    "label":       it.get("risk_type") or "unknown",
+                    "severity":    sev,
+                    "description": it.get("reason") or it.get("risk_type") or "",
+                })
+        else:
+            overall = (state.risk_output.overall_risk_level or "low").lower()
+            if overall == "critical":
+                overall = "high"
+            for f in (state.risk_output.risk_flags or []):
+                flags_payload.append({
+                    "flag_id":     f,
+                    "label":       f,
+                    "severity":    overall,
+                    "description": f,
+                })
+        payload["risk_flags"] = flags_payload
 
     start = time.perf_counter()
     logger.info("call_da: sending request", extra={"task_id": payload.get("task_id")})

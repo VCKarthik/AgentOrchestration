@@ -300,3 +300,37 @@ Undocumented at the time; reconstructed from file timestamps during Session 9.
   IAA "Start Document Review" via gemini/gemini-2.5-flash (real LLM call) →
   DA assigned Rachel Green / Senior Compliance Officer, confidence 95.3.
 - Tests: IAA 77/77, RRA 6/6, SWA 6/6.
+
+### Session 10 — 2026-11-16 (later): Newer snapshot reconciled + Gemini 3.8 migration
+
+**Snapshot import.** The working folder was replaced (17:42) with a newer development
+snapshot whose archive dropped all dotfiles and `infra/seed_csa_db.py`. Reconciled by
+re-initializing git against origin/main, restoring the dropped files from the repo, and
+committing the snapshot's work on top. The snapshot's changes (all kept):
+- `orchestrator/shims.py` — `csa_to_rra` now maps document-level status (missing /
+  pending_review) into workflow_state + mandatory_inputs. Fixes "every case is low-risk":
+  CASE-1001 now correctly yields critical/hold with missing_input + compliance_risk flags.
+- `IAA/agent/chain.py`, `DA llm_router/llm_service` — fail-fast LLM config
+  (max_retries=0, timeout) so provider errors trigger the fallback immediately, not
+  after ~60s of internal retries.
+- `data/cases/` — NEW: self-contained per-case demo bundles (intake.json, policy .md,
+  workflow_context.json, csa_seed.json). Replaces `data/workflow_contexts/` and the
+  scattered `data/policies/{procurement,claims,interview_scheduling}.md` (moved into
+  bundles; other policies remain in `data/policies/`).
+- `demo/app.py` — Case Queue reads intakes from `data/cases/*/intake.json`; large rework.
+
+**Gemini model migration (again).** The new API key is a "new user" key: Google gates
+`gemini-2.5-flash` off for new keys (404 "no longer available to new users"). Moved to
+`GEMINI_MODEL=gemini-3.8-flash` (.env, .env.example, README). Gemini 3.x also returns
+message content as a list of typed blocks — `IAA/agent/chain.py` now coerces list
+content to text before `_extract_json` (otherwise every call fell back to review_case).
+
+**Re-applied from Session 9** (snapshot predated them): bash-3.2 launcher fix + venv
+auto-activate, 13 `use_container_width` → `width='stretch'`, stale IAA test rewrites,
+RRA `risk_radar` conftest alias, psycopg removal.
+
+**Verified.** IAA 77/77, RRA 6/6, SWA 6/6. Live end-to-end on all agents:
+- CASE-3001 (clean claim): RRA low/proceed → GPA APPROVE → IAA "Close Case" (65%,
+  gemini-3.8-flash) → DA assigned Karen Mills / Senior Claims Processor.
+- CASE-1001 (missing docs): RRA critical/hold → GPA ESCALATE (procurement_director,
+  cfo) → IAA "Start Document Review" (78%) → DA escalated to Rachel Green.

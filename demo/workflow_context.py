@@ -171,14 +171,14 @@ def render_sidebar_panel() -> None:
         "in the same domain."
     )
 
-    sample_path = os.path.join(_REPO_ROOT, "data", "workflow_contexts")
-    if os.path.isdir(sample_path):
+    # Sample files now live in `data/cases/<CASE-ID>-<workflow>/workflow_context.json`
+    cases_root = os.path.join(_REPO_ROOT, "data", "cases")
+    if os.path.isdir(cases_root):
         with st.sidebar.expander("Sample files"):
-            samples = sorted(
-                f for f in os.listdir(sample_path) if f.endswith(".json")
-            )
-            for s in samples:
-                st.markdown(f"- `data/workflow_contexts/{s}`")
+            for case_dir in sorted(os.listdir(cases_root)):
+                ctx_path = os.path.join(cases_root, case_dir, "workflow_context.json")
+                if os.path.isfile(ctx_path):
+                    st.markdown(f"- `data/cases/{case_dir}/workflow_context.json`")
             st.caption("Drag any of these into the uploader below.")
 
     uploaded = st.sidebar.file_uploader(

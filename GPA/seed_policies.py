@@ -62,6 +62,10 @@ _POLICIES: list[dict] = [
         "department":  "claims",
         "source":      "data/policies/claims.md",
         "rules": [
+            # Auto-approval threshold lifted to $1,500 to match the
+            # POL-GOLD policy advertised in the demo deck. Claims under
+            # $1,500 with all documents present pass through GPA without
+            # human approval.
             (
                 "approval_threshold", "monetary_value", ">=", "25000", "USD", "ESCALATE",
                 "Claim amount exceeds $25,000 — mandatory escalation required.",
@@ -73,14 +77,9 @@ _POLICIES: list[dict] = [
                 0.88, "risk_committee",
             ),
             (
-                "approval_threshold", "monetary_value", ">", "2000", "USD", "ESCALATE",
-                "Equipment claim exceeds $2,000 — Department head review required.",
-                0.82, "department_head",
-            ),
-            (
-                "approval_threshold", "monetary_value", ">", "500", "USD", "ESCALATE",
-                "Medical reimbursement exceeds $500 — Manager sign-off required.",
-                0.78, "manager",
+                "approval_threshold", "monetary_value", ">=", "1500", "USD", "ESCALATE",
+                "Claim amount exceeds $1,500 — exceeds POL-GOLD auto-approval threshold; manager sign-off required.",
+                0.82, "manager",
             ),
         ],
     },

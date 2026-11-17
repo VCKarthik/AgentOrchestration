@@ -1,0 +1,14 @@
+{
+  "case_id": "CASE-3001",
+  "case_type": "claim_review",
+  "task_type": "claim_review",
+  "title": "Medical claim review \u2014 David Kim \u2014 $1,200 \u2014 all documents received",
+  "description": "Claim CLM-001 for $1,200. All documents now complete. Policy check shows within limits. Ready for final approval decision.",
+  "priority": "medium",
+  "urgency": "moderate",
+  "requester": "claims@acme.com",
+  "requester_role": "claims_processor",
+  "business_domain": "insurance",
+  "estimated_effort": 1.0,
+  "monetary_value": 1200
+}
