@@ -56,13 +56,21 @@ def main() -> None:
     logger.info("Step 4/4: SWA SQLite schema")
     try:
         import os
+        import subprocess
         import sys
         swa_path = os.path.join(os.path.dirname(__file__), "..", "SWA")
-        if swa_path not in sys.path:
-            sys.path.insert(0, swa_path)
-        from db import db as swa_db  # type: ignore[import]
-        swa_db.init_db()
-        logger.info("  SWA DB ready at %s", swa_db._db_path())
+        # Run in a clean subprocess with SWA as cwd: under start_agents.sh,
+        # PYTHONPATH=IAA:GPA makes GPA/db.py (a regular module) shadow SWA's
+        # namespace package `db/`, so an in-process import picks the wrong db.
+        env = {k: v for k, v in os.environ.items() if k != "PYTHONPATH"}
+        proc = subprocess.run(
+            [sys.executable, "-c", "from db import db; db.init_db(); print(db._db_path())"],
+            cwd=swa_path, env=env, capture_output=True, text=True, timeout=60,
+        )
+        if proc.returncode == 0:
+            logger.info("  SWA DB ready at %s", proc.stdout.strip())
+        else:
+            logger.warning("  SWA DB init failed (non-fatal): %s", proc.stderr.strip()[-300:])
     except Exception as exc:
         logger.warning("  SWA DB init failed (non-fatal): %s", exc)
 
