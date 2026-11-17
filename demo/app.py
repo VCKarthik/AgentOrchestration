@@ -939,14 +939,28 @@ with center_col:
             _log_ref   = st.session_state.get("_log_container_ref")
             _sugg_ref  = st.session_state.get("_sugg_container_ref")
 
+            # If the user clicks anything mid-run, Streamlit stops this script
+            # run and the next st.* call raises a control-flow BaseException
+            # (StopException). Without this guard that exception escapes the
+            # progress callback, kills the workflow thread, and leaves
+            # running=True stuck on "Workflow in progress". Instead: stop
+            # touching the UI, let the workflow finish, and rely on the
+            # self-heal block above to display the stored result.
+            _ui_dead = {"flag": False}
+
             def on_progress(msg: str) -> None:
-                _parse_progress(
-                    msg,
-                    agent_statuses,
-                    log_messages,
-                    agent_bar,
-                    _log_ref if _log_ref else st.empty(),
-                )
+                if _ui_dead["flag"]:
+                    return
+                try:
+                    _parse_progress(
+                        msg,
+                        agent_statuses,
+                        log_messages,
+                        agent_bar,
+                        _log_ref if _log_ref else st.empty(),
+                    )
+                except BaseException:
+                    _ui_dead["flag"] = True
 
             run_task_id  = f'{case["case_id"]}-{int(time.time())}'
             due_date_iso = (datetime.now(timezone.utc) + timedelta(hours=48)).isoformat()
